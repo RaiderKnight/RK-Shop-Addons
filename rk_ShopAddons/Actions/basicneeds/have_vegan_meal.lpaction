@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: have_vegan_meal
+ACTION_NAME: Have a vegan meal
+WHERE: restaurant, cafe, fast_food, pub, hotel
+WHEN: 5.30 - 22.30
+MINUTES: 40 - 90
+TIMEOUT_MINUTES: 120
+ALSO_TIMEOUT: have_a_snack_in, have_a_snack, have_a_meal_in
+EFFECTS: money -15 (START), mood +3.5 (END), energy +20 (DURATION), fitness +0.02 (END), intelligence +0.05 (END), attractiveness +0.05 (END), mood -1 (INTERRUPTED)
+CONDITIONS: 
+MOVE_FIRST: true
+SCENE_ALWAYS:
+ANIMATION: eat

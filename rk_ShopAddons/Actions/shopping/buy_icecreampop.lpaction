@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_icecreampop
+ACTION_NAME: Buy ice cream
+WHERE: ice_cream
+WHEN: 0 - 24
+MINUTES: 1 - 15
+TIMEOUT_MINUTES: 10
+ALSO_TIMEOUT:
+EFFECTS: money -5 (START), mood +0.5 (END), stock_icecreampop +5 (END)
+CONDITIONS:
+MOVE_FIRST: true
+SCENE_ALWAYS: 
+ANIMATION: 

@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_meatprod
+ACTION_NAME: Buy meat
+WHERE: butcher, deli, fast_food, marketplace, restaurant
+WHEN: 0 - 24
+MINUTES: 1 - 15
+TIMEOUT_MINUTES: 10
+ALSO_TIMEOUT:
+EFFECTS: money -10 (START), mood +0.025 (END), stock_meatprod +1 (END)
+CONDITIONS:
+MOVE_FIRST: true
+SCENE_ALWAYS: 
+ANIMATION:  
