@@ -5,7 +5,7 @@ WHEN: 0 - 24
 MINUTES: 1 - 5
 TIMEOUT_MINUTES: 15
 ALSO_TIMEOUT:
-EFFECTS:  money -20 (START), mood +0.055 (END), stock_weedpro +7 (END)
+EFFECTS:  money -20 (START), mood +0.055 (END), stock_weedpro +3.5 (END)
 CONDITIONS:
 MOVE_FIRST: true
 SCENE_ALWAYS: 
