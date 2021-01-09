@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_confectioneryprod_MULTIPLE
+ACTION_NAME: Buy confectionery
+WHERE: confectionery
+WHEN: 0 - 24
+MINUTES: 1 - 10
+TIMEOUT_MINUTES: 4
+ALSO_TIMEOUT:
+EFFECTS: money -1 (START), mood +0.012 (END), stock_confectioneryprod +1 (END)
+CONDITIONS:
+MOVE_FIRST: true
+SCENE_ALWAYS: 
+ANIMATION: 

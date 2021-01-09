@@ -1,5 +1,5 @@
 ACTION_UNIQUEID: read_xxxmag
-ACTION_NAME: Read a travelmap
+ACTION_NAME: Read a xxx mag
 WHERE: home, toilets, work, prison, pub, nightclub, laundry, library, hospital, hotel, coffee, cafe, bar
 WHEN: 0 - 24
 MINUTES: 5 - 30

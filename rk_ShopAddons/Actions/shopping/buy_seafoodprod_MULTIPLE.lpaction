@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_seafoodprod_MULTIPLE
+ACTION_NAME: Buy seafood
+WHERE: seafood
+WHEN: 0 - 24
+MINUTES: 1 - 10
+TIMEOUT_MINUTES: 10
+ALSO_TIMEOUT:
+EFFECTS:  money -15 (START), mood +0.05 (END), stock_seafoodprod +1 (END)
+CONDITIONS: 
+MOVE_FIRST: true
+SCENE_ALWAYS:
+ANIMATION:

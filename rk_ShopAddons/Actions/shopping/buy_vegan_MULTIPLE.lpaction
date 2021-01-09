@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_vegan_MULTIPLE
+ACTION_NAME: Buy a vegan meal
+WHERE: greengrocer
+WHEN: 0 - 24
+MINUTES: 1 - 2
+TIMEOUT_MINUTES: 10
+ALSO_TIMEOUT:
+EFFECTS:  money -15 (START), mood +0.05 (END), stock_veganmeal +1 (END)), karma +0.25 (END)
+CONDITIONS:
+MOVE_FIRST: true
+SCENE_ALWAYS:
+ANIMATION:
