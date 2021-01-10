@@ -17,7 +17,7 @@ OTHER: none
         5:: "Sex doll"
         6:: "Massage lotion"
         7:: "Masturbator"
-        
+		
         If 0
             "I've got enough sextoys for now."
         Else
@@ -58,17 +58,19 @@ OTHER: none
                     rk_sexshop_value += Price
                     money -= Price
                     Player(Excited)::"Maybe not high quality but enough to get fun."
-                    perversion += Random(0, 0.25)          
+                    perversion += Random(0, 0.25)
                 Elseif 1
                     rk_sexshop_value += Price1
                     money -= Price1
                     Player(Excited)::"Best product when your alone."
                     perversion += Random(0, 0.35)
+                    
                 Else
                     rk_sexshop_value += Price2
                     money -= Price2
                     Player(Excited)::"Now we talk, high quality product for maximum fun."
                     perversion += Random(0, 0.45)
+                    
                 Endif           
             Endif
             choice = 8
