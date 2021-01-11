@@ -8,5 +8,5 @@ ALSO_TIMEOUT:
 EFFECTS: mood +1 (END),perversion +0.5 (END)
 CONDITIONS:
 MOVE_FIRST: true
-SCENE_ALWAYS: buy_a_sex_toy
+SCENE_ALWAYS: buy_a_sextoy
 ANIMATION:   
