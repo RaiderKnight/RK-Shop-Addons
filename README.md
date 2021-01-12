@@ -22,3 +22,8 @@ NOT
 c:\..\LifePlay\Content\Modules\rk_ShopAddons\rk_ShopAddons
 
 After the mod have been installed, make sure the mod is active in the Mod Manager. 
+
+### How to update
+* Download and extract the latest version on your pc
+* Delete the old mod inside c:\..\LifePlay\Content\Modules\rk_ShopAddons
+* Upload the new version of rk_ShopAddons inside c:\..\LifePlay\Content\Modules\
