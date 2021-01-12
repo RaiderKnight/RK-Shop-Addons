@@ -2,11 +2,11 @@ ACTION_UNIQUEID: smoke_weed
 ACTION_NAME: Smoke weed
 WHERE: home, work, alcohol, art, bar, biergarten, cafe, cinema, coffee, hotel, nightclub, place_of_worship, pub, stationery, theatre, tobacco, fraternity, university, brothel, stripclub, prison
 WHEN: 0 - 24
-MINUTES: 3 - 15
-TIMEOUT_MINUTES: 15
+MINUTES: 0 - 1
+TIMEOUT_MINUTES: 1
 ALSO_TIMEOUT: 
-EFFECTS: stock_weedpro -0.5 (START), mood +5 (END), energy -1 (END), fitness -0.07 (BUFF:60), attractiveness +0.05 (BUFF:60)
-CONDITIONS: stock_weedpro > 0 (STAT_COMPARE)
+EFFECTS: 
+CONDITIONS: 
 MOVE_FIRST: true
-SCENE_ALWAYS:
-ANIMATION: smoke
+SCENE_ALWAYS: smoke_weed
+ANIMATION: 
