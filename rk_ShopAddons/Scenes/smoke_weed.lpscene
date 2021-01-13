@@ -111,7 +111,7 @@ OTHER: none
             interpersonal -= 1
             intoxication += 3.5
         
-        Elseif 6
+        Elseif 7
             Player(Excited)::"Humm, I like the earthy, piney and sour taste and the couch-locking effect of that one !"
             Player.modifyActorVar(rk_GGWeed, -1)
             stock_GGweed -= 1
