@@ -81,7 +81,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+        
             
         ElseIf 1
             If FleshlightType >= 4
@@ -135,7 +135,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+       
             
         ElseIf 2
             If AnalPlugType >= 4
@@ -185,7 +185,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+            
             
         ElseIf 3
             If LubricantType >= 4
@@ -239,7 +239,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+           
             
         ElseIf 4
             If SexDollType >= 4
@@ -289,7 +289,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+           
             
         ElseIf 5
             If MassageLotionType >= 4
@@ -339,7 +339,7 @@ OTHER: none
                 EndIf
             EndIf
             
-            followUp(buy_a_sextoy)
+            
             
         ElseIf 6
             If MasturbatorType >= 4
