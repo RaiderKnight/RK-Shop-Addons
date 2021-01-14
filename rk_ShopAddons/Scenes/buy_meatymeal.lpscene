@@ -1,0 +1,96 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If money < -1
+        Player(Anxious)::"I am in debt. The stores will not sell me anything."
+    Else
+    
+        Player(Curious)::"There is a lot of good meaty dishes here." 
+        
+        // Get current  types
+        Meal1 = Player.getActorVar(rk_Meal1)
+        Meal1p = 1.convertToLocalCurrency(false)
+        Meal2 = Player.getActorVar(rk_Meal2)
+        Meal2p = 5.convertToLocalCurrency(false)
+        Meal3 = Player.getActorVar(rk_Meal3)
+        Meal3p = 6.convertToLocalCurrency(false)
+        Meal4 = Player.getActorVar(rk_Meal4)
+        Meal4p = 7.convertToLocalCurrency(false)
+        Meal5 = Player.getActorVar(rk_Meal5)
+        Meal5p = 8.convertToLocalCurrency(false)
+        Meal6 = Player.getActorVar(rk_Meal6)
+        Meal6p = 10.convertToLocalCurrency(false)
+        Meal7 = Player.getActorVar(rk_Meal7)
+        Meal7p = 12.convertToLocalCurrency(false)
+        Meal8 = Player.getActorVar(rk_Meal8)
+        Meal8p = 15.convertToLocalCurrency(false)
+            
+        Player(Curious)::"Which type of  shall I buy?"
+        0:: BKMeal1 >= 0 ::" for <VMeal1p>"
+        1:: BKMeal2 >= 0 ::" for <VMeal2p>"
+        2:: BKMeal3 >= 0 ::" for <VMeal3p>"
+        3:: BKMeal4 >= 0 ::" for <VMeal4p>"
+        4:: BKMeal5 >= 0 ::" for <VMeal5p>"
+        5:: BKMeal6 >= 0 ::" for <VMeal6p>"
+        6:: BKMeal7 >= 0 ::" for <VMeal7p>"
+        7:: BKMeal8 >= 0 ::" for <VMeal8p>"
+        99:: "Don't buy anything"
+               
+        If 0
+            Player.setActorVar(rk_Meal1, 1)
+            money -= 1
+            stock_bakeryproduct += 0.5
+            Player(Excited)::"0.5  added to my  !"
+                    
+        ElseIf 1
+            Player.setActorVar(rk_Meal2, 1)
+            money -= 5
+            stock_bakeryproduct += 1
+            Player(Excited)::"1  added to my  !"
+                    
+        ElseIf 2
+            Player.setActorVar(rk_Meal3, 1)
+            money -= 6
+            stock_bakeryproduct += 1.25
+            Player(Excited)::"1.25  added to my  !"
+                    
+        ElseIf 3
+            Player.setActorVar(rk_Meal4, 1)
+            money -= 7
+            stock_bakeryproduct += 1.5
+            Player(Excited)::"1.5  added to my  !"
+        
+        ElseIf 4
+            Player.setActorVar(rk_Meal5, 1)
+            money -= 8
+            stock_bakeryproduct += 1.75
+            Player(Excited)::"1.75  added to my  !"
+            
+        ElseIf 5
+            Player.setActorVar(rk_Meal6, 1)
+            money -= 10
+            stock_bakeryproduct += 2
+            Player(Excited)::"2  added to my  !"
+
+        ElseIf 6
+            Player.setActorVar(rk_Meal7, 1)
+            money -= 12
+            stock_bakeryproduct += 2.5
+            Player(Excited)::"2.5  added to my  !"
+
+        ElseIf 7
+            Player.setActorVar(rk_Meal8, 1)
+            money -= 15
+            stock_bakeryproduct += 3
+            Player(Excited)::"3  added to my pantry !"
+   
+        EndIf
+        
+    EndIf
+    
+    SceneEnd()

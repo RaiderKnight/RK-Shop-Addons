@@ -1,5 +1,5 @@
 STAT_ID: stock_confectioneryprod
-STAT_NAME: Number of confectionery
+STAT_NAME: Number of candies
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0

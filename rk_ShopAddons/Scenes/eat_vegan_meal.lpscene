@@ -1,0 +1,128 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If  money < -1 
+        Player(Anxious)::"Ok, no money to eat! I need to find a job !"
+    Else
+        
+        // Get current vegan meal types
+        VMeal1 = Player.getActorVar(rk_VMeal1)
+        VMeal1p = 2.convertToLocalCurrency(false)
+        VMeal2 = Player.getActorVar(rk_VMeal2)
+        VMeal2p = 6.convertToLocalCurrency(false)
+        VMeal3 = Player.getActorVar(rk_VMeal3)
+        VMeal3p = 7.convertToLocalCurrency(false)
+        VMeal4 = Player.getActorVar(rk_VMeal4)
+        VMeal4p = 8.convertToLocalCurrency(false)
+        VMeal5 = Player.getActorVar(rk_VMeal5)
+        VMeal5p = 9.convertToLocalCurrency(false)
+        VMeal6 = Player.getActorVar(rk_VMeal6)
+        VMeal6p = 11.convertToLocalCurrency(false)
+        VMeal7 = Player.getActorVar(rk_VMeal7)
+        VMeal7p = 13.convertToLocalCurrency(false)
+        VMeal8 = Player.getActorVar(rk_VMeal8)
+        VMeal8p = 16.convertToLocalCurrency(false)
+        
+        Player::"Ok, which vegan meal I'm gonna eat?"
+        0:: money >= 2 :: "Healthy cookie for <VMeal1p>"
+        1:: money >= 6:: "Winter Squash and Lentil Stew for <VMeal2p>"
+        2:: money >= 7:: "Cauliflower Alfredo for <VMeal3p>"
+        3:: money >= 8:: "Coconutty Rice and Peas for <VMeal4p>"
+        4:: money >= 9:: "Peanutty Edamame and Noodle Salad for <VMeal5p>"
+        5:: money >= 11:: "Pasta with Red Pepper Alfredo for <VMeal6p>"
+        6:: money >= 13:: "Crispy Tofu Bowl with fruits for <VMeal7p>"
+        7:: money >= 16:: "Veggie Lo Mein for <VMeal8p>"
+        8:: "Bah! I'm not hungry !"
+        
+        If 0
+            Player.modifyActorVar(rk_VMeal1, -1)
+            mood += 1
+            energy += 2
+            fitness += 0.5
+            intelligence += 0.5
+            attractiveness += 0.05
+            money -= 0.5
+            
+            
+        Elseif 1
+            Player.modifyActorVar(rk_VMeal2, -1)
+            mood += 4
+            energy += 4
+            fitness += 1
+            intelligence += 1
+            attractiveness += 1
+            money -= 3
+            
+        
+        Elseif 2
+            Player.modifyActorVar(rk_VMeal3, -1)
+            mood += 5
+            energy += 5
+            fitness += 2
+            intelligence += 1.25
+            attractiveness += 1.5
+            money -= 3.5
+            
+        
+        Elseif 3
+            Player.modifyActorVar(rk_VMeal4, -1)
+            mood += 6
+            energy += 6
+            fitness += 3
+            intelligence += 1.5
+            attractiveness += 2
+            money -= 4
+            
+        
+        Elseif 4
+            Player.modifyActorVar(rk_VMeal5, -1)
+            mood += 7
+            energy += 7
+            fitness += 4
+            intelligence += 1.75
+            attractiveness += 2.5
+            money -= 4.5
+            
+        
+        Elseif 5
+            Player.modifyActorVar(rk_VMeal6, -1)
+            mood += 9
+            energy += 8
+            fitness += 5
+            intelligence += 2
+            attractiveness += 3
+            money -= 5.5
+            
+        
+        Elseif 6
+            Player.modifyActorVar(rk_VMeal7, -1)
+            mood += 10
+            energy += 9
+            fitness += 6
+            intelligence += 2.25
+            attractiveness += 3.5
+            money -= 6
+            
+        
+        Elseif 7
+            Player.modifyActorVar(rk_VMeal8, -1)
+            mood += 12
+            energy += 10
+            fitness += 7
+            intelligence += 2.5
+            attractiveness += 4
+            money -= 6
+            
+        
+        Endif
+        
+    Endif
+    
+    passTime(0.25, 0.5)
+    
+SceneEnd()

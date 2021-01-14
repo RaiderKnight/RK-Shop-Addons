@@ -388,9 +388,6 @@ OTHER: none
                 
                 EndIf
             EndIf
-            
-            followUp(buy_a_sextoy)
-        
         
         EndIf
         
