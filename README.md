@@ -1,4 +1,6 @@
-# Shop Addons 
+# Shop Addons WILL BE BACK SOON !
+Sorry for the inconvenience...
+
 Module for the game LifePlay
 https://github.com/vinfamy/LifePlay
 
