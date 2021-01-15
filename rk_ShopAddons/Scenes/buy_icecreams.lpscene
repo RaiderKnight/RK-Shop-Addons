@@ -1,0 +1,75 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If money < -1
+        Player(Anxious)::"I am in debt. The stores will not sell me anything."
+    Else
+    
+        Player(Curious)::"There is a lot of ice cream desserts here." 
+        
+        // Get current ice cream desserts types
+        IceMeal1 = Player.getActorVar(rk_IceMeal1)
+        IceMeala = Random(1, 2)
+        IceMeal1p = IceMeala.convertToLocalCurrency(false)
+        IceMeal2 = Player.getActorVar(rk_IceMeal2)
+        IceMealb = Random(3, 4)
+        IceMeal2p = IceMealb.convertToLocalCurrency(false)
+        IceMeal3 = Player.getActorVar(rk_IceMeal3)
+        IceMealc = Random(5, 6)
+        IceMeal3p = IceMealc.convertToLocalCurrency(false)
+        IceMeal4 = Player.getActorVar(rk_IceMeal4)
+        IceMeald = Random(7, 8)
+        IceMeal4p = IceMeald.convertToLocalCurrency(false)
+        IceMeal5 = Player.getActorVar(rk_IceMeal5)
+        IceMeale = Random(10, 12)
+        IceMeal5p = IceMeale.convertToLocalCurrency(false)
+
+            
+        Player(Curious)::"Which type of ice cream desserts shall I buy?"
+        0:: IceMeal1 >= 0 ::"Popcycle for <IceMeal1p>"
+        1:: IceMeal2 >= 0 ::"Ice cream cup for <IceMeal2p>"
+        2:: IceMeal3 >= 0 ::"Milk Shake for <IceMeal3p>"
+        3:: IceMeal4 >= 0 ::"Frozen Margarita pie for <IceMeal4p>"
+        4:: IceMeal5 >= 0 ::"Ice cream cake for <IceMeal5p>"
+        99:: "Don't buy anything"
+               
+        If 0
+            Player.setActorVar(rk_IceMeal1, 1)
+            money -= IceMeal1p
+            stock_icecreampop += 1
+            Player(Excited)::"1 ice cream dessert added to my freezer!"
+                    
+        ElseIf 1
+            Player.setActorVar(rk_IceMeal2, 1)
+            money -= IceMeal2p
+            stock_icecreampop += 2
+            Player(Excited)::"2 ice cream desserts added to my freezer!"
+                    
+        ElseIf 2
+            Player.setActorVar(rk_IceMeal3, 1)
+            money -= IceMeal3p
+            stock_icecreampop += 3
+            Player(Excited)::"3 ice cream desserts added to my freezer!"
+                    
+        ElseIf 3
+            Player.setActorVar(rk_IceMeal4, 1)
+            money -= IceMeal4p
+            stock_icecreampop += 4
+            Player(Excited)::"4 ice cream desserts added to my freezer!"
+        
+        ElseIf 4
+            Player.setActorVar(rk_IceMeal5, 1)
+            money -= IceMeal5p
+            stock_icecreampop += 5
+            Player(Excited)::"5 ice cream desserts added to my freezer!"
+            
+        EndIf
+        
+    EndIf
+    
+    SceneEnd()

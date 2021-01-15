@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_a_sex_toy
+ACTION_NAME: Buy a sextoys
+WHERE: beauty, department_store, marketplace
+WHEN: 0 - 24
+MINUTES: 1 - 1
+TIMEOUT_MINUTES: 0
+ALSO_TIMEOUT: 
+EFFECTS: mood +1 (END),perversion +0.5 (END)
+CONDITIONS:
+MOVE_FIRST: true
+SCENE_ALWAYS: buy_a_sextoy
+ANIMATION:   

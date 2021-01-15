@@ -1,0 +1,62 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If stock_popcorn < 1 
+        Player(Anxious)::"Ok, not enough popcorn to have a snack!"
+    Else
+        
+        // Get current popcorn types
+        PopcMeal1 = Player.getActorVar(rk_PopcMeal1)
+        PopcMeal2 = Player.getActorVar(rk_PopcMeal2)
+        PopcMeal3 = Player.getActorVar(rk_PopcMeal3)
+        PopcMeal4 = Player.getActorVar(rk_PopcMeal4)
+        PopcMeal5 = Player.getActorVar(rk_PopcMeal4)
+        
+        Player::"Ok, which popcorn I'm gonna eat?"
+        0:: stock_popcorn >= 1:: "1 Plain popcorn"
+        1:: stock_popcorn >= 1:: "1 Butter popcorn"
+        2:: stock_popcorn >= 1:: "1 Popcorn sweet mix"
+        3:: stock_popcorn >= 1:: "1 Healthy popcorn"
+        8:: "Bah! I'm not hungry !"
+        
+        If 0
+            Player.modifyActorVar(rk_PopcMeal1, -1)
+            stock_popcorn -= 1
+            mood += 0.75
+            energy += 2
+            fitness -= 0.02
+
+        Elseif 1
+            Player.modifyActorVar(rk_PopcMeal2, -1)
+            stock_popcorn -= 1.25
+            mood += 1
+            energy += 3
+            fitness -= 0.05
+
+        Elseif 2
+            Player.modifyActorVar(rk_PopcMeal3, -1)
+            stock_popcorn -= 1.5
+            mood += 2
+            energy += 5
+            fitness -= 0.07
+
+        Elseif 3
+            Player.modifyActorVar(rk_PopcMeal4, -1)
+            stock_popcorn -= 1.75
+            mood += 3
+            energy += 5
+            fitness += 1
+			attractiveness += 1
+
+        Endif
+        
+    Endif
+    
+    passTime(0.25, 0.5)
+    
+SceneEnd()

@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: buy_doytools_MULTIPLE
+ACTION_NAME: Buy tools
+WHERE: doityourself, marketplace, variety_store, department_store
+WHEN: 0 - 24
+MINUTES: 5 - 30
+TIMEOUT_MINUTES: 10
+ALSO_TIMEOUT:
+EFFECTS: money -50 (START), mood +0.05 (END), stock_tools +1 (END)
+CONDITIONS: 
+MOVE_FIRST: true
+SCENE_ALWAYS: 
+ANIMATION: 

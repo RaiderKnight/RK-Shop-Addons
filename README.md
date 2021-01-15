@@ -1,6 +1,4 @@
-# Shop Addons WILL BE BACK SOON !
-Sorry for the inconvenience...
-
+# Shop Addons
 Module for the game LifePlay
 https://github.com/vinfamy/LifePlay
 
@@ -27,7 +25,7 @@ After the mod have been installed, make sure the mod is active in the Mod Manage
 
 ### How to update
 * Download and extract the latest version on your pc
-* Delete the old mod inside c:\..\LifePlay\Content\Modules\rk_ShopAddons
+* Delete the old mod (rk_ShopAddons) inside c:\..\LifePlay\Content\Modules\
 * Upload the new version of rk_ShopAddons inside c:\..\LifePlay\Content\Modules\
 
 

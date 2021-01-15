@@ -1,0 +1,64 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If money < -1
+        Player(Anxious)::"I am in debt. The stores will not sell me anything."
+    Else
+    
+        Player(Curious)::"There is a lot of popcorns here." 
+
+        // Get current popcorn types
+        PopcMeal1 = Player.getActorVar(rk_PopcMeal1)
+        PopcMeala = Random(1, 2)
+        PopcMeal1p = PopcMeala.convertToLocalCurrency(false)
+        PopcMeal2 = Player.getActorVar(rk_PopcMeal2)
+        PopcMealb = Random(3, 4)
+        PopcMeal2p = PopcMealb.convertToLocalCurrency(false)
+        PopcMeal3 = Player.getActorVar(rk_PopcMeal3)
+        PopcMealc = Random(5, 7)
+        PopcMeal3p = PopcMealc.convertToLocalCurrency(false)
+        PopcMeal4 = Player.getActorVar(rk_PopcMeal4)
+        PopcMeald = Random(8, 12)
+        PopcMeal4p = PopcMeald.convertToLocalCurrency(false)
+            
+        Player(Curious)::"Which type of popcorn shall I buy?"
+        0:: PopcMeal1 >= 0 ::"Plain popcorns for <PopcMeal1p>"
+        1:: PopcMeal2 >= 0 ::"Butter popcorns for <PopcMeal2p>"
+        2:: PopcMeal3 >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
+        3:: PopcMeal4 >= 0 ::"Healthy popcorns for <PopcMeal4p>"
+        99:: "Don't buy anything"
+               
+        If 0
+            Player.setActorVar(rk_PopcMeal1, 1)
+            money -= PopcMeal1p
+            stock_popcorn += 1
+            Player(Excited)::"1 popcorn added to my pantry!"
+                    
+        ElseIf 1
+            Player.setActorVar(rk_PopcMeal2, 1)
+            money -= PopcMeal2p
+            stock_popcorn += 2
+            Player(Excited)::"2 popcorns added to my pantry!"
+                    
+        ElseIf 2
+            Player.setActorVar(rk_PopcMeal3, 1)
+            money -= PopcMeal3p
+            stock_popcorn += 3
+            Player(Excited)::"3 popcorns added to my pantry!"
+                    
+        ElseIf 3
+            Player.setActorVar(rk_PopcMeal4, 1)
+            money -= PopcMeal4p
+            stock_popcorn += 4
+            Player(Excited)::"4 popcorns added to my pantry!"
+        
+        EndIf
+        
+    EndIf
+    
+    SceneEnd()

@@ -1,0 +1,114 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If  money < -1 
+        Player(Anxious)::"Ok, no money to eat! I need to find a job I guess... !"
+    Else
+        
+        
+        
+        // Get current meat dishes types
+        MeatMeal1 = Player.getActorVar(rk_MeatMeal1)
+        MeatMeala = Random(4, 7)
+        MeatMeal1p = MeatMeala.convertToLocalCurrency(false)
+        MeatMeal2 = Player.getActorVar(rk_MeatMeal2)
+        MeatMealb = Random(8, 10)
+        MeatMeal2p = MeatMealb.convertToLocalCurrency(false)
+        MeatMeal3 = Player.getActorVar(rk_MeatMeal3)
+        MeatMealc = Random(13, 15)
+        MeatMeal3p = MeatMealc.convertToLocalCurrency(false)
+        MeatMeal4 = Player.getActorVar(rk_MeatMeal4)
+        MeatMeald = Random(16, 17)
+        MeatMeal4p = MeatMeald.convertToLocalCurrency(false)
+        MeatMeal5 = Player.getActorVar(rk_MeatMeal5)
+        MeatMeale = Random(18, 20)
+        MeatMeal5p = MeatMeale.convertToLocalCurrency(false)
+        MeatMeal6 = Player.getActorVar(rk_MeatMeal6)
+        MeatMealf = Random(21, 24)
+        MeatMeal6p = MeatMealf.convertToLocalCurrency(false)
+        MeatMeal7 = Player.getActorVar(rk_MeatMeal7)
+        MeatMealg = Random(25, 29)
+        MeatMeal7p = MeatMealg.convertToLocalCurrency(false)
+        MeatMeal8 = Player.getActorVar(rk_MeatMeal8)
+        MeatMealh = Random(31, 40)
+        MeatMeal8p = MeatMealh.convertToLocalCurrency(false)
+        
+        Player::"Which type of meaty dish shall I buy?"
+        0:: MeatMeal1 >= 0 ::"1 Beef Jerkey bag for <MeatMeal1p>"
+        1:: MeatMeal2 >= 0 ::"1 Philly Cheesesteak for <MeatMeal2p>"
+        2:: MeatMeal3 >= 0 ::"1 Chicken schnitzel for <MeatMeal3p>"
+        3:: MeatMeal4 >= 0 ::"1 Salt-and-Pepper Steak for <MeatMeal4p>"
+        4:: MeatMeal5 >= 0 ::"1 Bacon-Wrapped Pork for <MeatMeal5p>"
+        5:: MeatMeal6 >= 0 ::"1 Chicken Kebabs with rice for <MeatMeal6p>"
+        6:: MeatMeal7 >= 0 ::"1 Chinese Beef & Broccoli for <MeatMeal7p>"
+        7:: MeatMeal8 >= 0 ::"1 Surf 'n Turf for <MeatMeal8p>"
+        8:: "Bah! I'm not hungry !"
+        
+        If 0
+            Player.modifyActorVar(rk_MeatMeal1, -1)
+            mood += 0.5
+            energy += 1
+            fitness += 1
+            money -= MeatMeal1p
+            
+        Elseif 1
+            Player.modifyActorVar(rk_MeatMeal2, -1)
+            mood += 2
+            energy += 2
+            fitness += 2
+            money -= MeatMeal2p
+        
+        Elseif 2
+            Player.modifyActorVar(rk_MeatMeal3, -1)
+            mood += 2.5
+            energy += 2.5
+            fitness += 2.5
+            money -= MeatMeal3p
+        
+        Elseif 3
+            Player.modifyActorVar(rk_MeatMeal4, -1)
+            mood += 3
+            energy += 3
+            fitness += 3
+            money -= MeatMeal4p
+        
+        Elseif 4
+            Player.modifyActorVar(rk_BKMeal5, -1)
+            mood += 3.5
+            energy += 3.5
+            fitness += 3.5
+            money -= MeatMeal5p
+        
+        Elseif 5
+            Player.modifyActorVar(rk_MeatMeal6, -1)
+            mood += 4
+            energy += 4
+            fitness += 4
+            money -= MeatMeal6p
+        
+        Elseif 6
+            Player.modifyActorVar(rk_MeatMeal7, -1)
+            mood += 4.5
+            energy += 4.5
+            fitness += 4.5
+            money -= MeatMeal7p
+        
+        Elseif 7
+            Player.modifyActorVar(rk_MeatMeal8, -1)
+            mood += 5
+            energy += 5
+            fitness += 5
+            money -= MeatMeal8p
+            
+        Endif
+        
+    Endif
+    
+    passTime(0.25, 0.5)
+    
+SceneEnd()

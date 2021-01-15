@@ -1,0 +1,104 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+    If money < -1
+        Player(Anxious)::"I am in debt. The stores will not sell me anything."
+    Else
+    
+        Player(Curious)::"There is a lot of good meaty dishes here."
+        
+        // Get current meat dishes types
+        MeatMeal1 = Player.getActorVar(rk_MeatMeal1)
+        MeatMeala = Random(3, 6)
+        MeatMeal1p = MeatMeala.convertToLocalCurrency(false)
+        MeatMeal2 = Player.getActorVar(rk_MeatMeal2)
+        MeatMealb = Random(5, 9)
+        MeatMeal2p = MeatMealb.convertToLocalCurrency(false)
+        MeatMeal3 = Player.getActorVar(rk_MeatMeal3)
+        MeatMealc = Random(12, 14)
+        MeatMeal3p = MeatMealc.convertToLocalCurrency(false)
+        MeatMeal4 = Player.getActorVar(rk_MeatMeal4)
+        MeatMeald = Random(15, 16)
+        MeatMeal4p = MeatMeald.convertToLocalCurrency(false)
+        MeatMeal5 = Player.getActorVar(rk_MeatMeal5)
+        MeatMeale = Random(17, 19)
+        MeatMeal5p = MeatMeale.convertToLocalCurrency(false)
+        MeatMeal6 = Player.getActorVar(rk_MeatMeal6)
+        MeatMealf = Random(20, 23)
+        MeatMeal6p = MeatMealf.convertToLocalCurrency(false)
+        MeatMeal7 = Player.getActorVar(rk_MeatMeal7)
+        MeatMealg = Random(25, 28)
+        MeatMeal7p = MeatMealg.convertToLocalCurrency(false)
+        MeatMeal8 = Player.getActorVar(rk_MeatMeal8)
+        MeatMealh = Random(30, 35)
+        MeatMeal8p = MeatMealh.convertToLocalCurrency(false)
+            
+        Player(Curious)::"Which type of meal shall I buy?"
+        0:: MeatMeal1 >= 0 ::"Beef Jerkey bag for <MeatMeal1p>"
+        1:: MeatMeal2 >= 0 ::"Philly Cheesesteak for <MeatMeal2p>"
+        2:: MeatMeal3 >= 0 ::"Chicken schnitzel for <MeatMeal3p>"
+        3:: MeatMeal4 >= 0 ::"Salt-and-Pepper Steak for <MeatMeal4p>"
+        4:: MeatMeal5 >= 0 ::"Bacon-Wrapped Pork for <MeatMeal5p>"
+        5:: MeatMeal6 >= 0 ::"Chicken Kebabs with rice for <MeatMeal6p>"
+        6:: MeatMeal7 >= 0 ::"Chinese Beef & Broccoli for <MeatMeal7p>"
+        7:: MeatMeal8 >= 0 ::"Surf 'n Turf for <MeatMeal8p>"
+        99:: "Don't buy anything"
+               
+        If 0
+            Player.setActorVar(rk_MeatMeal1, 1)
+            money -= MeatMeal1p
+            stock_meatprod += 1
+            Player(Excited)::"0.5 meal added to my refrigerator!"
+                    
+        ElseIf 1
+            Player.setActorVar(rk_MeatMeal2, 1)
+            money -= MeatMeal2p
+            stock_meatprod += 1.25
+            Player(Excited)::"1.25 meal added to my refrigerator!"
+                    
+        ElseIf 2
+            Player.setActorVar(rk_MeatMeal3, 1)
+            money -= MeatMeal3p
+            stock_meatprod += 1.5
+            Player(Excited)::"1.5 meal added to my refrigerator!"
+                    
+        ElseIf 3
+            Player.setActorVar(rk_MeatMeal4, 1)
+            money -= MeatMeal4p
+            stock_meatprod += 1.75
+            Player(Excited)::"1.75 meals added to my refrigerator!"
+        
+        ElseIf 4
+            Player.setActorVar(rk_MeatMeal5, 1)
+            money -= MeatMeal5p
+            stock_meatprod += 2
+            Player(Excited)::"2 meals added to my refrigerator!"
+            
+        ElseIf 5
+            Player.setActorVar(rk_MeatMeal6, 1)
+            money -= MeatMeal6p
+            stock_meatprod += 2.25
+            Player(Excited)::"2.25 meals added to my refrigerator!"
+
+        ElseIf 6
+            Player.setActorVar(rk_MeatMeal7, 1)
+            money -= MeatMeal7p
+            stock_meatprod += 2.5
+            Player(Excited)::"2.5 meals added to my refrigerator!"
+
+        ElseIf 7
+            Player.setActorVar(rk_MeatMeal8, 1)
+            money -= MeatMeal8p
+            stock_meatprod += 3
+            Player(Excited)::"3 meals added to my refrigerator!"
+   
+        EndIf
+        
+    EndIf
+    
+    SceneEnd()
