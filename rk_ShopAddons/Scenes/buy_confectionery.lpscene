@@ -44,44 +44,44 @@ OTHER: none
         If 0
             Player.setActorVar(rk_ConFMeal1, 1)
             money -= 1
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 3
+            Player(Excited)::"3 candies added to my pantry!"
                     
         ElseIf 1
             Player.setActorVar(rk_ConFMeal2, 1)
             money -= 5
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 4
+            Player(Excited)::"4 candies added to my pantry!"
                     
         ElseIf 2
             Player.setActorVar(rk_ConFMeal3, 1)
             money -= 6
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 5
+            Player(Excited)::"5 candies added to my pantry!"
                     
         ElseIf 3
             Player.setActorVar(rk_ConFMeal4, 1)
             money -= 7
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 6
+            Player(Excited)::"6 candies added to my pantry!"
         
         ElseIf 4
             Player.setActorVar(rk_ConFMeal5, 1)
             money -= 8
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 7
+            Player(Excited)::"7 candies added to my pantry!"
             
         ElseIf 5
             Player.setActorVar(rk_ConFMeal6, 1)
             money -= 10
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 8
+            Player(Excited)::"8 candies added to my pantry!"
 
         ElseIf 6
             Player.setActorVar(rk_ConFMeal7, 1)
             money -= 12
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            stock_confectioneryprod += 9
+            Player(Excited)::"9 candies added to my pantry!"
 
         ElseIf 7
             Player.setActorVar(rk_ConFMeal8, 1)
