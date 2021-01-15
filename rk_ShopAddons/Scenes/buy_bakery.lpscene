@@ -45,49 +45,49 @@ OTHER: none
             Player.setActorVar(rk_BKMeal1, 1)
             money -= 1
             stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishe added to my pantry !"
+            Player(Excited)::"0.5 more dishes added to my pantry!"
                     
         ElseIf 1
             Player.setActorVar(rk_BKMeal2, 1)
             money -= 2
             stock_bakeryproduct += 1.25
-            Player(Excited)::"1.25 more dishe added to my pantry !"
+            Player(Excited)::"1.25 more dishes added to my pantry!"
                     
         ElseIf 2
             Player.setActorVar(rk_BKMeal3, 1)
             money -= 3
             stock_bakeryproduct += 1.5
-            Player(Excited)::"1.5 more dishe added to my pantry !"
+            Player(Excited)::"1.5 more dishes added to my pantry!"
                     
         ElseIf 3
             Player.setActorVar(rk_BKMeal4, 1)
             money -= 4
             stock_bakeryproduct += 2
-            Player(Excited)::"2 more dishe added to my pantry !"
+            Player(Excited)::"2 more dishes added to my pantry!"
         
         ElseIf 4
             Player.setActorVar(rk_BKMeal5, 1)
             money -= 2
             stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishe added to my pantry !"
+            Player(Excited)::"0.5 more dishes added to my pantry!"
             
         ElseIf 5
             Player.setActorVar(rk_BKMeal6, 1)
             money -= 5
             stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishe added to my pantry !"
+            Player(Excited)::"0.5 more dishes added to my pantry!"
 
         ElseIf 6
             Player.setActorVar(rk_BKMeal7, 1)
             money -= 10
             stock_bakeryproduct += 2
-            Player(Excited)::"2 more dishe added to my pantry !"
+            Player(Excited)::"2 more dishes added to my pantry!"
 
         ElseIf 7
             Player.setActorVar(rk_BKMeal8, 1)
             money -= 25
             stock_bakeryproduct += 5
-            Player(Excited)::"5 more dishe added to my pantry !"
+            Player(Excited)::"5 more dishes added to my pantry!"
    
         EndIf
         
