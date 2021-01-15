@@ -30,11 +30,11 @@ OTHER: none
         SeaMeal5p = SeaMeale.convertToLocalCurrency(false)
         
         Player::"Which type of seafood shall I buy?"
-        0:: SeaMeal1 >= 0 ::"1 Oysters dish for <SeaMeal1p>"
-        1:: SeaMeal2 >= 0 ::"1 Shrimp dish for <SeaMeal2p>"
-        2:: SeaMeal3 >= 0 ::"1 Sushi dish for <SeaMeal3p>"
-        3:: SeaMeal4 >= 0 ::"1 Lobster dish for <SeaMeal4p>"
-        4:: SeaMeal5 >= 0 ::"1 Caviar dish for <SeaMeal5p>"
+        0:: money >= 0 ::"1 Oysters dish for <SeaMeal1p>"
+        1:: money >= 0 ::"1 Shrimp dish for <SeaMeal2p>"
+        2:: money >= 0 ::"1 Sushi dish for <SeaMeal3p>"
+        3:: money >= 0 ::"1 Lobster dish for <SeaMeal4p>"
+        4:: money >= 0 ::"1 Caviar dish for <SeaMeal5p>"
         8:: "Bah! I'm not hungry !"
         
         If 0
@@ -44,7 +44,7 @@ OTHER: none
             fitness += 1
             intelligence += 1
             arousal += 1
-            money -= SeaMeal1p
+            money -= SeaMeal1
             
         Elseif 1
             Player.modifyActorVar(rk_SeaMeal2, -1)
@@ -53,7 +53,7 @@ OTHER: none
             fitness += 2
             intelligence += 2
             arousal += 1.25
-            money -= SeaMeal2p
+            money -= SeaMeal2
         
         Elseif 2
             Player.modifyActorVar(rk_SeaMeal3, -1)
@@ -71,7 +71,7 @@ OTHER: none
             fitness += 4
             intelligence += 4
             arousal += 2
-            money -= SeaMeal4p
+            money -= SeaMeal4
         
         Elseif 4
             Player.modifyActorVar(rk_SeaMeal5, -1)
@@ -80,7 +80,7 @@ OTHER: none
             fitness += 5
             intelligence += 5
             arousal += 3
-            money -= SeaMeal5p
+            money -= SeaMeal5
         
         Endif
         

@@ -39,61 +39,61 @@ OTHER: none
         MeatMeal8p = MeatMealh.convertToLocalCurrency(false)
             
         Player(Curious)::"Which type of meal shall I buy?"
-        0:: MeatMeal1 >= 0 ::"Beef Jerkey bag for <MeatMeal1p>"
-        1:: MeatMeal2 >= 0 ::"Philly Cheesesteak for <MeatMeal2p>"
-        2:: MeatMeal3 >= 0 ::"Chicken schnitzel for <MeatMeal3p>"
-        3:: MeatMeal4 >= 0 ::"Salt-and-Pepper Steak for <MeatMeal4p>"
-        4:: MeatMeal5 >= 0 ::"Bacon-Wrapped Pork for <MeatMeal5p>"
-        5:: MeatMeal6 >= 0 ::"Chicken Kebabs with rice for <MeatMeal6p>"
-        6:: MeatMeal7 >= 0 ::"Chinese Beef & Broccoli for <MeatMeal7p>"
-        7:: MeatMeal8 >= 0 ::"Surf 'n Turf for <MeatMeal8p>"
+        0:: money >= 0 ::"Beef Jerkey bag for <MeatMeal1p>"
+        1:: money >= 0 ::"Philly Cheesesteak for <MeatMeal2p>"
+        2:: money >= 0 ::"Chicken schnitzel for <MeatMeal3p>"
+        3:: money >= 0 ::"Salt-and-Pepper Steak for <MeatMeal4p>"
+        4:: money >= 0 ::"Bacon-Wrapped Pork for <MeatMeal5p>"
+        5:: money >= 0 ::"Chicken Kebabs with rice for <MeatMeal6p>"
+        6:: money >= 0 ::"Chinese Beef & Broccoli for <MeatMeal7p>"
+        7:: money >= 0 ::"Surf 'n Turf for <MeatMeal8p>"
         99:: "Don't buy anything"
                
         If 0
             Player.setActorVar(rk_MeatMeal1, 1)
-            money -= MeatMeal1p
+            money -= MeatMeal1
             stock_meatprod += 1
             Player(Excited)::"0.5 meal added to my refrigerator!"
                     
         ElseIf 1
             Player.setActorVar(rk_MeatMeal2, 1)
-            money -= MeatMeal2p
+            money -= MeatMeal2
             stock_meatprod += 1.25
             Player(Excited)::"1.25 meal added to my refrigerator!"
                     
         ElseIf 2
             Player.setActorVar(rk_MeatMeal3, 1)
-            money -= MeatMeal3p
+            money -= MeatMeal3
             stock_meatprod += 1.5
             Player(Excited)::"1.5 meal added to my refrigerator!"
                     
         ElseIf 3
             Player.setActorVar(rk_MeatMeal4, 1)
-            money -= MeatMeal4p
+            money -= MeatMeal4
             stock_meatprod += 1.75
             Player(Excited)::"1.75 meals added to my refrigerator!"
         
         ElseIf 4
             Player.setActorVar(rk_MeatMeal5, 1)
-            money -= MeatMeal5p
+            money -= MeatMeal5
             stock_meatprod += 2
             Player(Excited)::"2 meals added to my refrigerator!"
             
         ElseIf 5
             Player.setActorVar(rk_MeatMeal6, 1)
-            money -= MeatMeal6p
+            money -= MeatMeal6
             stock_meatprod += 2.25
             Player(Excited)::"2.25 meals added to my refrigerator!"
 
         ElseIf 6
             Player.setActorVar(rk_MeatMeal7, 1)
-            money -= MeatMeal7p
+            money -= MeatMeal7
             stock_meatprod += 2.5
             Player(Excited)::"2.5 meals added to my refrigerator!"
 
         ElseIf 7
             Player.setActorVar(rk_MeatMeal8, 1)
-            money -= MeatMeal8p
+            money -= MeatMeal8
             stock_meatprod += 3
             Player(Excited)::"3 meals added to my refrigerator!"
    

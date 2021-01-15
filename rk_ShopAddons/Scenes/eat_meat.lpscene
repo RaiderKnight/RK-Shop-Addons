@@ -39,14 +39,14 @@ OTHER: none
         MeatMeal8p = MeatMealh.convertToLocalCurrency(false)
         
         Player::"Which type of meaty dish shall I buy?"
-        0:: MeatMeal1 >= 0 ::"1 Beef Jerkey bag for <MeatMeal1p>"
-        1:: MeatMeal2 >= 0 ::"1 Philly Cheesesteak for <MeatMeal2p>"
-        2:: MeatMeal3 >= 0 ::"1 Chicken schnitzel for <MeatMeal3p>"
-        3:: MeatMeal4 >= 0 ::"1 Salt-and-Pepper Steak for <MeatMeal4p>"
-        4:: MeatMeal5 >= 0 ::"1 Bacon-Wrapped Pork for <MeatMeal5p>"
-        5:: MeatMeal6 >= 0 ::"1 Chicken Kebabs with rice for <MeatMeal6p>"
-        6:: MeatMeal7 >= 0 ::"1 Chinese Beef & Broccoli for <MeatMeal7p>"
-        7:: MeatMeal8 >= 0 ::"1 Surf 'n Turf for <MeatMeal8p>"
+        0:: money >= 0 ::"1 Beef Jerkey bag for <MeatMeal1p>"
+        1:: money >= 0 ::"1 Philly Cheesesteak for <MeatMeal2p>"
+        2:: money >= 0 ::"1 Chicken schnitzel for <MeatMeal3p>"
+        3:: money >= 0 ::"1 Salt-and-Pepper Steak for <MeatMeal4p>"
+        4:: money >= 0 ::"1 Bacon-Wrapped Pork for <MeatMeal5p>"
+        5:: money >= 0 ::"1 Chicken Kebabs with rice for <MeatMeal6p>"
+        6:: money >= 0 ::"1 Chinese Beef & Broccoli for <MeatMeal7p>"
+        7:: money >= 0 ::"1 Surf 'n Turf for <MeatMeal8p>"
         8:: "Bah! I'm not hungry !"
         
         If 0

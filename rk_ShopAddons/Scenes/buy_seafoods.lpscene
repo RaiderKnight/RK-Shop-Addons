@@ -30,40 +30,40 @@ OTHER: none
         SeaMeal5p = SeaMeale.convertToLocalCurrency(false)
             
         Player(Curious)::"Which type of seafood shall I buy?"
-        0:: SeaMeal1 >= 0 ::"Oysters for <SeaMeal1p>"
-        1:: SeaMeal2 >= 0 ::"Shrimps for <SeaMeal2p>"
-        2:: SeaMeal3 >= 0 ::"Sushi dish for <SeaMeal3p>"
-        3:: SeaMeal4 >= 0 ::"Lobster for <SeaMeal4p>"
-        4:: SeaMeal5 >= 0 ::"Caviar for <SeaMeal5p>"
+        0:: money >= 0 ::"Oysters for <SeaMeal1p>"
+        1:: money >= 0 ::"Shrimps for <SeaMeal2p>"
+        2:: money >= 0 ::"Sushi dish for <SeaMeal3p>"
+        3:: money >= 0 ::"Lobster for <SeaMeal4p>"
+        4:: money >= 0 ::"Caviar for <SeaMeal5p>"
         99:: "Don't buy anything"
                
         If 0
             Player.setActorVar(rk_SeaMeal1, 1)
-            money -= SeaMeal1p
+            money -= SeaMeal1
             stock_seafoodprod += 1
             Player(Excited)::"1 seafood added to my refrigerator!"
                     
         ElseIf 1
             Player.setActorVar(rk_SeaMeal2, 1)
-            money -= SeaMeal2p
+            money -= SeaMeal2
             stock_seafoodprod += 1.5
             Player(Excited)::"1.5 seafood added to my refrigerator!"
                     
         ElseIf 2
             Player.setActorVar(rk_SeaMeal3, 1)
-            money -= SeaMeal3p
+            money -= SeaMeal3
             stock_seafoodprod += 2
             Player(Excited)::"2 seafood added to my refrigerator!"
                     
         ElseIf 3
             Player.setActorVar(rk_SeaMeal4, 1)
-            money -= SeaMeal4p
+            money -= SeaMeal4
             stock_seafoodprod += 3
             Player(Excited)::"3 seafood added to my refrigerator!"
         
         ElseIf 4
             Player.setActorVar(rk_SeaMeal5, 1)
-            money -= SeaMeal5p
+            money -= SeaMeal5
             stock_seafoodprod += 4
             Player(Excited)::"4 seafood added to my refrigerator!"
             

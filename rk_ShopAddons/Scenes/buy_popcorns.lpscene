@@ -27,33 +27,33 @@ OTHER: none
         PopcMeal4p = PopcMeald.convertToLocalCurrency(false)
             
         Player(Curious)::"Which type of popcorn shall I buy?"
-        0:: PopcMeal1 >= 0 ::"Plain popcorns for <PopcMeal1p>"
-        1:: PopcMeal2 >= 0 ::"Butter popcorns for <PopcMeal2p>"
-        2:: PopcMeal3 >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
-        3:: PopcMeal4 >= 0 ::"Healthy popcorns for <PopcMeal4p>"
+        0:: money >= 0 ::"Plain popcorns for <PopcMeal1p>"
+        1:: money >= 0 ::"Butter popcorns for <PopcMeal2p>"
+        2:: money >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
+        3:: money >= 0 ::"Healthy popcorns for <PopcMeal4p>"
         99:: "Don't buy anything"
                
         If 0
             Player.setActorVar(rk_PopcMeal1, 1)
-            money -= PopcMeal1p
+            money -= PopcMeal1
             stock_popcorn += 1
             Player(Excited)::"1 popcorn added to my pantry!"
                     
         ElseIf 1
             Player.setActorVar(rk_PopcMeal2, 1)
-            money -= PopcMeal2p
+            money -= PopcMeal2
             stock_popcorn += 2
             Player(Excited)::"2 popcorns added to my pantry!"
                     
         ElseIf 2
             Player.setActorVar(rk_PopcMeal3, 1)
-            money -= PopcMeal3p
+            money -= PopcMeal3
             stock_popcorn += 3
             Player(Excited)::"3 popcorns added to my pantry!"
                     
         ElseIf 3
             Player.setActorVar(rk_PopcMeal4, 1)
-            money -= PopcMeal4p
+            money -= PopcMeal4
             stock_popcorn += 4
             Player(Excited)::"4 popcorns added to my pantry!"
         

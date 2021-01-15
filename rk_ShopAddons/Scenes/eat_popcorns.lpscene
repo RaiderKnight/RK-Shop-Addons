@@ -27,10 +27,10 @@ OTHER: none
         PopcMeal4p = PopcMeald.convertToLocalCurrency(false)
         
         Player::"Which type of popcorn shall I buy?"
-        0:: Meal1 >= 0 ::"Plain popcorn for <PopcMeal1p>"
-        1:: Meal2 >= 0 ::"Butter popcorn for <PopcMeal2p>"
-        2:: Meal3 >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
-        3:: Meal4 >= 0 ::"Healthy popcorn for <PopcMeal4p>"
+        0:: money >= 0 ::"Plain popcorn for <PopcMeal1p>"
+        1:: money >= 0 ::"Butter popcorn for <PopcMeal2p>"
+        2:: money >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
+        3:: money >= 0 ::"Healthy popcorn for <PopcMeal4p>"
         8:: "Bah! I'm not hungry !"
         
         If 0
@@ -38,28 +38,28 @@ OTHER: none
             mood += 0.75
             energy += 1
             fitness -= 0.02
-            money -= PopcMeal1p
+            money -= PopcMeal1
             
         Elseif 1
             Player.modifyActorVar(rk_PopcMeal2, -1)
             mood += 1
             energy += 2
             fitness -= 0.05
-            money -= PopcMeal2p
+            money -= PopcMeal2
         
         Elseif 2
             Player.modifyActorVar(rk_PopcMeal3, -1)
             mood += 2
             energy += 5
             fitness -= 0.07
-            money -= PopcMeal3p
+            money -= PopcMeal3
         
         Elseif 3
             Player.modifyActorVar(rk_PopcMeal4, -1)
             mood += 3
             energy += 5
             fitness += 1
-            money -= PopcMeal4p
+            money -= PopcMeal4
             attractiveness += 1
         
         Endif

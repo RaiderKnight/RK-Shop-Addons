@@ -31,14 +31,14 @@ OTHER: none
         BKMeal8p = 25.convertToLocalCurrency(false)
             
         Player(Curious)::"Which type of bread or pastry shall I buy?"
-        0:: BKMeal1 >= 0 ::"1 pita for <BKMeal1p>"
-        1:: BKMeal2 >= 0 ::"1 Nutricious bread for <BKMeal2p>"
-        2:: BKMeal3 >= 0 ::"1 Whole grain bagel for <BKMeal3p>"
-        3:: BKMeal4 >= 0 ::"1 Baltik bread for <BKMeal4p>"
-        4:: BKMeal5 >= 0 ::"1 Protein cookie for <BKMeal5p>"
-        5:: BKMeal6 >= 0 ::"1 Vdolky donut for <BKMeal6p>"
-        6:: BKMeal7 >= 0 ::"1 Homemade apple pie for <BKMeal7p>"
-        7:: BKMeal8 >= 0 ::"1 Royal cake for <BKMeal8p>"
+        0:: money >= 0 ::"1 pita for <BKMeal1p>"
+        1:: money >= 0 ::"1 Nutricious bread for <BKMeal2p>"
+        2:: money >= 0 ::"1 Whole grain bagel for <BKMeal3p>"
+        3:: money >= 0 ::"1 Baltik bread for <BKMeal4p>"
+        4:: money >= 0 ::"1 Protein cookie for <BKMeal5p>"
+        5:: money >= 0 ::"1 Vdolky donut for <BKMeal6p>"
+        6:: money >= 0 ::"1 Homemade apple pie for <BKMeal7p>"
+        7:: money >= 0 ::"1 Royal cake for <BKMeal8p>"
         99:: "Don't buy anything"
                
         If 0

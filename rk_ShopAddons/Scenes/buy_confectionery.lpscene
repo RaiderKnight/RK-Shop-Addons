@@ -31,14 +31,14 @@ OTHER: none
         ConFMeal8p = 15.convertToLocalCurrency(false)
             
         Player(Curious)::"Which type of candy shall I buy?"
-        0:: ConFMeal1 >= 0 ::"Cotton Candy for <ConFMeal1p>"
-        1:: ConFMeal2 >= 0 ::"Smarties Candy for <ConFMeal2p>"
-        2:: ConFMeal3 >= 0 ::"Pop Rocks Candy for <ConFMeal3p>"
-        3:: ConFMeal4 >= 0 ::"Jolly Ranchers Candy for <ConFMeal4p>"
-        4:: ConFMeal5 >= 0 ::"Starburst Fruit Chews Candy for <ConFMeal5p>"
-        5:: ConFMeal6 >= 0 ::"Peanut Butter Cups for <ConFMeal6p>"
-        6:: ConFMeal7 >= 0 ::"Licorice Candy for <ConFMeal7p>"
-        7:: ConFMeal8 >= 0 ::"Gummi Bears for <ConFMeal8p>"
+        0:: money >= 0 ::"Cotton Candy for <ConFMeal1p>"
+        1:: money >= 0 ::"Smarties Candy for <ConFMeal2p>"
+        2:: money >= 0 ::"Pop Rocks Candy for <ConFMeal3p>"
+        3:: money >= 0 ::"Jolly Ranchers Candy for <ConFMeal4p>"
+        4:: money >= 0 ::"Starburst Fruit Chews Candy for <ConFMeal5p>"
+        5:: money >= 0 ::"Peanut Butter Cups for <ConFMeal6p>"
+        6:: money >= 0 ::"Licorice Candy for <ConFMeal7p>"
+        7:: money >= 0 ::"Gummi Bears for <ConFMeal8p>"
         99:: "Don't buy anything"
                
         If 0
