@@ -4,8 +4,9 @@ https://github.com/vinfamy/LifePlay
 
 
 ### 1- rk_ShopAddons  : 
-Add more options to buy / eat different consumable items in the city.
-Contain 25 scenes.
+Add more options to buy / eat different consumable items in the city.  
+Contain 25 scenes.  
+
 This mod contain all mini-shops
 1. RK-Bakery-Shop
 2. RK-Confectionery-Shop
