@@ -5,92 +5,98 @@ WHO: none
 OTHER: none
 
     SceneStart()
+    stock_PopRocks = Player.getActorVar(stock_PopRocks)
+    stock_CottonCandy = Player.getActorVar(stock_CottonCandy)
+    stock_GummiBears = Player.getActorVar(stock_GummiBears)
+    stock_Smarties = Player.getActorVar(stock_Smarties)
+    stock_JollyRanchers = Player.getActorVar(stock_JollyRanchers)
+    stock_PeanutCups = Player.getActorVar(stock_PeanutCups)
+    stock_Licorice = Player.getActorVar(stock_Licorice)
+    stock_PowerBar = Player.getActorVar(stock_PowerBar)
+    
+    stock_confectioneryprod = stock_PopRocks + stock_CottonCandy + stock_GummiBears + stock_Smarties + stock_JollyRanchers + stock_PeanutCups + stock_Licorice + stock_PowerBar
     
     If  stock_confectioneryprod < 1 
         Player(Anxious)::"Ok, no candy to eat! I will suck my thumb instead !"
     Else
-        
-        // Get current candy types
-        ConFMeal1 = Player.getActorVar(rk_ConFMeal1)
-        ConFMeal2 = Player.getActorVar(rk_ConFMeal2)
-        ConFMeal3 = Player.getActorVar(rk_ConFMeal3)
-        ConFMeal4 = Player.getActorVar(rk_ConFMeal4)
-        ConFMeal5 = Player.getActorVar(rk_ConFMeal5)
-        ConFMeal6 = Player.getActorVar(rk_ConFMeal6)
-        ConFMeal7 = Player.getActorVar(rk_ConFMeal7)
-        ConFMeal8 = Player.getActorVar(rk_ConFMeal8)
-        
+
         Player::"Ok, which candy I'm gonna eat?"
-        0:: stock_confectioneryprod >= 1:: "1 Cotton Candy"
-        1:: stock_confectioneryprod >= 1:: "1 box of Smarties"
-        2:: stock_confectioneryprod >= 1:: "1 box of Pop Rocks"
-        3:: stock_confectioneryprod >= 1:: "1 pack of Jolly Ranchers"
-        4:: stock_confectioneryprod >= 1:: "1 pack of Starburst Fruit"
-        5:: stock_confectioneryprod >= 1:: "1 pack of Peanut Butter Cups"
-        6:: stock_confectioneryprod >= 1:: "2 Licorice"
-        7:: stock_confectioneryprod >= 1:: "5 Gummi Bears"
+        0:: stock_PopRocks > 0:: "1 box of Pop Rocks"
+        1:: stock_CottonCandy > 0:: "1 Cotton Candy"
+        2:: stock_GummiBears > 0:: "1 pack of Gummi Bears"
+        3:: stock_Smarties > 0:: "1 box of Smarties"
+        4:: stock_JollyRanchers > 0:: "1 pack of Jolly Ranchers"
+        5:: stock_PeanutCups > 0:: "1 pack of Peanut Butter Cups"
+        6:: stock_Licorice > 0:: "1 pack of Licorices"
+        7:: stock_PowerBar > 0:: "1 power bar"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_ConFMeal1, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
-            energy += 1
-            interpersonal -= 3
+            Player.modifyActorVar(stock_PopRocks, -1)
+            stock_PopRocks -= 1
+            mood += 2
+            energy += 2
+            interpersonal -= 1
+            passTime(0.05, 0.15)
 
         Elseif 1
-            Player.modifyActorVar(rk_ConFMeal2, -1)
-            stock_confectioneryprod -= 1
+            Player.modifyActorVar(stock_CottonCandy, -1)
+            stock_CottonCandy -= 1
             mood += 3
-            energy += 2
-            interpersonal += 0.5
+            energy += 3
+            interpersonal -= 1
+            passTime(0.05, 0.15)
 
         Elseif 2
-            Player.modifyActorVar(rk_ConFMeal3, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
+            Player.modifyActorVar(stock_GummiBears, -1)
+            stock_GummiBears -= 1
+            mood += 2
             energy += 1
-            interpersonal += 0.5
+            interpersonal += 0.25
+            passTime(0.05, 0.15)
 
         Elseif 3
-            Player.modifyActorVar(rk_ConFMeal4, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
-            energy += 3
-            interpersonal += 1
-
-        Elseif 4
-            Player.modifyActorVar(rk_ConFMeal5, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
-            energy += 3
-            interpersonal += 1
-
-        Elseif 5
-            Player.modifyActorVar(rk_ConFMeal6, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
-            energy += 5
-            interpersonal -= 2
-
-        Elseif 6
-            Player.modifyActorVar(rk_ConFMeal7, -1)
-            stock_confectioneryprod -= 1
-            mood += 3
+            Player.modifyActorVar(stock_Smarties, -1)
+            stock_Smarties -= 1
+            mood += 1
             energy += 2
             interpersonal += 1
+            passTime(0.05, 0.15)
+
+        Elseif 4
+            Player.modifyActorVar(stock_JollyRanchers, -1)
+            stock_JollyRanchers -= 1
+            mood += 2
+            energy += 3
+            interpersonal += 0.5
+            passTime(0.05, 0.15)
+
+        Elseif 5
+            Player.modifyActorVar(stock_PeanutCups, -1)
+            stock_PeanutCups -= 1
+            mood += 3
+            energy += 4
+            interpersonal -= 2
+            passTime(0.05, 0.15)
+
+        Elseif 6
+            Player.modifyActorVar(stock_Licorice, -1)
+            stock_Licorice -= 1
+            mood += 2
+            energy += 1
+            interpersonal += 0.5
+            passTime(0.05, 0.15)
         
         Elseif 7
-            Player.modifyActorVar(rk_ConFMeal8, -1)
-            stock_confectioneryprod -= 1
+            Player.modifyActorVar(stock_PowerBar, -1)
+            stock_PowerBar -= 1
             mood += 3
-            energy += 1
+            energy += 5
             interpersonal += 1
+            passTime(0.05, 0.15)
         
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

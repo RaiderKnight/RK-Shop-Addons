@@ -5,78 +5,78 @@ WHO: none
 OTHER: none
 
     SceneStart()
+    stock_Davidoff = Player.getActorVar(stock_Davidoff)
+    stock_Romeo = Player.getActorVar(stock_Romeo)
+    stock_KDcigars = Player.getActorVar(stock_KDcigars)
+    stock_Cohiba = Player.getActorVar(stock_Cohiba)
+    stock_Montecristo = Player.getActorVar(stock_Montecristo)
+
+    emptycigarStck = stock_Davidoff + stock_Romeo + stock_KDcigars + stock_Cohiba + stock_Montecristo
     
-    cigarsstck = stock_Davidoff + stock_Romeo + stock_KDcigars + stock_Cohiba + stock_Montecristo
-    emptycigarStck = 0
-    
-    If  cigarsstck == emptycigarStck 
+    If  emptycigarStck < 1 
         Player(Anxious)::"After searching everywhere... I don't have any cigars !"
     Else
         
-        // Get current cigars strains
-        CigStck1 = Player.getActorVar(rk_CigStck1)
-        CigStck2 = Player.getActorVar(rk_CigStck2)
-        CigStck3 = Player.getActorVar(rk_CigStck3)
-        CigStck4 = Player.getActorVar(rk_CigStck4)
-        CigStck5 = Player.getActorVar(rk_CigStck5)
-        
         Player::"Ok, which cigar I'm gonna smoke?"
-        0:: CigStck1 >= 1 :: "1 Davidoff Yamasá"
-        1:: CigStck2 >= 1:: "1 Romeo y Julieta"
-        2:: CigStck3 >= 1:: "1 Montecristo"
-        3:: CigStck4 >= 1:: "1 King of Denmark Limited Edition"
-        4:: CigStck5 >= 1:: "1 Cohiba Behike"
+        0:: stock_Davidoff > 0 :: "1 Davidoff Yamasá"
+        1:: stock_Romeo > 0:: "1 Romeo y Julieta"
+        2:: stock_Montecristo > 0:: "1 Montecristo"
+        3:: stock_KDcigars > 0:: "1 King of Denmark Limited Edition"
+        4:: stock_Cohiba > 0:: "1 Cohiba Behike"
         8:: "Bah! I changed my mind!"
         
         If 0
-            Player.modifyActorVar(rk_CigStck1, -1)
+            Player.modifyActorVar(stock_Davidoff, -1)
             stock_Davidoff -= 1
             mood += 1
             attractiveness -= 0.07
             intoxication += 2.5
             fitness -= 0.08
             energy += 1
+            passTime(0.25, 0.5)
             
         Elseif 1
-            Player.modifyActorVar(rk_CigStck2, -1)
+            Player.modifyActorVar(stock_Romeo, -1)
             stock_Romeo -= 1
             mood += 2
             attractiveness -= 0.06
             intoxication += 2
             fitness -= 0.07
             energy += 1.25
+            passTime(0.25, 0.5)
         
         Elseif 2
-            Player.modifyActorVar(rk_CigStck3, -1)
+            Player.modifyActorVar(stock_Montecristo, -1)
             stock_Montecristo -= 1
             mood += 3
             attractiveness -= 0.05
             intoxication -= 0.5
             fitness -= 0.06
             energy += 1.5
+            passTime(0.25, 0.5)
         
         Elseif 3
-            Player.modifyActorVar(rk_CigStck4, -1)
+            Player.modifyActorVar(stock_KDcigars, -1)
             stock_KDcigars -= 1
             mood += 4
             attractiveness -= 0.04
             intoxication += 1
             fitness -= 0.05
             energy += 1.75
+            passTime(0.25, 0.5)
         
         Elseif 4
-            Player.modifyActorVar(rk_CigStck5, -1)
+            Player.modifyActorVar(stock_Cohiba, -1)
             stock_Cohiba -= 1
             mood += 5
             attractiveness -= 0.03
             intoxication += 0.5
             fitness -= 0.04
             energy += 2
+            passTime(0.25, 0.5)
         
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

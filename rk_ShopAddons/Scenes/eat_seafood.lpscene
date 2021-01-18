@@ -10,82 +10,73 @@ OTHER: none
         Player(Anxious)::"Ok, no money to eat! I need to find a job I guess... !"
     Else
         
-        
-        
         // Get current seafood types
-        SeaMeal1 = Player.getActorVar(rk_SeaMeal1)
-        SeaMeala = Random(6, 15)
-        SeaMeal1p = SeaMeala.convertToLocalCurrency(false)
-        SeaMeal2 = Player.getActorVar(rk_SeaMeal2)
-        SeaMealb = Random(20, 30)
-        SeaMeal2p = SeaMealb.convertToLocalCurrency(false)
-        SeaMeal3 = Player.getActorVar(rk_SeaMeal3)
-        SeaMealc = Random(30, 40)
-        SeaMeal3p = SeaMealc.convertToLocalCurrency(false)
-        SeaMeal4 = Player.getActorVar(rk_SeaMeal4)
-        SeaMeald = Random(45, 60)
-        SeaMeal4p = SeaMeald.convertToLocalCurrency(false)
-        SeaMeal5 = Player.getActorVar(rk_SeaMeal5)
-        SeaMeale = Random(85, 150)
-        SeaMeal5p = SeaMeale.convertToLocalCurrency(false)
+        price_Oysters = Random(7, 12)
+        price_Oysters_local = price_Oysters.convertToLocalCurrency()
+        price_Shrimps = Random(14, 15)
+        price_Shrimps_local = price_Shrimps.convertToLocalCurrency()
+        price_Sushi = Random(17, 18)
+        price_Sushi_local = price_Sushi.convertToLocalCurrency()
+        price_Lobster = Random(19, 30)
+        price_Lobster_local = price_Lobster.convertToLocalCurrency()
+        price_Caviar = Random(75, 122)
+        price_Caviar_local = price_Caviar.convertToLocalCurrency()
         
         Player::"Which type of seafood shall I buy?"
-        0:: money >= 0 ::"1 Oysters dish for <SeaMeal1p>"
-        1:: money >= 0 ::"1 Shrimp dish for <SeaMeal2p>"
-        2:: money >= 0 ::"1 Sushi dish for <SeaMeal3p>"
-        3:: money >= 0 ::"1 Lobster dish for <SeaMeal4p>"
-        4:: money >= 0 ::"1 Caviar dish for <SeaMeal5p>"
+        0:: money >= 5 ::"1 Oysters dish for <price_Oysters_local>"
+        1:: money >= 12 ::"1 Shrimp dish for <price_Shrimps_local>"
+        2:: money >= 15 ::"1 Sushi dish for <price_Sushi_local>"
+        3:: money >= 17 ::"1 Lobster dish for <price_Lobster_local>"
+        4:: money >= 70 ::"1 Caviar dish for <price_Caviar_local>"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_SeaMeal1, -1)
             mood += 1
             energy += 3
             fitness += 1
             intelligence += 1
             arousal += 1
-            money -= SeaMeal1
+            money -= price_Oysters
+            passTime(0.25, 0.5)
             
         Elseif 1
-            Player.modifyActorVar(rk_SeaMeal2, -1)
             mood += 2
             energy += 4
             fitness += 2
             intelligence += 2
             arousal += 1.25
-            money -= SeaMeal2
+            money -= price_Shrimps
+            passTime(0.25, 0.5)
         
         Elseif 2
-            Player.modifyActorVar(rk_SeaMeal3, -1)
             mood += 3
             energy += 6
             fitness += 3
             intelligence += 3
             arousal += 1.5
-            money -= SeaMeal3p
+            money -= price_Sushi
+            passTime(0.25, 0.5)
         
         Elseif 3
-            Player.modifyActorVar(rk_SeaMeal4, -1)
             mood += 4
             energy += 8
             fitness += 4
             intelligence += 4
             arousal += 2
-            money -= SeaMeal4
+            money -= price_Lobster
+            passTime(0.25, 0.5)
         
         Elseif 4
-            Player.modifyActorVar(rk_SeaMeal5, -1)
             mood += 5
             energy += 10
             fitness += 5
             intelligence += 5
             arousal += 3
-            money -= SeaMeal5
+            money -= price_Caviar
+            passTime(0.25, 0.5)
         
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
-    
+
 SceneEnd()

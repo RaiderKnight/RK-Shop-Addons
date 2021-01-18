@@ -11,61 +11,54 @@ OTHER: none
     Else
         
         
-        
-        // Get current popcorn types
-        PopcMeal1 = Player.getActorVar(rk_PopcMeal1)
-        PopcMeala = Random(2, 3)
-        PopcMeal1p = PopcMeala.convertToLocalCurrency(false)
-        PopcMeal2 = Player.getActorVar(rk_PopcMeal2)
-        PopcMealb = Random(4, 5)
-        PopcMeal2p = PopcMealb.convertToLocalCurrency(false)
-        PopcMeal3 = Player.getActorVar(rk_PopcMeal3)
-        PopcMealc = Random(6, 8)
-        PopcMeal3p = PopcMealc.convertToLocalCurrency(false)
-        PopcMeal4 = Player.getActorVar(rk_PopcMeal4)
-        PopcMeald = Random(9, 15)
-        PopcMeal4p = PopcMeald.convertToLocalCurrency(false)
+        // Get current popcorn prices for each types
+        price_PlainPopcorn = Random(2, 3)
+        price_PlainPopcorn_local = price_PlainPopcorn.convertToLocalCurrency()
+        price_ButterPopcorn = Random(4, 5)
+        price_ButterPopcorn_local = price_ButterPopcorn.convertToLocalCurrency()
+        price_PopcornMix = Random(6, 8)
+        price_PopcornMix_local = price_PopcornMix.convertToLocalCurrency()
+        price_HealthyPopcorn = Random(9, 15)
+        price_HealthyPopcorn_local = price_HealthyPopcorn.convertToLocalCurrency()
         
         Player::"Which type of popcorn shall I buy?"
-        0:: money >= 0 ::"Plain popcorn for <PopcMeal1p>"
-        1:: money >= 0 ::"Butter popcorn for <PopcMeal2p>"
-        2:: money >= 0 ::"Popcorn sweet mix for <PopcMeal3p>"
-        3:: money >= 0 ::"Healthy popcorn for <PopcMeal4p>"
+        0:: money >= 0 ::"Plain popcorn for <price_PlainPopcorn_local>"
+        1:: money >= 2 ::"Butter popcorn for <price_ButterPopcorn_local>"
+        2:: money >= 4 ::"Popcorn sweet mix for <price_PopcornMix_local>"
+        3:: money >= 7 ::"Healthy popcorn for <price_HealthyPopcorn_local>"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_PopcMeal1, -1)
             mood += 0.75
             energy += 1
             fitness -= 0.02
-            money -= PopcMeal1
+            money -= price_PlainPopcorn
+            passTime(0.15, 0.25)
             
         Elseif 1
-            Player.modifyActorVar(rk_PopcMeal2, -1)
             mood += 1
             energy += 2
             fitness -= 0.05
-            money -= PopcMeal2
+            money -= price_ButterPopcorn
+            passTime(0.15, 0.25)
         
         Elseif 2
-            Player.modifyActorVar(rk_PopcMeal3, -1)
             mood += 2
             energy += 5
             fitness -= 0.07
-            money -= PopcMeal3
+            money -= price_PopcornMix
+            passTime(0.15, 0.25)
         
         Elseif 3
-            Player.modifyActorVar(rk_PopcMeal4, -1)
             mood += 3
             energy += 5
             fitness += 1
-            money -= PopcMeal4
+            money -= price_HealthyPopcorn
             attractiveness += 1
+            passTime(0.15, 0.25)
         
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

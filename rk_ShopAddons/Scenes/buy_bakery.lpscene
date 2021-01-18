@@ -12,82 +12,83 @@ OTHER: none
     
         Player(Curious)::"There is a lot of pastry and breads here." 
         
-        // Get current pastry types
-        BKMeal1 = Player.getActorVar(rk_BKMeal1)
-        BKMeal1p = 1.convertToLocalCurrency(false)
-        BKMeal2 = Player.getActorVar(rk_BKMeal2)
-        BKMeal2p = 2.convertToLocalCurrency(false)
-        BKMeal3 = Player.getActorVar(rk_BKMeal3)
-        BKMeal3p = 3.convertToLocalCurrency(false)
-        BKMeal4 = Player.getActorVar(rk_BKMeal4)
-        BKMeal4p = 4.convertToLocalCurrency(false)
-        BKMeal5 = Player.getActorVar(rk_BKMeal5)
-        BKMeal5p = 2.convertToLocalCurrency(false)
-        BKMeal6 = Player.getActorVar(rk_BKMeal6)
-        BKMeal6p = 5.convertToLocalCurrency(false)
-        BKMeal7 = Player.getActorVar(rk_BKMeal7)
-        BKMeal7p = 10.convertToLocalCurrency(false)
-        BKMeal8 = Player.getActorVar(rk_BKMeal8)
-        BKMeal8p = 25.convertToLocalCurrency(false)
+        // Get current pastry and breads prices for each types
+        price_Pita = Random(1, 2)
+        price_Pita_local = price_Pita.convertToLocalCurrency()
+        price_Bread = Random(2, 3)
+        price_Bread_local = price_Bread.convertToLocalCurrency()
+        price_Bagel = Random(3, 4)
+        price_Bagel_local = price_Bagel.convertToLocalCurrency()
+        price_BaltikBread = Random(4, 5)
+        price_BaltikBread_local = price_BaltikBread.convertToLocalCurrency()
+        price_ProteinCookie = Random(2, 3)
+        price_ProteinCookie_local = price_ProteinCookie.convertToLocalCurrency()
+        price_VdolkyDonut = Random(3, 4)
+        price_VdolkyDonut_local = price_VdolkyDonut.convertToLocalCurrency()
+        price_ApplePie = Random(4, 5)
+        price_ApplePie_local = price_ApplePie.convertToLocalCurrency()
+        price_RoyalCake = Random(6, 7)
+        price_RoyalCake_local = price_RoyalCake.convertToLocalCurrency()
+
             
         Player(Curious)::"Which type of bread or pastry shall I buy?"
-        0:: money >= 0 ::"1 pita for <BKMeal1p>"
-        1:: money >= 0 ::"1 Nutricious bread for <BKMeal2p>"
-        2:: money >= 0 ::"1 Whole grain bagel for <BKMeal3p>"
-        3:: money >= 0 ::"1 Baltik bread for <BKMeal4p>"
-        4:: money >= 0 ::"1 Protein cookie for <BKMeal5p>"
-        5:: money >= 0 ::"1 Vdolky donut for <BKMeal6p>"
-        6:: money >= 0 ::"1 Homemade apple pie for <BKMeal7p>"
-        7:: money >= 0 ::"1 Royal cake for <BKMeal8p>"
+        0:: money >= 0 ::"1 pita for <price_Pita_local>"
+        1:: money >= 0 ::"1 Nutricious bread for <price_Bread_local>"
+        2:: money >= 2 ::"1 Whole grain bagel for <price_Bagel_local>"
+        3:: money >= 3 ::"1 Baltik bread for <price_BaltikBread_local>"
+        4:: money >= 1 ::"1 Protein cookie for <price_ProteinCookie_local>"
+        5:: money >= 2 ::"1 Vdolky donut for <price_VdolkyDonut_local>"
+        6:: money >= 3 ::"1 slice apple pie for <price_ApplePie_local>"
+        7:: money >= 4 ::"1 piece of Royal cake for <price_RoyalCake_local>"
         99:: "Don't buy anything"
                
         If 0
-            Player.setActorVar(rk_BKMeal1, 1)
-            money -= 1
-            stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishes added to my pantry!"
+            Player.modifyActorVar(stock_Pita, 1)
+            money -= price_Pita
+            stock_Pita += 1
+            Player(Excited)::"1 more pita added to my pantry!"
                     
         ElseIf 1
-            Player.setActorVar(rk_BKMeal2, 1)
-            money -= 2
-            stock_bakeryproduct += 1.25
-            Player(Excited)::"1.25 more dishes added to my pantry!"
+            Player.modifyActorVar(stock_Bread, 1)
+            money -= price_Bread
+            stock_Bread += 1
+            Player(Excited)::"1 more bread added to my pantry!"
                     
         ElseIf 2
-            Player.setActorVar(rk_BKMeal3, 1)
+            Player.modifyActorVar(stock_Bagel, 1)
             money -= 3
-            stock_bakeryproduct += 1.5
-            Player(Excited)::"1.5 more dishes added to my pantry!"
+            stock_Bagel += 1
+            Player(Excited)::"1 more bagel added to my pantry!"
                     
         ElseIf 3
-            Player.setActorVar(rk_BKMeal4, 1)
+            Player.modifyActorVar(stock_BaltikBread, 2)
             money -= 4
-            stock_bakeryproduct += 2
-            Player(Excited)::"2 more dishes added to my pantry!"
+            stock_BaltikBread += 2
+            Player(Excited)::"1 more Baltik bread added to my pantry!"
         
         ElseIf 4
-            Player.setActorVar(rk_BKMeal5, 1)
+            Player.modifyActorVar(stock_ProteinCookie, 1)
             money -= 2
-            stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishes added to my pantry!"
+            stock_ProteinCookie += 1
+            Player(Excited)::"1 more protein cookie added to my pantry!"
             
         ElseIf 5
-            Player.setActorVar(rk_BKMeal6, 1)
+            Player.modifyActorVar(stock_VdolkyDonut, 1)
             money -= 5
-            stock_bakeryproduct += 0.5
-            Player(Excited)::"0.5 more dishes added to my pantry!"
+            stock_VdolkyDonut += 1
+            Player(Excited)::"1 more Vdolky donut added to my pantry!"
 
         ElseIf 6
-            Player.setActorVar(rk_BKMeal7, 1)
+            Player.modifyActorVar(stock_ApplePie, 2)
             money -= 10
-            stock_bakeryproduct += 2
-            Player(Excited)::"2 more dishes added to my pantry!"
+            stock_ApplePie += 2
+            Player(Excited)::"1 slice of apple pie added to my pantry!"
 
         ElseIf 7
-            Player.setActorVar(rk_BKMeal8, 1)
+            Player.modifyActorVar(stock_RoyalCake, 5)
             money -= 25
-            stock_bakeryproduct += 5
-            Player(Excited)::"5 more dishes added to my pantry!"
+            stock_RoyalCake += 5
+            Player(Excited)::"1 piece of Royal cake added to my pantry!"
    
         EndIf
         

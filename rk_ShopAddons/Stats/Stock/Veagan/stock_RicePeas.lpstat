@@ -1,5 +1,5 @@
-STAT_ID: stock_veganmeal
-STAT_NAME: Number of vegan meals
+STAT_ID: stock_RicePeas
+STAT_NAME: Number of Rice Peas
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0

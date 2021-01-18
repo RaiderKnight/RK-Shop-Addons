@@ -11,104 +11,95 @@ OTHER: none
     Else
         
         
-        
-        // Get current meat dishes types
-        MeatMeal1 = Player.getActorVar(rk_MeatMeal1)
-        MeatMeala = Random(4, 7)
-        MeatMeal1p = MeatMeala.convertToLocalCurrency(false)
-        MeatMeal2 = Player.getActorVar(rk_MeatMeal2)
-        MeatMealb = Random(8, 10)
-        MeatMeal2p = MeatMealb.convertToLocalCurrency(false)
-        MeatMeal3 = Player.getActorVar(rk_MeatMeal3)
-        MeatMealc = Random(13, 15)
-        MeatMeal3p = MeatMealc.convertToLocalCurrency(false)
-        MeatMeal4 = Player.getActorVar(rk_MeatMeal4)
-        MeatMeald = Random(16, 17)
-        MeatMeal4p = MeatMeald.convertToLocalCurrency(false)
-        MeatMeal5 = Player.getActorVar(rk_MeatMeal5)
-        MeatMeale = Random(18, 20)
-        MeatMeal5p = MeatMeale.convertToLocalCurrency(false)
-        MeatMeal6 = Player.getActorVar(rk_MeatMeal6)
-        MeatMealf = Random(21, 24)
-        MeatMeal6p = MeatMealf.convertToLocalCurrency(false)
-        MeatMeal7 = Player.getActorVar(rk_MeatMeal7)
-        MeatMealg = Random(25, 29)
-        MeatMeal7p = MeatMealg.convertToLocalCurrency(false)
-        MeatMeal8 = Player.getActorVar(rk_MeatMeal8)
-        MeatMealh = Random(31, 40)
-        MeatMeal8p = MeatMealh.convertToLocalCurrency(false)
+        // Get current meat dishes prices for each types
+        price_Jerkey = Random(4, 7)
+        price_Jerkey_local = price_Jerkey.convertToLocalCurrency()
+        price_Cheesesteak = Random(8, 10)
+        price_Cheesesteak_local = price_Cheesesteak.convertToLocalCurrency()
+        price_Chicken = Random(13, 15)
+        price_Chicken_local = price_Chicken.convertToLocalCurrency()
+        price_SaltNPepper = Random(16, 17)
+        price_SaltNPepper_local = price_SaltNPepper.convertToLocalCurrency()
+        price_WrappedPork = Random(18, 20)
+        price_WrappedPork_local = price_WrappedPork.convertToLocalCurrency()
+        price_ChickenKebabs = Random(21, 24)
+        price_ChickenKebabs_local = price_ChickenKebabs.convertToLocalCurrency()
+        price_ChineseBeef = Random(25, 29)
+        price_ChineseBeef_local = price_ChineseBeef.convertToLocalCurrency()
+        price_SurfNTurf = Random(31, 40)
+        price_SurfNTurf_local = price_SurfNTurf.convertToLocalCurrency()
+
         
         Player::"Which type of meaty dish shall I buy?"
-        0:: money >= 0 ::"1 Beef Jerkey bag for <MeatMeal1p>"
-        1:: money >= 0 ::"1 Philly Cheesesteak for <MeatMeal2p>"
-        2:: money >= 0 ::"1 Chicken schnitzel for <MeatMeal3p>"
-        3:: money >= 0 ::"1 Salt-and-Pepper Steak for <MeatMeal4p>"
-        4:: money >= 0 ::"1 Bacon-Wrapped Pork for <MeatMeal5p>"
-        5:: money >= 0 ::"1 Chicken Kebabs with rice for <MeatMeal6p>"
-        6:: money >= 0 ::"1 Chinese Beef & Broccoli for <MeatMeal7p>"
-        7:: money >= 0 ::"1 Surf 'n Turf for <MeatMeal8p>"
+        0:: money >= 0 ::"1 Beef Jerkey bag for <price_Jerkey_local>"
+        1:: money >= 0 ::"1 Philly Cheesesteak for <price_Cheesesteak_local>"
+        2:: money >= 0 ::"1 Chicken schnitzel for <price_Chicken_local>"
+        3:: money >= 0 ::"1 Salt-and-Pepper Steak for <price_SaltNPepper_local>"
+        4:: money >= 0 ::"1 Bacon-Wrapped Pork for <price_WrappedPork_local>"
+        5:: money >= 0 ::"1 Chicken Kebabs with rice for <price_ChickenKebabs_local>"
+        6:: money >= 0 ::"1 Chinese Beef & Broccoli for <price_ChineseBeef_local>"
+        7:: money >= 0 ::"1 Surf 'n Turf for <price_SurfNTurf_local>"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_MeatMeal1, -1)
             mood += 0.5
             energy += 1
             fitness += 1
             money -= MeatMeal1p
+            passTime(0.25, 0.5)
             
         Elseif 1
-            Player.modifyActorVar(rk_MeatMeal2, -1)
             mood += 2
             energy += 2
             fitness += 2
             money -= MeatMeal2p
+            passTime(0.25, 0.5)
         
         Elseif 2
-            Player.modifyActorVar(rk_MeatMeal3, -1)
             mood += 2.5
             energy += 2.5
             fitness += 2.5
             money -= MeatMeal3p
+            passTime(0.25, 0.5)
         
         Elseif 3
-            Player.modifyActorVar(rk_MeatMeal4, -1)
             mood += 3
             energy += 3
             fitness += 3
             money -= MeatMeal4p
+            passTime(0.25, 0.5)
         
         Elseif 4
-            Player.modifyActorVar(rk_BKMeal5, -1)
             mood += 3.5
             energy += 3.5
             fitness += 3.5
             money -= MeatMeal5p
+            passTime(0.25, 0.5)
         
         Elseif 5
-            Player.modifyActorVar(rk_MeatMeal6, -1)
             mood += 4
             energy += 4
             fitness += 4
             money -= MeatMeal6p
+            passTime(0.25, 0.5)
         
         Elseif 6
-            Player.modifyActorVar(rk_MeatMeal7, -1)
             mood += 4.5
             energy += 4.5
             fitness += 4.5
             money -= MeatMeal7p
+            passTime(0.25, 0.5)
         
         Elseif 7
-            Player.modifyActorVar(rk_MeatMeal8, -1)
             mood += 5
             energy += 5
             fitness += 5
             money -= MeatMeal8p
+            passTime(0.25, 0.5)
             
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
+
     
 SceneEnd()

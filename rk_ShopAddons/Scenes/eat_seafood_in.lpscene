@@ -6,74 +6,80 @@ OTHER: none
 
     SceneStart()
     
+    // Get current seafood types
+    stock_Oysters = Player.getActorVar(stock_Oysters)
+    stock_Shrimps = Player.getActorVar(stock_Shrimps)
+    stock_Sushi = Player.getActorVar(stock_Sushi)
+    stock_Lobster = Player.getActorVar(stock_Lobster)
+    stock_Caviar = Player.getActorVar(stock_Caviar)
+    
+    stock_seafoodprod = stock_Oysters + stock_Shrimps + stock_Sushi + stock_Lobster + stock_Caviar
+    
     If stock_seafoodprod < 1 
         Player(Anxious)::"Ok, not enough seafood to make a lunch!"
+        
     Else
         
-        // Get current seafood types
-        SeaMeal1 = Player.getActorVar(rk_SeaMeal1)
-        SeaMeal2 = Player.getActorVar(rk_SeaMeal2)
-        SeaMeal3 = Player.getActorVar(rk_SeaMeal3)
-        SeaMeal4 = Player.getActorVar(rk_SeaMeal4)
-        SeaMeal5 = Player.getActorVar(rk_SeaMeal4)
-        
         Player::"Ok, which seafood I'm gonna eat?"
-        0:: stock_seafoodprod >= 1:: "1 Oysters dish"
-        1:: stock_seafoodprod >= 1:: "1 Shrimp dish"
-        2:: stock_seafoodprod >= 1:: "1 Sushi dish"
-        3:: stock_seafoodprod >= 1:: "1 Lobster dish"
-        4:: stock_seafoodprod >= 1:: "1 Caviar dish"
+        0:: stock_Oysters > 0:: "1 Oysters dish"
+        1:: stock_Shrimps > 0:: "1 Shrimp dish"
+        2:: stock_Sushi > 0:: "1 Sushi dish"
+        3:: stock_Lobster > 0:: "1 Lobster dish"
+        4:: stock_Caviar > 0:: "1 Caviar dish"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_SeaMeal1, -1)
-            stock_seafoodprod -= 0.5
+            Player.modifyActorVar(stock_Oysters, -1)
+            stock_Oysters -= 1
             mood += 1
             energy += 3
             fitness += 1
             intelligence += 1
             arousal += 1
+            passTime(0.25, 0.5)
 
         Elseif 1
-            Player.modifyActorVar(rk_SeaMeal2, -1)
-            stock_seafoodprod -= 0.75
+            Player.modifyActorVar(stock_Shrimps, -1)
+            stock_Shrimps -= 1
             mood += 2
             energy += 4
             fitness += 2
             intelligence += 2
             arousal += 1.25
+            passTime(0.25, 0.5)
 
         Elseif 2
-            Player.modifyActorVar(rk_SeaMeal3, -1)
-            stock_seafoodprod -= 1
+            Player.modifyActorVar(stock_Sushi, -1)
+            stock_Sushi -= 1
             mood += 3
             energy += 6
             fitness += 3
             intelligence += 3
             arousal += 1.5
+            passTime(0.25, 0.5)
 
         Elseif 3
-            Player.modifyActorVar(rk_SeaMeal4, -1)
-            stock_seafoodprod -= 1.5
+            Player.modifyActorVar(stock_Lobster, -1)
+            stock_Lobster -= 1
             mood += 4
             energy += 8
             fitness += 4
             intelligence += 4
             arousal += 2
+            passTime(0.25, 0.5)
 
         Elseif 4
-            Player.modifyActorVar(rk_SeaMeal5, -1)
-            stock_seafoodprod -= 2
+            Player.modifyActorVar(stock_Caviar, -1)
+            stock_Caviar -= 1
             mood += 5
             energy += 10
             fitness += 5
             intelligence += 5
             arousal += 3
+            passTime(0.25, 0.5)
         
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

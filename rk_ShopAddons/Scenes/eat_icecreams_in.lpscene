@@ -6,59 +6,59 @@ OTHER: none
 
     SceneStart()
     
+    // Get current ice cream desserts types
+    stock_Popcycle = Player.getActorVar(stock_Popcycle)
+    stock_IcecreamCup = Player.getActorVar(stock_IcecreamCup)
+    stock_MilkShake = Player.getActorVar(stock_MilkShake)
+    stock_FrozenPie = Player.getActorVar(stock_FrozenPie)
+    stock_IceCreamCake = Player.getActorVar(stock_IceCreamCake)
+    
+    stock_icecreampop = stock_Popcycle + stock_IcecreamCup + stock_MilkShake + stock_FrozenPie + stock_IceCreamCake
+    
     If stock_icecreampop < 1 
         Player(Anxious)::"Ok, not enough ice cream desserts to satisfy my belly! I need to go shopping I guess!"
     Else
-        
-        // Get current ice cream desserts types
-        IceMeal1 = Player.getActorVar(rk_IceMeal1)
-        IceMeal2 = Player.getActorVar(rk_IceMeal2)
-        IceMeal3 = Player.getActorVar(rk_IceMeal3)
-        IceMeal4 = Player.getActorVar(rk_IceMeal4)
-        IceMeal5 = Player.getActorVar(rk_IceMeal5)
-        
+    
         Player::"Ok, which ice cream dessert I'm gonna eat?"
-        0:: stock_icecreampop >= 1:: "1 Popcycle"
-        1:: stock_icecreampop >= 1:: "1 Ice cream cup"
-        2:: stock_icecreampop >= 1:: "1 Milk Shake"
-        3:: stock_icecreampop >= 1:: "1 Frozen Margarita pie"
-        4:: stock_icecreampop >= 1:: "1 Ice cream cake"
+        0:: stock_Popcycle > 0:: "1 Popcycle"
+        1:: stock_IcecreamCup > 0:: "1 Ice cream cup"
+        2:: stock_MilkShake > 0:: "1 Milk Shake"
+        3:: stock_FrozenPie > 0:: "1 Frozen Margarita pie"
+        4:: stock_IceCreamCake > 0:: "1 Ice cream cake"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_IceMeal1, -1)
-            stock_icecreampop -= 1
+            Player.modifyActorVar(stock_Popcycle, -1)
             mood += 2
             energy += 1
-
+            stock_Popcycle -= 1
+            passTime(0.15, 0.25)
         Elseif 1
-            Player.modifyActorVar(rk_IceMeal2, -1)
-            stock_icecreampop -= 1
+            Player.modifyActorVar(stock_IcecreamCup, -1)
             mood += 3
             energy += 2
-
+            stock_IcecreamCup -= 1
+            passTime(0.15, 0.25)
         Elseif 2
-            Player.modifyActorVar(rk_IceMeal3, -1)
-            stock_icecreampop -= 1
+            Player.modifyActorVar(stock_MilkShake, -1)
             mood += 4
             energy += 3
-
+            stock_MilkShake -= 1
+            passTime(0.15, 0.25)
         Elseif 3
-            Player.modifyActorVar(rk_IceMeal4, -1)
-            stock_icecreampop -= 1
+            Player.modifyActorVar(stock_FrozenPie, -1)
             mood += 5
             energy += 4
-
+            stock_FrozenPie -= 1
+            passTime(0.15, 0.25)
         Elseif 4
-            Player.modifyActorVar(rk_IceMeal5, -1)
-            stock_icecreampop -= 1
+            Player.modifyActorVar(stock_IceCreamCake, -1)
             mood += 6
             energy += 5
-
+            stock_IceCreamCake -= 1
+            passTime(0.15, 0.25)
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

@@ -12,82 +12,83 @@ OTHER: none
     
         Player(Curious)::"There is a lot of vegan meal here." 
         
-        // Get current vegan meal types
-        VMeal1 = Player.getActorVar(rk_VMeal1)
-        VMeal1p = 1.convertToLocalCurrency(false)
-        VMeal2 = Player.getActorVar(rk_VMeal2)
-        VMeal2p = 5.convertToLocalCurrency(false)
-        VMeal3 = Player.getActorVar(rk_VMeal3)
-        VMeal3p = 6.convertToLocalCurrency(false)
-        VMeal4 = Player.getActorVar(rk_VMeal4)
-        VMeal4p = 7.convertToLocalCurrency(false)
-        VMeal5 = Player.getActorVar(rk_VMeal5)
-        VMeal5p = 8.convertToLocalCurrency(false)
-        VMeal6 = Player.getActorVar(rk_VMeal6)
-        VMeal6p = 10.convertToLocalCurrency(false)
-        VMeal7 = Player.getActorVar(rk_VMeal7)
-        VMeal7p = 12.convertToLocalCurrency(false)
-        VMeal8 = Player.getActorVar(rk_VMeal8)
-        VMeal8p = 15.convertToLocalCurrency(false)
+        // Get current vegan meal prices for each types
+        price_HealthyCookie = 1
+        price_HealthyCookie_local = price_HealthyCookie.convertToLocalCurrency()
+        price_LentilStew = 5
+        price_LentilStew_local = price_LentilStew.convertToLocalCurrency()
+        price_CauliAlfredo = 6
+        price_CauliAlfredo_local = price_CauliAlfredo.convertToLocalCurrency()
+        price_RicePeas = 7
+        price_RicePeas_local = price_RicePeas.convertToLocalCurrency()
+        price_Edamame = 8
+        price_Edamame_local = price_Edamame.convertToLocalCurrency()
+        price_PastaAlfredo = 10
+        price_PastaAlfredo_local = price_PastaAlfredo.convertToLocalCurrency()
+        price_CrispyTofu = 12
+        price_CrispyTofu_local = price_CrispyTofu.convertToLocalCurrency()
+        price_LoMein = 15
+        price_LoMein_local = price_LoMein.convertToLocalCurrency()
+        
             
         Player(Curious)::"Which type of vegan meal shall I buy?"
-        0:: VMeal1 >= 0 ::"Healthy cookie for <VMeal1p>"
-        1:: VMeal2 >= 0 ::"Winter Squash and Lentil Stew for <VMeal2p>"
-        2:: VMeal3 >= 0 ::"Cauliflower Alfredo for <VMeal3p>"
-        3:: VMeal4 >= 0 ::"Coconutty Rice and Peas for <VMeal4p>"
-        4:: VMeal5 >= 0 ::"Peanutty Edamame and Noodle Salad for <VMeal5p>"
-        5:: VMeal6 >= 0 ::"Pasta with Red Pepper Alfredo for <VMeal6p>"
-        6:: VMeal7 >= 0 ::"Crispy Tofu Bowl with fruits for <VMeal7p>"
-        7:: VMeal8 >= 0 ::"Veggie Lo Mein for <VMeal8p>"
+        0:: money >= 0 ::"1 Healthy cookie for <price_HealthyCookie_local>"
+        1:: money >= 2 ::"1 Winter squash and lentil stew for <price_LentilStew_local>"
+        2:: money >= 4 ::"1 Cauliflower Alfredo for <price_CauliAlfredo_local>"
+        3:: money >= 5 ::"1 Coconutty rice and peas for <price_RicePeas_local>"
+        4:: money >= 6 ::"1 Peanutty Edamame and noodle salad for <price_Edamame_local>"
+        5:: money >= 8 ::"1 Pasta with red pepper Alfredo for <price_PastaAlfredo_local>"
+        6:: money >= 10 ::"1 Crispy Tofu bowl with fruits for <price_CrispyTofu_local>"
+        7:: money >= 12 ::"1 Veggie Lo Mein for <price_LoMein_local>"
         99:: "Don't buy anything"
                
         If 0
-            Player.setActorVar(rk_VMeal1, 1)
-            money -= 1
-            stock_veganmeal += 0.5
-            Player(Excited)::"0.5 meal added to my vegan stock !"
+            Player.modifyActorVar(stock_HealthyCookie, 1)
+            money -= price_HealthyCookie
+            stock_HealthyCookie += 1
+            Player(Excited)::"1 healthy cookie added to my pantry!"
                     
         ElseIf 1
-            Player.setActorVar(rk_VMeal2, 1)
-            money -= 5
-            stock_veganmeal += 1
-            Player(Excited)::"1 meal added to my vegan stock !"
+            Player.modifyActorVar(stock_LentilStew, 1)
+            money -= price_LentilStew
+            stock_LentilStew += 1
+            Player(Excited)::"1 winter squash and lentil stew added to my pantry!"
                     
         ElseIf 2
-            Player.setActorVar(rk_VMeal3, 1)
-            money -= 6
-            stock_veganmeal += 1.25
-            Player(Excited)::"1.25 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_CauliAlfredo, 1)
+            money -= price_CauliAlfredo
+            stock_CauliAlfredo += 1
+            Player(Excited)::"1 cauliflower Alfredo added to my pantry!"
                     
         ElseIf 3
-            Player.setActorVar(rk_VMeal4, 1)
-            money -= 7
-            stock_veganmeal += 1.5
-            Player(Excited)::"1.5 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_RicePeas, 1)
+            money -= price_RicePeas
+            stock_RicePeas += 1
+            Player(Excited)::"1 coconutty rice and peas added to my pantry!"
         
         ElseIf 4
-            Player.setActorVar(rk_VMeal5, 1)
-            money -= 8
-            stock_veganmeal += 1.75
-            Player(Excited)::"1.75 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_Edamame, 1)
+            money -= price_Edamame
+            stock_Edamame += 1
+            Player(Excited)::"1 peanutty Edamame and noodle salad added to my pantry!"
             
         ElseIf 5
-            Player.setActorVar(rk_VMeal6, 1)
-            money -= 10
-            stock_veganmeal += 2
-            Player(Excited)::"2 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_PastaAlfredo, 1)
+            money -= price_PastaAlfredo
+            stock_PastaAlfredo += 1
+            Player(Excited)::"1 pasta with red pepper Alfredo added to my pantry!"
 
         ElseIf 6
-            Player.setActorVar(rk_VMeal7, 1)
-            money -= 12
-            stock_veganmeal += 2.5
-            Player(Excited)::"2.5 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_CrispyTofu, 1)
+            money -= price_CrispyTofu
+            stock_CrispyTofu += 1
+            Player(Excited)::"1 crispy Tofu Bowl added to my pantry!"
 
         ElseIf 7
-            Player.setActorVar(rk_VMeal8, 1)
-            money -= 15
-            stock_veganmeal += 3
-            Player(Excited)::"3 meals added to my vegan stock !"
+            Player.modifyActorVar(stock_LoMein, 1)
+            money -= price_LoMein
+            stock_LoMein += 1
+            Player(Excited)::"1 veggie Lo Mein added to my pantry!"
    
         EndIf
         

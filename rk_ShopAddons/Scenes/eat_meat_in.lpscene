@@ -6,91 +6,100 @@ OTHER: none
 
     SceneStart()
     
+    stock_Jerkey = Player.getActorVar(stock_Jerkey)
+    stock_Cheesesteak = Player.getActorVar(stock_Cheesesteak)
+    stock_Chicken = Player.getActorVar(stock_Chicken)
+    stock_SaltNPepper = Player.getActorVar(stock_SaltNPepper)
+    stock_WrappedPork = Player.getActorVar(stock_WrappedPork)
+    stock_ChickenKebabs = Player.getActorVar(stock_ChickenKebabs)
+    stock_ChineseBeef = Player.getActorVar(stock_ChineseBeef)
+    stock_SurfNTurf = Player.getActorVar(stock_SurfNTurf)
+    
+    stock_meatprod = stock_Jerkey + stock_Cheesesteak + stock_Chicken + stock_SaltNPepper + stock_WrappedPork + stock_ChickenKebabs + stock_ChineseBeef + stock_SurfNTurf
+    
     If stock_meatprod < 1 
         Player(Anxious)::"Ok, not enough meats to make a meal! I need to go shopping !"
     Else
         
-        // Get current meat dishes types
-        MeatMeal1 = Player.getActorVar(rk_MeatMeal1)
-        MeatMeal2 = Player.getActorVar(rk_MeatMeal2)
-        MeatMeal3 = Player.getActorVar(rk_MeatMeal3)
-        MeatMeal4 = Player.getActorVar(rk_MeatMeal4)
-        MeatMeal5 = Player.getActorVar(rk_MeatMeal5)
-        MeatMeal6 = Player.getActorVar(rk_MeatMeal6)
-        MeatMeal7 = Player.getActorVar(rk_MeatMeal7)
-        MeatMeal8 = Player.getActorVar(rk_MeatMeal8)
-        
         Player::"Ok, which meaty dish I'm gonna eat?"
-        0:: stock_meatprod >= 1:: "1 Beef Jerkey bag"
-        1:: stock_meatprod >= 1:: "1 Philly Cheesesteak"
-        2:: stock_meatprod >= 1:: "1 Chicken schnitzel"
-        3:: stock_meatprod >= 1:: "1 Salt-and-Pepper Steak"
-        4:: stock_meatprod >= 1:: "1 Bacon-Wrapped Pork"
-        5:: stock_meatprod >= 1:: "1 Chicken Kebabs with rice"
-        6:: stock_meatprod >= 1:: "1 Chinese Beef & Broccoli"
-        7:: stock_meatprod >= 1:: "1 Surf 'n Turf"
+        0:: stock_Jerkey > 0:: "1 Beef Jerkey bag"
+        1:: stock_Cheesesteak > 0:: "1 Philly Cheesesteak"
+        2:: stock_Chicken > 0:: "1 Chicken schnitzel"
+        3:: stock_SaltNPepper > 0:: "1 Salt-and-Pepper Steak"
+        4:: stock_WrappedPork > 0:: "1 Bacon-Wrapped Pork"
+        5:: stock_ChickenKebabs > 0:: "1 Chicken Kebabs with rice"
+        6:: stock_ChineseBeef > 0:: "1 Chinese Beef & Broccoli"
+        7:: stock_SurfNTurf > 0:: "1 Surf 'n Turf"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_MeatMeal1, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_Jerkey, -1)
+            stock_Jerkey -= 1
             mood += 0.5
             energy += 1
             fitness += 1
+            passTime(0.15, 0.25)
 
         Elseif 1
-            Player.modifyActorVar(rk_MeatMeal2, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_Cheesesteak, -1)
+            stock_Cheesesteak -= 1
             mood += 2
             energy += 2
             fitness += 2
+            passTime(0.25, 0.5)
 
         Elseif 2
-            Player.modifyActorVar(rk_MeatMeal3, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_Chicken, -1)
+            stock_Chicken -= 1
             mood += 2.5
             energy += 2.5
             fitness += 2.5
+            passTime(0.25, 0.5)
 
         Elseif 3
-            Player.modifyActorVar(rk_MeatMeal4, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_SaltNPepper, -1)
+            stock_SaltNPepper -= 1
             mood += 3
             energy += 3
             fitness += 3
+            passTime(0.25, 0.5)
 
         Elseif 4
-            Player.modifyActorVar(rk_MeatMeal5, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_WrappedPork, -1)
+            stock_WrappedPork -= 1
             mood += 3.5
             energy += 3.5
             fitness += 3.5
+            passTime(0.25, 0.5)
 
         Elseif 5
-            Player.modifyActorVar(rk_MeatMeal6, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_ChickenKebabs, -1)
+            stock_ChickenKebabs -= 1
             mood += 4
             energy += 4
             fitness += 4
+            passTime(0.25, 0.5)
 
         Elseif 6
-            Player.modifyActorVar(rk_MeatMeal7, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_ChineseBeef, -1)
+            stock_ChineseBeef -= 1
             mood += 4.5
             energy += 4.5
             fitness += 4.5
+            passTime(0.25, 0.5)
         
         Elseif 7
-            Player.modifyActorVar(rk_MeatMeal8, -1)
-            stock_meatprod -= 1
+            Player.modifyActorVar(stock_SurfNTurf, -1)
+            stock_SurfNTurf -= 1
             mood += 5
             energy += 5
             fitness += 5
+            passTime(0.25, 0.5)
         
         Endif
         
     Endif
     
-    passTime(0.25, 0.5)
+    
     
 SceneEnd()

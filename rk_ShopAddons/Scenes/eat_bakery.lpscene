@@ -10,95 +10,94 @@ OTHER: none
         Player(Anxious)::"Ok, no money to eat! I need to find a job I guess... !"
     Else
         
-        // Get current bakery types
-        BKMeal1 = Player.getActorVar(rk_BKMeal1)
-        BKMeal1p = 2.convertToLocalCurrency(false)
-        BKMeal2 = Player.getActorVar(rk_BKMeal2)
-        BKMeal2p = 3.convertToLocalCurrency(false)
-        BKMeal3 = Player.getActorVar(rk_BKMeal3)
-        BKMeal3p = 4.convertToLocalCurrency(false)
-        BKMeal4 = Player.getActorVar(rk_BKMeal4)
-        BKMeal4p = 5.convertToLocalCurrency(false)
-        BKMeal5 = Player.getActorVar(rk_BKMeal5)
-        BKMeal5p = 3.convertToLocalCurrency(false)
-        BKMeal6 = Player.getActorVar(rk_BKMeal6)
-        BKMeal6p = 6.convertToLocalCurrency(false)
-        BKMeal7 = Player.getActorVar(rk_BKMeal7)
-        BKMeal7p = 11.convertToLocalCurrency(false)
-        BKMeal8 = Player.getActorVar(rk_BKMeal8)
-        BKMeal8p = 26.convertToLocalCurrency(false)
+        // Get current pastry and breads prices for each types
+        price_Pita = Random(1.5, 3)
+        price_Pita_local = price_Pita.convertToLocalCurrency()
+        price_Bread = Random(3, 4)
+        price_Bread_local = price_Bread.convertToLocalCurrency()
+        price_Bagel = Random(4, 5)
+        price_Bagel_local = price_Bagel.convertToLocalCurrency()
+        price_BaltikBread = Random(5, 6)
+        price_BaltikBread_local = price_BaltikBread.convertToLocalCurrency()
+        price_ProteinCookie = Random(2.5, 4)
+        price_ProteinCookie_local = price_ProteinCookie.convertToLocalCurrency()
+        price_VdolkyDonut = Random(3.5, 5)
+        price_VdolkyDonut_local = price_VdolkyDonut.convertToLocalCurrency()
+        price_ApplePie = Random(5, 6)
+        price_ApplePie_local = price_ApplePie.convertToLocalCurrency()
+        price_RoyalCake = Random(7, 8)
+        price_RoyalCake_local = price_RoyalCake.convertToLocalCurrency()
         
         Player::"Which type of bread or pastry shall I buy?"
-        0:: money >= 0 ::"1 pita for <BKMeal1p>"
-        1:: money >= 0 ::"1 Nutricious bread for <BKMeal2p>"
-        2:: money >= 0 ::"1 Whole grain bagel for <BKMeal3p>"
-        3:: money >= 0 ::"1 Baltik bread for <BKMeal4p>"
-        4:: money >= 0 ::"1 Protein cookie for <BKMeal5p>"
-        5:: money >= 0 ::"1 Vdolky donut for <BKMeal6p>"
-        6:: money >= 0 ::"1 Homemade apple pie for <BKMeal7p>"
-        7:: money >= 0 ::"1 Royal cake for <BKMeal8p>"
+        0:: money >= 0 ::"1 pita for <price_Pita_local>"
+        1:: money >= 2 ::"1 Nutricious bread for <price_Bread_local>"
+        2:: money >= 3 ::"1 Whole grain bagel for <price_Bagel_local>"
+        3:: money >= 4 ::"1 Baltik bread for <price_BaltikBread_local>"
+        4:: money >= 1 ::"1 Protein cookie for <price_ProteinCookie_local>"
+        5:: money >= 2 ::"1 Vdolky donut for <price_VdolkyDonut_local>"
+        6:: money >= 4 ::"1 Homemade apple pie for <price_ApplePie_local>"
+        7:: money >= 5 ::"1 Royal cake for <price_RoyalCake_local>"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_BKMeal1, -1)
             mood += 0.5
             energy += 1
             fitness += 1
-            money -= 2
+            money -= price_Pita
+            passTime(0.15, 0.25)
             
         Elseif 1
-            Player.modifyActorVar(rk_BKMeal2, -1)
             mood += 1
             energy += 3
             fitness += 2
-            money -= 3
+            money -= price_Bread
+            passTime(0.15, 0.25)
         
         Elseif 2
-            Player.modifyActorVar(rk_BKMeal3, -1)
             mood += 1
             energy += 4
             fitness += 3
-            money -= 4
+            money -= price_Bagel
+            passTime(0.15, 0.25)
         
         Elseif 3
-            Player.modifyActorVar(rk_BKMeal4, -1)
             mood += 2
             energy += 5
             fitness += 4
-            money -= 5
+            money -= price_BaltikBread
+            passTime(0.15, 0.25)
         
         Elseif 4
-            Player.modifyActorVar(rk_BKMeal5, -1)
             mood += 2
             energy += 3
             fitness += 1
-            money -= 3
+            money -= price_ProteinCookie
+            passTime(0.15, 0.25)
         
         Elseif 5
-            Player.modifyActorVar(rk_BKMeal6, -1)
             mood += 3
             energy += 3
             fitness -= 1
-            money -= 6
+            money -= price_VdolkyDonut
+            passTime(0.15, 0.25)
         
         Elseif 6
-            Player.modifyActorVar(rk_BKMeal7, -1)
             mood += 4
             energy += 4
             fitness -= 1
-            money -= 11
+            money -= price_ApplePie
+            passTime(0.15, 0.25)
         
         Elseif 7
-            Player.modifyActorVar(rk_BKMeal8, -1)
             mood += 6
             energy += 5
             fitness -= 2
-            money -= 26
+            money -= price_RoyalCake
+            passTime(0.15, 0.25)
             
         Endif
         
     Endif
     
-    passTime(0.25, 0.5)
     
 SceneEnd()

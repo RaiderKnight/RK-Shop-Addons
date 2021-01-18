@@ -1,5 +1,5 @@
-STAT_ID: stock_popcorn
-STAT_NAME: Number of popcorn
+STAT_ID: stock_Jerkey
+STAT_NAME: Number of Jerkey
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0

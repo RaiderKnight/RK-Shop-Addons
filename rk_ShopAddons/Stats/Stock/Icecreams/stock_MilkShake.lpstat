@@ -1,5 +1,5 @@
-STAT_ID: stock_seafoodprod
-STAT_NAME: Number of seafood
+STAT_ID: stock_MilkShake
+STAT_NAME: Number of Milk Shakes
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0

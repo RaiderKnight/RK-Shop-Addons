@@ -10,66 +10,59 @@ OTHER: none
         Player(Anxious)::"Ok, no money to eat! I need to find a job I guess... !"
     Else
         
-        // Get current ice cream desserts types
-        IceMeal1 = Player.getActorVar(rk_IceMeal1)
-        IceMeala = Random(1.5, 3)
-        IceMeal1p = IceMeala.convertToLocalCurrency(false)
-        IceMeal2 = Player.getActorVar(rk_IceMeal2)
-        IceMealb = Random(3.5, 5)
-        IceMeal2p = IceMealb.convertToLocalCurrency(false)
-        IceMeal3 = Player.getActorVar(rk_IceMeal3)
-        IceMealc = Random(5.5, 7)
-        IceMeal3p = IceMealc.convertToLocalCurrency(false)
-        IceMeal4 = Player.getActorVar(rk_IceMeal4)
-        IceMeald = Random(7.5, 9)
-        IceMeal4p = IceMeald.convertToLocalCurrency(false)
-        IceMeal5 = Player.getActorVar(rk_IceMeal5)
-        IceMeale = Random(11, 13)
-        IceMeal5p = IceMeale.convertToLocalCurrency(false)
+        // Get current ice cream desserts prices for each types
+        price_Popcycle = Random(1.5, 3)
+        price_Popcycle_local = price_Popcycle.convertToLocalCurrency()
+        price_IcecreamCup = Random(3.5, 5)
+        price_IcecreamCup_local = price_IcecreamCup.convertToLocalCurrency()
+        price_MilkShake = Random(5, 6)
+        price_MilkShake_local = price_MilkShake.convertToLocalCurrency()
+        price_FrozenPie = Random(6, 7)
+        price_FrozenPie_local = price_FrozenPie.convertToLocalCurrency()
+        price_IceCreamCake = Random(7, 8)
+        price_IceCreamCake_local = price_IceCreamCake.convertToLocalCurrency()
 
 
-        Player::"Which type of ice cream dessert shall I buy?"
-        0:: money >= 0 ::"1 Popcycle for <IceMeal1p>"
-        1:: money >= 0 ::"1 Ice cream cup for <IceMeal2p>"
-        2:: money >= 0 ::"1 Milk Shake for <IceMeal3p>"
-        3:: money >= 0 ::"1 Frozen Margarita pie for <IceMeal4p>"
-        4:: money >= 0 ::"1 Ice cream cake for <IceMeal5p>"
+        Player::"Which type of ice cream dessert I will eat?"
+        0:: money >= 0 ::"1 Popcycle for <price_Popcycle_local>"
+        1:: money >= 2 ::"1 Ice cream cup for <price_IcecreamCup_local>"
+        2:: money >= 3 ::"1 Milk Shake for <price_MilkShake_local>"
+        3:: money >= 4 ::"1 Frozen Margarita pie for <price_FrozenPie_local>"
+        4:: money >= 5 ::"1 Ice cream cake for <price_IceCreamCake_local>"
         8:: "Bah! I'm not hungry !"
         
         If 0
-            Player.modifyActorVar(rk_IceMeal1, -1)
             mood += 2
             energy += 1
-            money -= IceMeal1
+            money -= price_Popcycle
+            passTime(0.15, 0.25)
             
         Elseif 1
-            Player.modifyActorVar(rk_IceMeal2, -1)
             mood += 3
             energy += 2
-            money -= IceMeal2
-        
+            money -= price_IcecreamCup
+            passTime(0.15, 0.25)
+            
         Elseif 2
-            Player.modifyActorVar(rk_IceMeal3, -1)
             mood += 4
             energy += 3
-            money -= IceMeal3
-        
+            money -= price_MilkShake
+            passTime(0.15, 0.25)
+            
         Elseif 3
-            Player.modifyActorVar(rk_IceMeal4, -1)
             mood += 5
             energy += 4
-            money -= IceMeal4
-        
+            money -= price_FrozenPie
+            passTime(0.15, 0.25)
+            
         Elseif 4
-            Player.modifyActorVar(rk_IceMeal5, -1)
             mood += 6
             energy += 5
-            money -= IceMeal5
-        
+            money -= price_IceCreamCake
+            passTime(0.15, 0.25)
+            
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

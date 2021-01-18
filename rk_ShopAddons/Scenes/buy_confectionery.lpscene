@@ -12,82 +12,83 @@ OTHER: none
     
         Player(Curious)::"There is a lot of candies here." 
         
-        // Get current candy types
-        ConFMeal1 = Player.getActorVar(rk_ConFMeal1)
-        ConFMeal1p = 1.convertToLocalCurrency(false)
-        ConFMeal2 = Player.getActorVar(rk_ConFMeal2)
-        ConFMeal2p = 5.convertToLocalCurrency(false)
-        ConFMeal3 = Player.getActorVar(rk_ConFMeal3)
-        ConFMeal3p = 6.convertToLocalCurrency(false)
-        ConFMeal4 = Player.getActorVar(rk_ConFMeal4)
-        ConFMeal4p = 7.convertToLocalCurrency(false)
-        ConFMeal5 = Player.getActorVar(rk_ConFMeal5)
-        ConFMeal5p = 8.convertToLocalCurrency(false)
-        ConFMeal6 = Player.getActorVar(rk_ConFMeal6)
-        ConFMeal6p = 10.convertToLocalCurrency(false)
-        ConFMeal7 = Player.getActorVar(rk_ConFMeal7)
-        ConFMeal7p = 12.convertToLocalCurrency(false)
-        ConFMeal8 = Player.getActorVar(rk_ConFMeal8)
-        ConFMeal8p = 15.convertToLocalCurrency(false)
+        // Get current candy prices for each types
+        price_PopRocks = Random(0.5, 1)
+        price_PopRocks_local = price_PopRocks.convertToLocalCurrency()
+        price_CottonCandy = Random(1, 2)
+        price_CottonCandy_local = price_CottonCandy.convertToLocalCurrency()
+        price_GummiBears = Random(2, 3)
+        price_GummiBears_local = price_GummiBears.convertToLocalCurrency()
+        price_Smarties = Random(2.5, 3.5)
+        price_Smarties_local = price_Smarties.convertToLocalCurrency()
+        price_JollyRanchers = Random(3, 3.5)
+        price_JollyRanchers_local = price_JollyRanchers.convertToLocalCurrency()
+        price_PeanutCups = Random(3.5, 4)
+        price_PeanutCups_local = price_PeanutCups.convertToLocalCurrency()
+        price_Licorice = Random(4, 4.5)
+        price_Licorice_local = price_Licorice.convertToLocalCurrency()
+        price_PowerBar = Random(4.5, 6)
+        price_PowerBar_local = price_PowerBar.convertToLocalCurrency()
             
         Player(Curious)::"Which type of candy shall I buy?"
-        0:: money >= 0 ::"Cotton Candy for <ConFMeal1p>"
-        1:: money >= 0 ::"Smarties Candy for <ConFMeal2p>"
-        2:: money >= 0 ::"Pop Rocks Candy for <ConFMeal3p>"
-        3:: money >= 0 ::"Jolly Ranchers Candy for <ConFMeal4p>"
-        4:: money >= 0 ::"Starburst Fruit Chews Candy for <ConFMeal5p>"
-        5:: money >= 0 ::"Peanut Butter Cups for <ConFMeal6p>"
-        6:: money >= 0 ::"Licorice Candy for <ConFMeal7p>"
-        7:: money >= 0 ::"Gummi Bears for <ConFMeal8p>"
+        0:: money >= 0 ::"1 box of Pop Rocks for <price_PopRocks_local>"
+        1:: money >= 0 ::"1 Cotton Candy for <price_CottonCandy_local>"
+        2:: money >= 0 ::"1 pack of Gummi Bears for <price_GummiBears_local>"
+        3:: money >= 0 ::"1 box of Smarties for <price_Smarties_local>"
+        4:: money >= 0 ::"1 pack of Jolly Ranchers for <price_JollyRanchers_local>"
+        5:: money >= 0 ::"1 pack of Peanut Butter Cups for <price_PeanutCups_local>"
+        6:: money >= 0 ::"1 pack of Licorices for <price_Licorice_local>"
+        7:: money >= 0 ::"1 power bar for <price_PowerBar_local>"
+        
         99:: "Don't buy anything"
                
         If 0
-            Player.setActorVar(rk_ConFMeal1, 1)
-            money -= 1
-            stock_confectioneryprod += 3
-            Player(Excited)::"3 candies added to my pantry!"
+            Player.modifyActorVar(stock_PopRocks, 1)
+            money -= price_PopRocks
+            stock_PopRocks += 1
+            Player(Excited)::"1 Pop Rocks box added to my pantry!"
                     
         ElseIf 1
-            Player.setActorVar(rk_ConFMeal2, 1)
-            money -= 5
-            stock_confectioneryprod += 4
-            Player(Excited)::"4 candies added to my pantry!"
+            Player.modifyActorVar(stock_CottonCandy, 1)
+            money -= price_CottonCandy
+            stock_CottonCandy += 1
+            Player(Excited)::"1 Cotton Candy added to my pantry!"
                     
         ElseIf 2
-            Player.setActorVar(rk_ConFMeal3, 1)
-            money -= 6
-            stock_confectioneryprod += 5
-            Player(Excited)::"5 candies added to my pantry!"
+            Player.modifyActorVar(stock_GummiBears, 1)
+            money -= price_GummiBears
+            stock_GummiBears += 1
+            Player(Excited)::"1 pack Gummi Bears added to my pantry!"
                     
         ElseIf 3
-            Player.setActorVar(rk_ConFMeal4, 1)
-            money -= 7
-            stock_confectioneryprod += 6
-            Player(Excited)::"6 candies added to my pantry!"
+            Player.modifyActorVar(stock_Smarties, 1)
+            money -= price_Smarties
+            stock_Smarties += 1
+            Player(Excited)::"1 box of Smarties added to my pantry!"
         
         ElseIf 4
-            Player.setActorVar(rk_ConFMeal5, 1)
-            money -= 8
-            stock_confectioneryprod += 7
-            Player(Excited)::"7 candies added to my pantry!"
+            Player.modifyActorVar(stock_JollyRanchers, 1)
+            money -= price_JollyRanchers
+            stock_JollyRanchers += 1
+            Player(Excited)::"1 pack of Jolly Ranchers added to my pantry!"
             
         ElseIf 5
-            Player.setActorVar(rk_ConFMeal6, 1)
-            money -= 10
-            stock_confectioneryprod += 8
-            Player(Excited)::"8 candies added to my pantry!"
+            Player.modifyActorVar(stock_PeanutCups, 1)
+            money -= price_PeanutCups
+            stock_PeanutCups += 1
+            Player(Excited)::"1 pack of Peanut Butter Cups added to my pantry!"
 
         ElseIf 6
-            Player.setActorVar(rk_ConFMeal7, 1)
-            money -= 12
-            stock_confectioneryprod += 9
-            Player(Excited)::"9 candies added to my pantry!"
+            Player.modifyActorVar(stock_Licorice, 1)
+            money -= price_Licorice
+            stock_Licorice += 1
+            Player(Excited)::"1 pack of Licorices added to my pantry!"
 
         ElseIf 7
-            Player.setActorVar(rk_ConFMeal8, 1)
-            money -= 15
-            stock_confectioneryprod += 10
-            Player(Excited)::"10 candies added to my pantry!"
+            Player.modifyActorVar(stock_PowerBar, 1)
+            money -= price_PowerBar
+            stock_PowerBar += 1
+            Player(Excited)::"1 power bar added to my pantry!"
    
         EndIf
         

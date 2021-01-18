@@ -1,6 +1,6 @@
 ACTION_UNIQUEID: buy_icecreampop
 ACTION_NAME: Buy ice cream
-WHERE: ice_cream
+WHERE: ice_cream, supermarket, department_store, marketplace
 WHEN: 0 - 24
 MINUTES: 1 - 5
 TIMEOUT_MINUTES: 5
