@@ -39,7 +39,6 @@ OTHER: none
         5:: money >= 0 ::"1 pack of Peanut Butter Cups for <price_PeanutCups_local>"
         6:: money >= 0 ::"1 pack of Licorices for <price_Licorice_local>"
         7:: money >= 0 ::"1 power bar for <price_PowerBar_local>"
-        
         99:: "Don't buy anything"
                
         If 0
