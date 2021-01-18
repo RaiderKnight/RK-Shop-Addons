@@ -7,7 +7,7 @@ OTHER: none
     SceneStart()
     stock_PlainPopcorn = Player.getActorVar(stock_PlainPopcorn)
     stock_ButterPopcorn = Player.getActorVar(stock_ButterPopcorn)
-    stock_PopcornMix = Player.getActorVar(stock_HealthyPopcorn)
+    stock_PopcornMix = Player.getActorVar(stock_PopcornMix)
     stock_HealthyPopcorn = Player.getActorVar(stock_HealthyPopcorn)
     
     stock_popcorn = stock_PlainPopcorn + stock_ButterPopcorn + stock_PopcornMix + stock_HealthyPopcorn

@@ -46,49 +46,49 @@ OTHER: none
             Player.modifyActorVar(stock_HealthyCookie, 1)
             money -= price_HealthyCookie
             stock_HealthyCookie += 1
-            Player(Excited)::"1 healthy cookie added to my pantry!"
+            Player(Excited)::"1 healthy cookie added to my refrigerator!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_LentilStew, 1)
             money -= price_LentilStew
             stock_LentilStew += 1
-            Player(Excited)::"1 winter squash and lentil stew added to my pantry!"
+            Player(Excited)::"1 winter squash and lentil stew added to my refrigerator!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_CauliAlfredo, 1)
             money -= price_CauliAlfredo
             stock_CauliAlfredo += 1
-            Player(Excited)::"1 cauliflower Alfredo added to my pantry!"
+            Player(Excited)::"1 cauliflower Alfredo added to my refrigerator!"
                     
         ElseIf 3
             Player.modifyActorVar(stock_RicePeas, 1)
             money -= price_RicePeas
             stock_RicePeas += 1
-            Player(Excited)::"1 coconutty rice and peas added to my pantry!"
+            Player(Excited)::"1 coconutty rice and peas added to my refrigerator!"
         
         ElseIf 4
             Player.modifyActorVar(stock_Edamame, 1)
             money -= price_Edamame
             stock_Edamame += 1
-            Player(Excited)::"1 peanutty Edamame and noodle salad added to my pantry!"
+            Player(Excited)::"1 peanutty Edamame and noodle salad added to my refrigerator!"
             
         ElseIf 5
             Player.modifyActorVar(stock_PastaAlfredo, 1)
             money -= price_PastaAlfredo
             stock_PastaAlfredo += 1
-            Player(Excited)::"1 pasta with red pepper Alfredo added to my pantry!"
+            Player(Excited)::"1 pasta with red pepper Alfredo added to my refrigerator!"
 
         ElseIf 6
             Player.modifyActorVar(stock_CrispyTofu, 1)
             money -= price_CrispyTofu
             stock_CrispyTofu += 1
-            Player(Excited)::"1 crispy Tofu Bowl added to my pantry!"
+            Player(Excited)::"1 crispy Tofu Bowl added to my refrigerator!"
 
         ElseIf 7
             Player.modifyActorVar(stock_LoMein, 1)
             money -= price_LoMein
             stock_LoMein += 1
-            Player(Excited)::"1 veggie Lo Mein added to my pantry!"
+            Player(Excited)::"1 veggie Lo Mein added to my refrigerator!"
    
         EndIf
         
