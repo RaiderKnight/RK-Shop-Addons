@@ -36,28 +36,23 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_Popcycle, 1)
             money -= price_Popcycle
-            Player(Excited)::"1 popcycle dessert added to my freezer!"
-            stock_Popcycle += 1  
+            Player(Excited)::"1 popcycle dessert added to my freezer!" 
         ElseIf 1
             Player.modifyActorVar(stock_IcecreamCup, 1)
             money -= price_IcecreamCup
             Player(Excited)::"1 ice cream cups added to my freezer!"
-            stock_IcecreamCup += 1
         ElseIf 2
             Player.modifyActorVar(stock_MilkShake, 1)
             money -= price_MilkShake
             Player(Excited)::"1 milk shake added to my freezer!"
-            stock_MilkShake += 1
         ElseIf 3
             Player.modifyActorVar(stock_FrozenPie, 1)
             money -= price_FrozenPie
             Player(Excited)::"1 frozen Margarita pie added to my freezer!"
-            stock_FrozenPie += 1
         ElseIf 4
             Player.modifyActorVar(stock_IceCreamCake, 1)
             money -= price_IceCreamCake
             Player(Excited)::"1 ice cream cake added to my freezer!"
-            stock_IceCreamCake += 1
         EndIf
         
     EndIf

@@ -34,7 +34,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_Jerkey, -1)
-            stock_Jerkey -= 1
             mood += 0.5
             energy += 1
             fitness += 1
@@ -42,7 +41,6 @@ OTHER: none
 
         Elseif 1
             Player.modifyActorVar(stock_Cheesesteak, -1)
-            stock_Cheesesteak -= 1
             mood += 2
             energy += 2
             fitness += 2
@@ -50,7 +48,6 @@ OTHER: none
 
         Elseif 2
             Player.modifyActorVar(stock_Chicken, -1)
-            stock_Chicken -= 1
             mood += 2.5
             energy += 2.5
             fitness += 2.5
@@ -58,7 +55,6 @@ OTHER: none
 
         Elseif 3
             Player.modifyActorVar(stock_SaltNPepper, -1)
-            stock_SaltNPepper -= 1
             mood += 3
             energy += 3
             fitness += 3
@@ -66,7 +62,6 @@ OTHER: none
 
         Elseif 4
             Player.modifyActorVar(stock_WrappedPork, -1)
-            stock_WrappedPork -= 1
             mood += 3.5
             energy += 3.5
             fitness += 3.5
@@ -74,7 +69,6 @@ OTHER: none
 
         Elseif 5
             Player.modifyActorVar(stock_ChickenKebabs, -1)
-            stock_ChickenKebabs -= 1
             mood += 4
             energy += 4
             fitness += 4
@@ -82,7 +76,6 @@ OTHER: none
 
         Elseif 6
             Player.modifyActorVar(stock_ChineseBeef, -1)
-            stock_ChineseBeef -= 1
             mood += 4.5
             energy += 4.5
             fitness += 4.5
@@ -90,7 +83,6 @@ OTHER: none
         
         Elseif 7
             Player.modifyActorVar(stock_SurfNTurf, -1)
-            stock_SurfNTurf -= 1
             mood += 5
             energy += 5
             fitness += 5

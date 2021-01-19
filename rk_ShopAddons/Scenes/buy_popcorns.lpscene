@@ -33,25 +33,21 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_PlainPopcorn, 1)
             money -= price_PlainPopcorn
-            stock_PlainPopcorn += 1
             Player(Excited)::"1 bag of plain popcorns added to my pantry!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_ButterPopcorn, 1)
             money -= price_ButterPopcorn
-            stock_ButterPopcorn += 1
             Player(Excited)::"1 bag of butter popcorns added to my pantry!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_PopcornMix, 1)
             money -= price_PopcornMix
-            stock_PopcornMix += 1
             Player(Excited)::"1 bag of popcorn sweet mix added to my pantry!"
                     
         ElseIf 3
             Player.modifyActorVar(stock_HealthyPopcorn, 1)
             money -= price_HealthyPopcorn
-            stock_HealthyPopcorn += 1
             Player(Excited)::"1 bag of healthy popcorns added to my pantry!"
         
         EndIf

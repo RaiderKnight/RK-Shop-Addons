@@ -31,31 +31,26 @@ OTHER: none
             Player.modifyActorVar(stock_Popcycle, -1)
             mood += 2
             energy += 1
-            stock_Popcycle -= 1
             passTime(0.15, 0.25)
         Elseif 1
             Player.modifyActorVar(stock_IcecreamCup, -1)
             mood += 3
             energy += 2
-            stock_IcecreamCup -= 1
             passTime(0.15, 0.25)
         Elseif 2
             Player.modifyActorVar(stock_MilkShake, -1)
             mood += 4
             energy += 3
-            stock_MilkShake -= 1
             passTime(0.15, 0.25)
         Elseif 3
             Player.modifyActorVar(stock_FrozenPie, -1)
             mood += 5
             energy += 4
-            stock_FrozenPie -= 1
             passTime(0.15, 0.25)
         Elseif 4
             Player.modifyActorVar(stock_IceCreamCake, -1)
             mood += 6
             energy += 5
-            stock_IceCreamCake -= 1
             passTime(0.15, 0.25)
         Endif
         

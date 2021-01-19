@@ -44,49 +44,41 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_PopRocks, 1)
             money -= price_PopRocks
-            stock_PopRocks += 1
             Player(Excited)::"1 Pop Rocks box added to my pockets!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_CottonCandy, 1)
             money -= price_CottonCandy
-            stock_CottonCandy += 1
             Player(Excited)::"1 Cotton Candy added to my pockets!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_GummiBears, 1)
             money -= price_GummiBears
-            stock_GummiBears += 1
             Player(Excited)::"1 pack Gummi Bears added to my pockets!"
                     
         ElseIf 3
             Player.modifyActorVar(stock_Smarties, 1)
             money -= price_Smarties
-            stock_Smarties += 1
             Player(Excited)::"1 box of Smarties added to my pockets!"
         
         ElseIf 4
             Player.modifyActorVar(stock_JollyRanchers, 1)
             money -= price_JollyRanchers
-            stock_JollyRanchers += 1
             Player(Excited)::"1 pack of Jolly Ranchers added to my pockets!"
             
         ElseIf 5
             Player.modifyActorVar(stock_PeanutCups, 1)
             money -= price_PeanutCups
-            stock_PeanutCups += 1
             Player(Excited)::"1 pack of Peanut Butter Cups added to my pockets!"
 
         ElseIf 6
             Player.modifyActorVar(stock_Licorice, 1)
             money -= price_Licorice
-            stock_Licorice += 1
             Player(Excited)::"1 pack of Licorices added to my pockets!"
 
         ElseIf 7
             Player.modifyActorVar(stock_PowerBar, 1)
             money -= price_PowerBar
-            stock_PowerBar += 1
             Player(Excited)::"1 power bar added to my pockets!"
    
         EndIf

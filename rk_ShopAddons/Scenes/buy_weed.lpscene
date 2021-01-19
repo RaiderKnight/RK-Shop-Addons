@@ -43,49 +43,41 @@ OTHER: none
             If 0
                 Player.modifyActorVar(stock_AK47weed, 1)
                 money -= price_AK47Weed
-                stock_AK47weed += 1
                 Player(Excited)::"This strain produces happy memories, which makes me laugh and smile, during bad moments."
                                 
             Elseif 1
                 Player.modifyActorVar(stock_SSweed, 1)
                 money -= price_SSWeed
-                stock_SSweed += 1
                 Player(Excited)::"Powerful psychoactive effects which boost your motivation, creativity, imagination and inspiration."
                 
             Elseif 2
                 Player.modifyActorVar(stock_WWweed, 1)
                 money -= Price_WWweed
-                stock_WWweed += 1
                 Player(Excited)::"A delicious blend of earthy, wooded and flowery tastes. That one, smell very strong !"
                 
             Elseif 3
                 Player.modifyActorVar(stock_PEweed, 1)
                 money -= Price_PEweed
-                stock_PEweed += 1
                 Player(Excited)::"Perfect for smoking with friends during parties and social gatherings."
                 
             Elseif 4
                 Player.modifyActorVar(stock_OGKweed, 1)
                 money -= Price_OGKweed
-                stock_OGKweed += 1
                 Player(Excited)::"For a rapid headrush, an uplifted mood and euphoria as well as increased mental stimulation."
                 
             Elseif 5
                 Player.modifyActorVar(stock_GSCweed, 1)
                 money -= Price_GSCweed
-                stock_GSCweed += 1
                 Player(Excited)::"It can help to feel creative, euphoric, relaxed and couch-locked."
                 
             Elseif 6
                 Player.modifyActorVar(stock_BBweed, 1)
                 money -= Price_BBweed
-                stock_BBweed += 1
                 Player(Excited)::"The top wake and bake strains due to its ability to make you creative and inspired."
                 
             Elseif 7
                 Player.modifyActorVar(stock_GGweed, 1)
                 money -= price_GGWeed
-                stock_GGweed += 1
                 Player(Excited)::"Increased mental clarity, stimulation, energy and uber-relaxing effects"
                 
             Endif

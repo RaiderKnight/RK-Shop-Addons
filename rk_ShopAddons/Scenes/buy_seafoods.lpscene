@@ -35,32 +35,27 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_Oysters, 1)
             money -= price_Oysters
-            stock_Oysters += 1
-            Player(Excited)::"1 oysters dish added to my refrigerator!"
+            Player(Excited)::"1 oysters dish added to my freezer!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_Shrimps, 1)
             money -= price_Shrimps
-            stock_Shrimps += 1
-            Player(Excited)::"1 shrimps dish added to my refrigerator!"
+            Player(Excited)::"1 shrimps dish added to my freezer!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_Sushi, 1)
             money -= price_Sushi
-            stock_Sushi += 1
-            Player(Excited)::"1 sushi dish added to my refrigerator!"
+            Player(Excited)::"1 sushi dish added to my freezer!"
                     
         ElseIf 3
             Player.modifyActorVar(stock_Lobster, 1)
             money -= price_Lobster
-            stock_Lobster += 1
-            Player(Excited)::"1 lobster dish added to my refrigerator!"
+            Player(Excited)::"1 lobster dish added to my freezer!"
         
         ElseIf 4
             Player.modifyActorVar(stock_Caviar, 1)
             money -= price_Caviar
-            stock_Caviar += 1
-            Player(Excited)::"1 caviar dish added to my refrigerator!"
+            Player(Excited)::"1 caviar dish added to my freezer!"
             
         EndIf
         

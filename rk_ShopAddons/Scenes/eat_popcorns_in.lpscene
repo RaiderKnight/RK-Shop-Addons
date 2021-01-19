@@ -25,7 +25,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_PlainPopcorn, -1)
-            stock_PlainPopcorn -= 1
             mood += 0.75
             energy += 2
             fitness -= 0.02
@@ -33,7 +32,6 @@ OTHER: none
 
         Elseif 1
             Player.modifyActorVar(stock_ButterPopcorn, -1)
-            stock_ButterPopcorn -= 1
             mood += 1
             energy += 3
             fitness -= 0.05
@@ -41,7 +39,6 @@ OTHER: none
 
         Elseif 2
             Player.modifyActorVar(stock_PopcornMix, -1)
-            stock_PopcornMix -= 1
             mood += 2
             energy += 5
             fitness -= 0.07
@@ -49,7 +46,6 @@ OTHER: none
 
         Elseif 3
             Player.modifyActorVar(stock_HealthyPopcorn, -1)
-            stock_HealthyPopcorn -= 1
             mood += 3
             energy += 5
             fitness += 1
@@ -59,7 +55,5 @@ OTHER: none
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

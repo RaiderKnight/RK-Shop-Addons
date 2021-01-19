@@ -1,5 +1,5 @@
 ACTION_UNIQUEID: buy_meatprod
-ACTION_NAME: Buy meaty meal
+ACTION_NAME: Buy meat meal
 WHERE: butcher, deli, fast_food, marketplace, restaurant
 WHEN: 0 - 24
 MINUTES: 1 - 5

@@ -30,7 +30,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_Oysters, -1)
-            stock_Oysters -= 1
             mood += 1
             energy += 3
             fitness += 1
@@ -40,7 +39,6 @@ OTHER: none
 
         Elseif 1
             Player.modifyActorVar(stock_Shrimps, -1)
-            stock_Shrimps -= 1
             mood += 2
             energy += 4
             fitness += 2
@@ -50,7 +48,6 @@ OTHER: none
 
         Elseif 2
             Player.modifyActorVar(stock_Sushi, -1)
-            stock_Sushi -= 1
             mood += 3
             energy += 6
             fitness += 3
@@ -60,7 +57,6 @@ OTHER: none
 
         Elseif 3
             Player.modifyActorVar(stock_Lobster, -1)
-            stock_Lobster -= 1
             mood += 4
             energy += 8
             fitness += 4
@@ -70,7 +66,6 @@ OTHER: none
 
         Elseif 4
             Player.modifyActorVar(stock_Caviar, -1)
-            stock_Caviar -= 1
             mood += 5
             energy += 10
             fitness += 5

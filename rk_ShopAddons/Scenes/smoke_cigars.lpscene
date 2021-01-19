@@ -27,7 +27,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_Davidoff, -1)
-            stock_Davidoff -= 1
             mood += 1
             attractiveness -= 0.07
             intoxication += 2.5
@@ -37,7 +36,6 @@ OTHER: none
             
         Elseif 1
             Player.modifyActorVar(stock_Romeo, -1)
-            stock_Romeo -= 1
             mood += 2
             attractiveness -= 0.06
             intoxication += 2
@@ -47,7 +45,6 @@ OTHER: none
         
         Elseif 2
             Player.modifyActorVar(stock_Montecristo, -1)
-            stock_Montecristo -= 1
             mood += 3
             attractiveness -= 0.05
             intoxication -= 0.5
@@ -57,7 +54,6 @@ OTHER: none
         
         Elseif 3
             Player.modifyActorVar(stock_KDcigars, -1)
-            stock_KDcigars -= 1
             mood += 4
             attractiveness -= 0.04
             intoxication += 1
@@ -67,7 +63,6 @@ OTHER: none
         
         Elseif 4
             Player.modifyActorVar(stock_Cohiba, -1)
-            stock_Cohiba -= 1
             mood += 5
             attractiveness -= 0.03
             intoxication += 0.5

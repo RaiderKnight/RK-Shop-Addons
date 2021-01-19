@@ -1,5 +1,5 @@
 ACTION_UNIQUEID: eat_meatprod_in
-ACTION_NAME: Eat a meat
+ACTION_NAME: Eat meat meal 
 WHERE: home, work, fraternity
 WHEN: 0 - 24
 MINUTES: 1 - 5

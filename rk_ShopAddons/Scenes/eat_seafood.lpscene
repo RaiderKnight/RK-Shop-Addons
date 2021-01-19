@@ -22,7 +22,7 @@ OTHER: none
         price_Caviar = Random(75, 122)
         price_Caviar_local = price_Caviar.convertToLocalCurrency()
         
-        Player::"Which type of seafood shall I buy?"
+        Player::"Which type of seafood shall I eat?"
         0:: money >= 5 ::"1 Oysters dish for <price_Oysters_local>"
         1:: money >= 12 ::"1 Shrimp dish for <price_Shrimps_local>"
         2:: money >= 15 ::"1 Sushi dish for <price_Sushi_local>"

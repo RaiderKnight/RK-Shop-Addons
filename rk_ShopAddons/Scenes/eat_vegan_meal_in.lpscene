@@ -34,7 +34,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_HealthyCookie, -1)
-            stock_HealthyCookie -= 0.5
             mood += 1
             energy += 2
             fitness += 0.5
@@ -44,7 +43,6 @@ OTHER: none
             
         Elseif 1
             Player.modifyActorVar(stock_LentilStew, -1)
-            stock_LentilStew -= 1
             mood += 4
             energy += 4
             fitness += 1
@@ -54,7 +52,6 @@ OTHER: none
         
         Elseif 2
             Player.modifyActorVar(stock_CauliAlfredo, -1)
-            stock_CauliAlfredo -= 1.25
             mood += 5
             energy += 5
             fitness += 2
@@ -64,7 +61,6 @@ OTHER: none
         
         Elseif 3
             Player.modifyActorVar(stock_RicePeas, -1)
-            stock_RicePeas -= 1.5
             mood += 6
             energy += 6
             fitness += 3
@@ -74,7 +70,6 @@ OTHER: none
         
         Elseif 4
             Player.modifyActorVar(stock_Edamame, -1)
-            stock_Edamame -= 1.75
             mood += 7
             energy += 7
             fitness += 4
@@ -84,7 +79,6 @@ OTHER: none
         
         Elseif 5
             Player.modifyActorVar(stock_PastaAlfredo, -1)
-            stock_PastaAlfredo -= 2
             mood += 9
             energy += 8
             fitness += 5
@@ -94,7 +88,6 @@ OTHER: none
         
         Elseif 6
             Player.modifyActorVar(stock_CrispyTofu, -1)
-            stock_CrispyTofu -= 2.25
             mood += 10
             energy += 9
             fitness += 6
@@ -104,7 +97,6 @@ OTHER: none
         
         Elseif 7
             Player.modifyActorVar(stock_LoMein, -1)
-            stock_LoMein -= 2.5
             mood += 12
             energy += 10
             fitness += 7
@@ -115,7 +107,5 @@ OTHER: none
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

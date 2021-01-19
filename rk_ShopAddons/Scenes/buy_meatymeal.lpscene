@@ -44,49 +44,41 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_Jerkey, 1)
             money -= price_Jerkey
-            stock_Jerkey += 1
             Player(Excited)::"1 Beef Jerkey bag added to my refrigerator!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_Cheesesteak, 1)
             money -= price_Cheesesteak
-            stock_Cheesesteak += 1
             Player(Excited)::"1 Philly Cheesesteak added to my refrigerator!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_Chicken, 1)
             money -= price_Chicken
-            stock_Chicken += 1
             Player(Excited)::"1 Chicken schnitzel added to my refrigerator!"
                     
         ElseIf 3
             Player.modifyActorVar(stock_SaltNPepper, 1)
             money -= price_SaltNPepper
-            stock_SaltNPepper += 1
             Player(Excited)::"1 Salt-and-Pepper Steak added to my refrigerator!"
         
         ElseIf 4
             Player.modifyActorVar(stock_WrappedPork, 1)
             money -= price_WrappedPork
-            stock_WrappedPork += 1
             Player(Excited)::"1 Bacon-Wrapped Pork added to my refrigerator!"
             
         ElseIf 5
             Player.modifyActorVar(stock_ChickenKebabs, 1)
             money -= price_ChickenKebabs
-            stock_ChickenKebabs += 1
             Player(Excited)::"1 Chicken Kebabs added to my refrigerator!"
 
         ElseIf 6
             Player.modifyActorVar(stock_ChineseBeef, 1)
             money -= price_ChineseBeef
-            stock_ChineseBeef += 1
             Player(Excited)::"1 Chinese Beef & Broccoli added to my refrigerator!"
 
         ElseIf 7
             Player.modifyActorVar(stock_SurfNTurf, 1)
             money -= price_SurfNTurf
-            stock_SurfNTurf += 1
             Player(Excited)::"1 Surf 'n Turf added to my refrigerator!"
    
         EndIf

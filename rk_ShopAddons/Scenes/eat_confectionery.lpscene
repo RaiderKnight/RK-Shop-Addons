@@ -33,7 +33,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_PopRocks, -1)
-            stock_PopRocks -= 1
             mood += 2
             energy += 2
             interpersonal -= 1
@@ -41,7 +40,6 @@ OTHER: none
 
         Elseif 1
             Player.modifyActorVar(stock_CottonCandy, -1)
-            stock_CottonCandy -= 1
             mood += 3
             energy += 3
             interpersonal -= 1
@@ -49,7 +47,6 @@ OTHER: none
 
         Elseif 2
             Player.modifyActorVar(stock_GummiBears, -1)
-            stock_GummiBears -= 1
             mood += 2
             energy += 1
             interpersonal += 0.25
@@ -57,7 +54,6 @@ OTHER: none
 
         Elseif 3
             Player.modifyActorVar(stock_Smarties, -1)
-            stock_Smarties -= 1
             mood += 1
             energy += 2
             interpersonal += 1
@@ -65,7 +61,6 @@ OTHER: none
 
         Elseif 4
             Player.modifyActorVar(stock_JollyRanchers, -1)
-            stock_JollyRanchers -= 1
             mood += 2
             energy += 3
             interpersonal += 0.5
@@ -73,7 +68,6 @@ OTHER: none
 
         Elseif 5
             Player.modifyActorVar(stock_PeanutCups, -1)
-            stock_PeanutCups -= 1
             mood += 3
             energy += 4
             interpersonal -= 2
@@ -81,7 +75,6 @@ OTHER: none
 
         Elseif 6
             Player.modifyActorVar(stock_Licorice, -1)
-            stock_Licorice -= 1
             mood += 2
             energy += 1
             interpersonal += 0.5
@@ -89,7 +82,6 @@ OTHER: none
         
         Elseif 7
             Player.modifyActorVar(stock_PowerBar, -1)
-            stock_PowerBar -= 1
             mood += 3
             energy += 5
             interpersonal += 1

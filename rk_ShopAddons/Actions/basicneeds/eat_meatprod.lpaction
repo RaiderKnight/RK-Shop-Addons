@@ -1,5 +1,5 @@
 ACTION_UNIQUEID: eat_meatprod
-ACTION_NAME: Eat a meat
+ACTION_NAME: Eat meat meal
 WHERE:  cafe, coffee, deli, fast_food, hospital, hotel, marketplace, restaurant, prison
 WHEN: 0 - 24
 MINUTES: 1 - 5

@@ -45,49 +45,41 @@ OTHER: none
         If 0
             Player.modifyActorVar(stock_Pita, 1)
             money -= price_Pita
-            stock_Pita += 1
             Player(Excited)::"1 more pita added to my pantry!"
                     
         ElseIf 1
             Player.modifyActorVar(stock_Bread, 1)
             money -= price_Bread
-            stock_Bread += 1
             Player(Excited)::"1 more bread added to my pantry!"
                     
         ElseIf 2
             Player.modifyActorVar(stock_Bagel, 1)
             money -= 3
-            stock_Bagel += 1
             Player(Excited)::"1 more bagel added to my pantry!"
                     
         ElseIf 3
-            Player.modifyActorVar(stock_BaltikBread, 2)
+            Player.modifyActorVar(stock_BaltikBread, 1)
             money -= 4
-            stock_BaltikBread += 2
             Player(Excited)::"1 more Baltik bread added to my pantry!"
         
         ElseIf 4
             Player.modifyActorVar(stock_ProteinCookie, 1)
             money -= 2
-            stock_ProteinCookie += 1
             Player(Excited)::"1 more protein cookie added to my pantry!"
             
         ElseIf 5
             Player.modifyActorVar(stock_VdolkyDonut, 1)
             money -= 5
-            stock_VdolkyDonut += 1
             Player(Excited)::"1 more Vdolky donut added to my pantry!"
 
         ElseIf 6
-            Player.modifyActorVar(stock_ApplePie, 2)
+            Player.modifyActorVar(stock_ApplePie, 1)
             money -= 10
-            stock_ApplePie += 2
             Player(Excited)::"1 slice of apple pie added to my pantry!"
 
         ElseIf 7
-            Player.modifyActorVar(stock_RoyalCake, 5)
+            Player.modifyActorVar(stock_RoyalCake, 1)
             money -= 25
-            stock_RoyalCake += 5
             Player(Excited)::"1 piece of Royal cake added to my pantry!"
    
         EndIf

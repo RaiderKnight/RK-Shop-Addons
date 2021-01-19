@@ -5,8 +5,8 @@ WHO: none
 OTHER: none
 
     SceneStart()
-	
-	    // Get current bakery types
+    
+        // Get current bakery types
         stock_Pita = Player.getActorVar(stock_Pita)
         stock_Bread = Player.getActorVar(stock_Bread)
         stock_Bagel = Player.getActorVar(stock_Bagel)
@@ -35,7 +35,6 @@ OTHER: none
         
         If 0
             Player.modifyActorVar(stock_Pita, -1)
-            stock_Pita -= 1
             mood += 0.5
             energy += 1
             fitness += 1
@@ -43,7 +42,6 @@ OTHER: none
 
         Elseif 1
             Player.modifyActorVar(stock_Bread, -1)
-            stock_Bread -= 1
             mood += 1
             energy += 3
             fitness += 2
@@ -51,7 +49,6 @@ OTHER: none
 
         Elseif 2
             Player.modifyActorVar(stock_Bagel, -1)
-            stock_Bagel -= 1
             mood += 1
             energy += 4
             fitness += 3
@@ -59,7 +56,6 @@ OTHER: none
 
         Elseif 3
             Player.modifyActorVar(stock_BaltikBread, -1)
-            stock_BaltikBread -= 1
             mood += 2
             energy += 5
             fitness += 4
@@ -67,7 +63,6 @@ OTHER: none
 
         Elseif 4
             Player.modifyActorVar(stock_ProteinCookie, -1)
-            stock_ProteinCookie -= 1
             mood += 2
             energy += 3
             fitness += 1
@@ -75,7 +70,6 @@ OTHER: none
 
         Elseif 5
             Player.modifyActorVar(stock_VdolkyDonut, -1)
-            stock_VdolkyDonut -= 1
             mood += 3
             energy += 3
             fitness -= 1
@@ -83,7 +77,6 @@ OTHER: none
 
         Elseif 6
             Player.modifyActorVar(stock_ApplePie, -1)
-            stock_ApplePie -= 1
             mood += 4
             energy += 4
             fitness -= 1
@@ -91,7 +84,6 @@ OTHER: none
         
         Elseif 7
             Player.modifyActorVar(stock_RoyalCake, -1)
-            stock_RoyalCake -= 1
             mood += 6
             energy += 5
             fitness -= 2
@@ -100,7 +92,5 @@ OTHER: none
         Endif
         
     Endif
-    
-    passTime(0.25, 0.5)
     
 SceneEnd()

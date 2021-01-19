@@ -33,27 +33,22 @@ OTHER: none
             If 0
                 Player.modifyActorVar(stock_Davidoff, 1)
                 money -= price_Davidoff
-                stock_Davidoff += 1
                                 
             Elseif 1
                 Player.modifyActorVar(stock_Romeo, 1)
                 money -= price_RomeoJulieta
-                stock_Romeo += 1
                 
             Elseif 2
                 Player.modifyActorVar(stock_Montecristo, 1)
                 money -= price_Montecristo
-                stock_Montecristo += 1
                 
             Elseif 3
                 Player.modifyActorVar(stock_KDcigars, 1)
                 money -= price_KingDenmark
-                stock_KDcigars += 1
                 
             Elseif 4
                 Player.modifyActorVar(stock_Cohiba, 1)
                 money -= price_Cohiba
-                stock_Cohiba += 1
                 
             Endif
     Endif   
