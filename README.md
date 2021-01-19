@@ -4,13 +4,14 @@
 <br>
 <h3>rk_ShopAddons  version(1.0): </h3>
 <p>Add more options to buy / eat different consumable items in the city. </p> 
-<p>Contain 29 scenes.</p>
+<p>Contain 30 scenes.</p>
 <br>
 <p><strong>This mod contain all addons that I made</strong></p>
 <ul>
 <li>RK-Bakery-Shop</li>
 <li>RK-Confectionery-Shop</li>
 <li>RK-Cigars-Shop</li>
+<li>RK-Erotic-Shop</li>
 <li>RK-Ice-Cream-Shop</li>
 <li>RK-Meat-Shop</li>
 <li>RK-Popcorns-Shop</li>
@@ -31,6 +32,7 @@
 <li>RK-Bakery-Shop</li>
 <li>RK-Confectionery-Shop</li>
 <li>RK-Cigars-Shop</li>
+<li>RK-Erotic-Shop</li>
 <li>RK-Ice-Cream-Shop</li>
 <li>RK-Meat-Shop</li>
 <li>RK-Popcorns-Shop</li>

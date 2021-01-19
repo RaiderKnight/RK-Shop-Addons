@@ -6,393 +6,380 @@ OTHER: none
 
     SceneStart()
     
-    If money < -10
-        Player(Anxious)::"I am in debt. The stores will not sell me anything."
-    Else
-    
-        Player(Curious)::"There is a lot of cool stuff here." 
+        If money < -5
+            Player(Anxious)::"I am in debt. The store will not sell me anything."
         
-        // Get current sextoy types
-        DildoType = Player.getActorVar(rk_DildoType)
-        FleshlightType = Player.getActorVar(rk_FleshlightType)
-        AnalPlugType = Player.getActorVar(rk_AnalPlugType)
-        LubricantType = Player.getActorVar(rk_LubricantType)
-        SexDollType = Player.getActorVar(rk_SexDollType)
-        MassageLotionType = Player.getActorVar(rk_MassageLotionType)
-        MasturbatorType = Player.getActorVar(rk_MasturbatorType)
+        Else
         
-        // rk_taxes = CostofLiving*Random(0.8, 1.2)
+            Player(Curious)::"Which type of sex product shall I buy?"
+            0:: "Dildo"
+            1:: "Fleshlight"
+            2:: "Anal Plug"
+            3:: "Lubricant"
+            4:: "Sex Doll"
+            5:: "Massage Lotion"
+            6:: "Masturbator"
+            99:: "Don't buy anything"
+        
+            If 0
             
-        Player(Curious)::"Which type of sex product shall I buy?"
-        0:: "Dildo"
-        1:: "Fleshlight"
-        2:: "Anal Plug"
-        3:: "Lubricant"
-        4:: "Sex Doll"
-        5:: "Massage Lotion"
-        6:: "Masturbator"
-        99:: "Don't buy anything"
-        
-        If 0
-            If DildoType >= 4
-                Player(Sad)::"Eh! I prefer the dildo I already have. It's a piece of collection, so I will not find any better in town !"
+                price_DildoCheap = 20
+                price_DildoCheap_local = price_DildoCheap.convertToLocalCurrency()
+                price_DildoQuality = 40
+                price_DildoQuality_local = price_DildoQuality.convertToLocalCurrency()
+                price_DildoLuxe = 80
+                price_DildoLuxe_local = price_DildoLuxe.convertToLocalCurrency()
+                price_DildoFinest = 1600
+                price_DildoFinest_local = price_DildoFinest.convertToLocalCurrency()
+                
+                If stock_DildoType >= 50
+                    Player(Wink)::"Eh! I think I have enough dildos for the moment !"
             
-            Else
-                price1 = 20.convertToLocalCurrency(true)
-                price2 = 40.convertToLocalCurrency(true)
-                price3 = 80.convertToLocalCurrency(true)
-                price4 = 1600.convertToLocalCurrency(true)
+                Else
                 
-                Player(Excited)::"Which dildo should I get or upgrade for ?"
-                1:: DildoType == 0:: "The Leda Dildo for (<price1>)"
-                2:: DildoType == 1:: "Lelo Inez Gold Dildo for (<price2>)"
-                3:: DildoType == 2:: "The Venetian Casanova Dildo for (<price3>)"
-                4:: DildoType == 3:: "The Vinfamy Pearl Royale Dildo for (<price4>)"
-                5:: "Don't buy anything"
+                    Player(Excited)::"Which dildo should I buy ?"
+                    1:: "The Leda Dildo for (<price_DildoCheap_local>)"
+                    2:: "Lelo Inez Gold Dildo for (<price_DildoQuality_local>)"
+                    3:: "The Venetian Casanova Dildo for (<price_DildoLuxe_local>)"
+                    4:: "The Vinfamy Pearl Royale Dildo for (<price_DildoFinest_local>)"
+                    5:: "Don't buy anything"
                 
-                If 1
-                    Player.setActorVar(rk_DildoType, 1)
-                    money -= 20
-                    rk_sexshop_value += 20
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"Cheap, but the most furry-friendly dildo in the world!"
+                    If 1
+                        Player.modifyActorVar(stock_DildoCheap, 1)
+                        money -= price_DildoCheap
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"Cheap, but the most furry-friendly dildo in the world!"
                 
-                ElseIf 2
-                    Player.setActorVar(rk_DildoType, 2)
-                    money -= 40
-                    rk_sexshop_value += 40
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"Maybe not high quality but enough to get fun."
+                    ElseIf 2
+                        Player.modifyActorVar(stock_DildoQuality, 1)
+                        money -= price_DildoQuality
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"Maybe not high quality but enough to get fun."
                 
-                ElseIf 3
-                    Player.setActorVar(rk_DildoType, 3)
-                    money -= 80
-                    rk_sexshop_value += 80
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"The best when you want the ultimate in luxurious indulgence."
+                    ElseIf 3
+                        Player.modifyActorVar(stock_DildoLuxe, 1)
+                        money -= price_DildoLuxe
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"The best when you want the ultimate in luxurious indulgence."
                
-               ElseIf 4
-                    Player.setActorVar(rk_DildoType, 4)
-                    money -= 1600
-                    rk_sexshop_value += 1600
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"Having fun with a dildo along side the world's finest crown jewels."
+                    ElseIf 4
+                        Player.modifyActorVar(stock_DildoFinest, 1)
+                        money -= price_DildoFinest
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"Having fun with a dildo along side the world's finest crown jewels."
                 
+                    EndIf
+                    
                 EndIf
-            EndIf
             
-        
+            ElseIf 1
             
-        ElseIf 1
-            If FleshlightType >= 4
-                Player(Sad)::"Eh! I prefer the fleshlight I already have. It's a piece of collection, so I will not find any better in town !"
+                price_FleshlightPilot = 25
+                price_FleshlightPilot_local = price_FleshlightPilot.convertToLocalCurrency()
+                price_FleshlightGripIce = 50
+                price_FleshlightGripIce_local = price_FleshlightGripIce.convertToLocalCurrency()
+                price_FleshlightTenga = 100
+                price_FleshlightTenga_local = price_FleshlightTenga.convertToLocalCurrency()
+                price_FleshLightJack = 200
+                price_FleshLightJack_local = price_FleshLightJack.convertToLocalCurrency()
+                
+                If stock_FleshlightType >= 50
+                    Player(Wink)::"Eh! I think I have enough fleshlights for the moment !"
             
-            Else
-                price1 = 25.convertToLocalCurrency(true)
-                price2 = 50.convertToLocalCurrency(true)
-                price3 = 100.convertToLocalCurrency(true)
-                price4 = 200.convertToLocalCurrency(true)
+                Else
+            
+                    Player(Excited)::"Which fleshlight should I get ?"
+                    1:: "The Fleshlight Flight: Pilot for (<price_FleshlightPilot_local>)"
+                    2:: "The Fleshlight Fleshskins Grip Ice for (<price_FleshlightGripIce_local>)"
+                    3:: "The Tenga 3D Module for (<price_FleshlightTenga_local>)"
+                    4:: "The Fleshlight Girls & Fleshjack Boys for (<price_FleshLightJack_local>)"
+                    5:: "Don't buy anything"
                 
-                Player(Excited)::"Which fleshlight should I get or upgrade for ?"
-                1:: FleshlightType == 0:: "The Fleshlight Flight: Pilot for (<price1>)"
-                2:: FleshlightType == 1:: "The Fleshlight Fleshskins Grip Ice for (<price2>)"
-                3:: FleshlightType == 2:: "The Tenga 3D Module for (<price3>)"
-                4:: FleshlightType == 3:: "The Fleshlight Girls & Fleshjack Boys for (<price4>)"
-                5:: "Don't buy anything"
+                    If 1
+                        Player.modifyActorVar(stock_FleshlightPilot, 1)
+                        money -= price_FleshlightPilot
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"Super-soft inner + universal opening + adjustable suction."
+                        Player(Excited)::"That low quality but it looks cool..."
                 
-                If 1
-                    Player.setActorVar(rk_FleshlightType, 1)
-                    money -= 25
-                    rk_sexshop_value += 25
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"Super-soft inner + universal opening + adjustable suction."
-                    Player(Excited)::"That low quality but it looks cool..."
+                    ElseIf 2
+                        Player.modifyActorVar(stock_FleshlightGripIce, 1)
+                        money -= price_FleshlightGripIce
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"Great for twisting sensations+soft, varied inner canal+no suction."
+                        Player(Excited)::"The best Fleshlight for blow job fun!"
                 
-                ElseIf 2
-                    Player.setActorVar(rk_FleshlightType, 2)
-                    money -= 50
-                    rk_sexshop_value += 50
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"Great for twisting sensations+soft, varied inner canal+no suction."
-                    Player(Excited)::"The best Fleshlight for blow job fun!"
+                    ElseIf 3
+                        Player.modifyActorVar(stock_FleshlightTenga, 1)
+                        money -= price_FleshlightTenga
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"Highly unusual+stealth appearance+great for heavier stimulation."
+                        Player(Excited)::"I bet I will have strong sensations with that one."
                 
-                ElseIf 3
-                    Player.setActorVar(rk_FleshlightType, 3)
-                    money -= 100
-                    rk_sexshop_value += 100
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"Highly unusual+stealth appearance+great for heavier stimulation."
-                    Player(Excited)::"I bet I will have strong sensations with that one."
+                    ElseIf 4
+                        Player.modifyActorVar(stock_FleshLightJack, 1)
+                        money -= price_FleshLightJack
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"Perfect for exploring new sexual fantasies."
+                        Player(Excited)::"Now we talk, high quality product for maximum fun!"
                 
-                ElseIf 4
-                    Player.setActorVar(rk_FleshlightType, 4)
-                    money -= 200
-                    rk_sexshop_value += 200
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"Perfect for exploring new sexual fantasies."
-                    Player(Excited)::"Now we talk, high quality product for maximum fun!"
+                    EndIf
+                    
+                Endif
+            
+            ElseIf 2
+                If stock_AnalPlugType >= 50
+                    Player(Wink)::"Eh! I think I have enough butt plugs for the moment !"
+            
+                Else
+
+                    price_AnalPlugTrainer = 15
+                    price_AnalPlugTrainer_local = price_AnalPlugTrainer.convertToLocalCurrency()
+                    price_AnalPlugTango = 30
+                    price_AnalPlugTango_local = price_AnalPlugTango.convertToLocalCurrency()
+                    price_AnalPlugUnbound = 60
+                    price_AnalPlugUnbound_local = price_AnalPlugUnbound.convertToLocalCurrency()
+                    price_AnalPlugBVibe = 120
+                    price_AnalPlugBVibe_local = price_AnalPlugBVibe.convertToLocalCurrency()
                 
+                    Player(Excited)::"Which butt plug should I get ?"
+                    1:: "Doc Johnson Naughty Trainer Set for (<price_AnalPlugTrainer_local>)"
+                    2:: "Tango Butt Plug for (<price_AnalPlugTango_local>)"
+                    3:: "The Unbound Shimmy for (<price_AnalPlugUnbound_local>)"
+                    4:: "b-Vibe Vibrating Rimming Butt Plug for (<price_AnalPlugBVibe_local>)"
+                    5:: "Don't buy anything"
+                
+                    If 1
+                        Player.modifyActorVar(stock_AnalPlugTrainer, 1)
+                        money -= price_AnalPlugTrainer
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"This trainer set is perfect for starting out and “to get ready for larger ones !"
+                
+                    ElseIf 2
+                        Player.modifyActorVar(stock_AnalPlugTango, 1)
+                        money -= price_AnalPlugTango
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"Good, when you want something teeny-tiny and not intimidating."
+                
+                    ElseIf 3
+                        Player.modifyActorVar(stock_AnalPlugUnbound, 1)
+                        money -= price_AnalPlugUnbound
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"This one is noticeably more pointy at the tip. I'm hurry to try it !"
+                
+                    ElseIf 4
+                        Player.modifyActorVar(stock_AnalPlugBVibe, 1)
+                        money -= price_AnalPlugBVibe
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"This one has beads around the neck of it that simulate rimming,... Fun times at the horizon!"
+                
+                    EndIf
                 EndIf
-            EndIf
+
+            ElseIf 3
+                If stock_LubricantType >= 50
+                    Player(Wink)::"Eh! I think I have enough lubricants for the moment !"
             
-       
-            
-        ElseIf 2
-            If AnalPlugType >= 4
-                Player(Sad)::"Eh! I prefer the butt plug I already have. It's a piece of collection, so I will not find any better in town !"
-            
-            Else
-                price1 = 15.convertToLocalCurrency(true)
-                price2 = 30.convertToLocalCurrency(true)
-                price3 = 60.convertToLocalCurrency(true)
-                price4 = 120.convertToLocalCurrency(true)
+                Else
                 
-                Player(Excited)::"Which butt plug should I get or upgrade for ?"
-                1:: AnalPlugType == 0:: "Doc Johnson Naughty Trainer Set for (<price1>)"
-                2:: AnalPlugType == 1:: "Tango Butt Plug for (<price2>)"
-                3:: AnalPlugType == 2:: "The Unbound Shimmy for (<price3>)"
-                4:: AnalPlugType == 3:: "b-Vibe Vibrating Rimming Butt Plug for (<price4>)"
-                5:: "Don't buy anything"
+                    price_LubeJOH2O = 15
+                    price_LubeJOH2O_local = price_LubeJOH2O.convertToLocalCurrency()
+                    price_LubeCoconut = 30
+                    price_LubeCoconut_local = price_LubeCoconut.convertToLocalCurrency()
+                    price_LubeSilicone = 60
+                    price_LubeSilicone_local = price_LubeSilicone.convertToLocalCurrency()
+                    price_LubeForia = 120
+                    price_LubeForia_local = price_LubeForia.convertToLocalCurrency()
                 
-                If 1
-                    Player.setActorVar(rk_AnalPlugType, 1)
-                    money -= 15
-                    rk_sexshop_value += 15
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"This trainer set is perfect for starting out and “to get ready for larger ones !"
+                    Player(Excited)::"Which lubricant should I get ?"
+                    1:: "JO H2O Succulent Watermelon for (<price_LubeJOH2O_local>)"
+                    2:: "Coconut Love Oil for (<price_LubeCoconut_local>)"
+                    3:: "Gun Oil Silicone for (<price_LubeSilicone_local>)"
+                    4:: "Foria Awaken for (<price_LubeForia_local>)"
+                    5:: "Don't buy anything"
                 
-                ElseIf 2
-                    Player.setActorVar(rk_AnalPlugType, 2)
-                    money -= 30
-                    rk_sexshop_value += 30
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"Good, when you want something teeny-tiny and not intimidating."
+                    If 1
+                        Player.modifyActorVar(stock_LubeJOH2O, 1)
+                        money -= price_LubeJOH2O
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"They make amazing formulas that are so delicious!"
+                        Player(Excited)::"It woulb be great for oral sex !"
                 
-                ElseIf 3
-                    Player.setActorVar(rk_AnalPlugType, 3)
-                    money -= 60
-                    rk_sexshop_value += 60
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"This one is noticeably more pointy at the tip. I'm hurry to try it !"
+                    ElseIf 2
+                        Player.modifyActorVar(stock_LubeCoconut, 1)
+                        money -= price_LubeCoconut
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"Nice option for something edible."
+                        Player(Excited)::"Little bit more expensive but, it tastes really good.  It woulb be great for oral sex !"
                 
-                ElseIf 4
-                    Player.setActorVar(rk_AnalPlugType, 4)
-                    money -= 120
-                    rk_sexshop_value += 120
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"This one has beads around the neck of it that simulate rimming,... Fun times at the horizon!"
+                    ElseIf 3
+                        Player.modifyActorVar(stock_LubeSilicone, 1)
+                        money -= price_LubeSilicone
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"That one is especially nice for anal play. Plus, it really stays slick for a while."
+                        Player(Excited)::"I need to find someone's ass to test that lube !"
                 
+                    ElseIf 4
+                        Player.modifyActorVar(stock_LubeForia, 1)
+                        money -= price_LubeForia
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"This CBD lube suppose to enhance pleasure and help make great sex even better. "
+                        Player(Excited)::"Humm, this will be perfect in solo or with a partner !"
+                
+                    EndIf
                 EndIf
-            EndIf
             
+            ElseIf 4
+                If stock_SexDollType >= 50
+                    Player(Sad)::"Eh! I think I have enough sex dolls for the moment !"
             
-            
-        ElseIf 3
-            If LubricantType >= 4
-                Player(Sad)::"Eh! I prefer the lubricant I already have. It's a piece of collection, so I will not find any better in town !"
-            
-            Else
-                price1 = 10.convertToLocalCurrency(true)
-                price2 = 20.convertToLocalCurrency(true)
-                price3 = 30.convertToLocalCurrency(true)
-                price4 = 50.convertToLocalCurrency(true)
+                Else
                 
-                Player(Excited)::"Which Lubricant should I get or upgrade for ?"
-                1:: LubricantType == 0:: "JO H2O Succulent Watermelon for (<price1>)"
-                2:: LubricantType == 1:: "Coconut Love Oil for (<price2>)"
-                3:: LubricantType == 2:: "Gun Oil Silicone for (<price3>)"
-                4:: LubricantType == 3:: "Foria Awaken for (<price4>)"
-                5:: "Don't buy anything"
+                    price_SexDollInflatable = 30
+                    price_SexDollInflatable_local = price_SexDollInflatable.convertToLocalCurrency()
+                    price_SexDollClassic = 750
+                    price_SexDollClassic_local = price_SexDollClassic.convertToLocalCurrency()
+                    price_SexDollTPE = 2000
+                    price_SexDollTPE_local = price_SexDollTPE.convertToLocalCurrency()
+                    price_SexDollRobot = 15000
+                    price_SexDollRobot_local = price_SexDollRobot.convertToLocalCurrency()
                 
-                If 1
-                    Player.setActorVar(rk_LubricantType, 1)
-                    money -= 10
-                    rk_sexshop_value += 10
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"They make amazing formulas that are so delicious!"
-                    Player(Excited)::"It woulb be great for oral sex !"
+                    Player(Excited)::"Which Sex Doll should I get ?"
+                    1:: "Inflatable Sex Doll for (<price_SexDollInflatable_local>)"
+                    2:: "Classic Tan Sex Doll for (<price_SexDollClassic_local>)"
+                    3:: "Most Lifelike TPE Sex Doll for (<price_SexDollTPE_local>)"
+                    4:: "Lifelike AI Sex Robot for (<price_SexDollRobot_local>)"
+                    5:: "Don't buy anything"
                 
-                ElseIf 2
-                    Player.setActorVar(rk_LubricantType, 2)
-                    money -= 20
-                    rk_sexshop_value += 20
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"Nice option for something edible."
-                    Player(Excited)::"Little bit more expensive but, it tastes really good.  It woulb be great for oral sex !"
+                    If 1
+                        Player.modifyActorVar(stock_SexDollInflatable, 1)
+                        money -= price_SexDollInflatable
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"Perfect for sex party or to give as a joke."
                 
-                ElseIf 3
-                    Player.setActorVar(rk_LubricantType, 3)
-                    money -= 30
-                    rk_sexshop_value += 30
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"That one is especially nice for anal play. Plus, it really stays slick for a while."
-                    Player(Excited)::"I need to find someone's ass to test that lube !"
+                    ElseIf 2
+                        Player.modifyActorVar(stock_SexDollClassic, 1)
+                        money -= price_SexDollClassic
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"That should bring some life at home."
                 
-                ElseIf 4
-                    Player.setActorVar(rk_LubricantType, 4)
-                    money -= 50
-                    rk_sexshop_value += 50
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"This CBD lube suppose to enhance pleasure and help make great sex even better. "
-                    Player(Excited)::"Humm, this will be perfect in solo or with a partner !"
+                    ElseIf 3
+                        Player.modifyActorVar(stock_SexDollTPE, 1)
+                        money -= price_SexDollTPE
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"For sure, I will pass long long nights with that sex doll !"
                 
+                    ElseIf 4
+                        Player.modifyActorVar(stock_SexDollRobot, 1)
+                        money -= price_SexDollRobot
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"Haha! I'm hurry to fuck or being fucked by my sex robot !"
+                
+                    EndIf
                 EndIf
-            EndIf
             
-           
+            ElseIf 5
+                If stock_MassageLotionType >= 50
+                    Player(Sad)::"Eh! I think I have enough massage lotions for the moment !"
             
-        ElseIf 4
-            If SexDollType >= 4
-                Player(Sad)::"Eh! I prefer the sex doll I already have. It's a piece of collection, so I will not find any better in town !"
-            
-            Else
-                price1 = 30.convertToLocalCurrency(true)
-                price2 = 750.convertToLocalCurrency(true)
-                price3 = 2000.convertToLocalCurrency(true)
-                price4 = 15000.convertToLocalCurrency(true)
+                Else
+                    
+                    price_LotionHoneydew = 5
+                    price_LotionHoneydew_local = price_LotionHoneydew.convertToLocalCurrency()
+                    price_LotionRedFlower = 25
+                    price_LotionRedFlower_local = price_LotionRedFlower.convertToLocalCurrency()
+                    price_LotionNaturale = 50
+                    price_LotionNaturale_local = price_LotionNaturale.convertToLocalCurrency()
+                    price_LotionTHC = 100
+                    price_LotionTHC_local = price_LotionTHC.convertToLocalCurrency()
+
+                    Player(Excited)::"Which massage lotion should I get ?"
+                    1:: "Honeydew Confectionary Delights Massage oil for (<price_LotionHoneydew_local>)"
+                    2:: "Red Flower Massage Lotion for (<price_LotionRedFlower_local>)"
+                    3:: "Naturale Massage Oil for (<price_LotionNaturale_local>)"
+                    4:: "High THC Formula Massage Lotion for (<price_LotionTHC_local>)"
+                    5:: "Don't buy anything"
                 
-                Player(Excited)::"Which Sex Doll should I get or upgrade for ?"
-                1:: SexDollType == 0:: "Inflatable Sex Doll for (<price1>)"
-                2:: SexDollType == 1:: "Classic Tan Sex Doll for (<price2>)"
-                3:: SexDollType == 2:: "Most Lifelike TPE Sex Doll for (<price3>)"
-                4:: SexDollType == 3:: "Lifelike AI Sex Robot for (<price4>)"
-                5:: "Don't buy anything"
+                    If 1
+                        Player.modifyActorVar(stock_LotionHoneydew, 1)
+                        money -= price_LotionHoneydew
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"Cheap but it will be perfect for Valentine’s Day."
                 
-                If 1
-                    Player.setActorVar(rk_SexDollType, 1)
-                    money -= 30
-                    rk_sexshop_value += 30
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"Perfect for sex party or to give as a joke."
+                    ElseIf 2
+                        Player.modifyActorVar(stock_LotionRedFlower, 1)
+                        money -= price_LotionRedFlower
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"Good quality and the smell of that oil is really awesome !"
                 
-                ElseIf 2
-                    Player.setActorVar(rk_SexDollType, 2)
-                    money -= 750
-                    rk_sexshop_value += 750
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"That should bring some life at home."
+                    ElseIf 3
+                        Player.modifyActorVar(stock_LotionNaturale, 1)
+                        money -= price_LotionNaturale
+                        perversion += Random(0, 0.45)
+                        Player(Excited)::"The best for great massages and for long lasting slippery nights !"
                 
-                ElseIf 3
-                    Player.setActorVar(rk_SexDollType, 3)
-                    money -= 2000
-                    rk_sexshop_value += 2000
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"For sure, I will pass long long nights with that sex doll !"
+                    ElseIf 4
+                        Player.modifyActorVar(stock_LotionTHC, 1)
+                        money -= price_LotionTHC
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"Humm, getting a massage and getting stoned at the same time, will see that !"
                 
-                ElseIf 4
-                    Player.setActorVar(rk_SexDollType, 4)
-                    money -= 15000
-                    rk_sexshop_value += 1500
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"Haha! I'm hurry to fuck or being fucked by my sex robot !"
-                
+                    EndIf
                 EndIf
-            EndIf
-            
-           
-            
-        ElseIf 5
-            If MassageLotionType >= 4
-                Player(Sad)::"Eh! I prefer the massage lotion I already have. It's a piece of collection, so I will not find any better in town !"
-            
-            Else
-                price1 = 5.convertToLocalCurrency(true)
-                price2 = 25.convertToLocalCurrency(true)
-                price3 = 50.convertToLocalCurrency(true)
-                price4 = 100.convertToLocalCurrency(true)
-                
-                Player(Excited)::"Which massage lotion should I get or upgrade for ?"
-                1:: MassageLotionType == 0:: "Honeydew Confectionary Delights Massage oil for (<price1>)"
-                2:: MassageLotionType == 1:: "Red Flower Moisturizing Body Lotion for (<price2>)"
-                3:: MassageLotionType == 2:: "Bon Vital Naturale Massage Oil for (<price3>)"
-                4:: MassageLotionType == 3:: "Lord Jones High THC Formula Body Lotion for (<price4>)"
-                5:: "Don't buy anything"
-                
-                If 1
-                    Player.setActorVar(rk_MassageLotionType, 1)
-                    money -= 5
-                    rk_sexshop_value += 5
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"Cheap but it will be perfect for Valentine’s Day."
-                
-                ElseIf 2
-                    Player.setActorVar(rk_MassageLotionType, 2)
-                    money -= 25
-                    rk_sexshop_value += 25
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"Good quality and the smell of that oil is really awesome !"
-                
-                ElseIf 3
-                    Player.setActorVar(rk_MassageLotionType, 3)
-                    money -= 50
-                    rk_sexshop_value += 50
-                    perversion += Random(0, 0.45)
-                    Player(Excited)::"The best for great massages and for long lasting slippery nights !"
-                
-                ElseIf 4
-                    Player.setActorVar(rk_MassageLotionType, 4)
-                    money -= 100
-                    rk_sexshop_value += 100
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"Humm, getting a massage and getting stoned at the same time, will see that !"
-                
-                EndIf
-            EndIf
             
             
             
-        ElseIf 6
-            If MasturbatorType >= 4
-                Player(Confused)::"Eh! I prefer the masturbator I already have. It's a piece of collection, so I will not find any better in town !"
+            ElseIf 6
+                If stock_MasturbatorType >= 50
+                    Player(Confused)::"Eh! I think I have enough masturbators for the moment !"
             
-            Else
-                price1 = 30.convertToLocalCurrency(true)
-                price2 = 200.convertToLocalCurrency(true)
-                price3 = 600.convertToLocalCurrency(true)
-                price4 = 900.convertToLocalCurrency(true)
+                Else
                 
-                Player(Excited)::"Which masturbator should I get or upgrade for ?"
-                1:: MasturbatorType == 0:: "Pocket Masturbator for (<price1>)"
-                2:: MasturbatorType == 1:: "Bubble Butt Realistic Masturbator for (<price2>)"
-                3:: MasturbatorType == 2:: "Mega Masturbator for (<price3>)"
-                4:: MasturbatorType == 3:: "Lovebotz Axis Multi-Angle Sex Machine for (<price4>)"
-                5:: "Don't buy anything"
+                    price_MasturbatorPocket = 30
+                    price_MasturbatorPocket_local = price_MasturbatorPocket.convertToLocalCurrency()
+                    price_MasturbatorBubble = 200
+                    price_MasturbatorBubble_local = price_MasturbatorBubble.convertToLocalCurrency()
+                    price_MasturbatorMega = 600
+                    price_MasturbatorMega_local = price_MasturbatorMega.convertToLocalCurrency()
+                    price_Lovebotz = 900
+                    price_Lovebotz_local = price_Lovebotz.convertToLocalCurrency()
+
+                    Player(Excited)::"Which masturbator should I get ?"
+                    1:: "Pocket Masturbator for (<price_MasturbatorPocket_local>)"
+                    2:: "Bubble Butt Realistic Masturbator for (<price_MasturbatorBubble_local>)"
+                    3:: "Mega Masturbator for (<price_MasturbatorMega_local>)"
+                    4:: "Lovebotz Axis Multi-Angle Sex Machine for (<price_Lovebotz_local>)"
+                    5:: "Don't buy anything"
                 
-                If 1
-                    Player.setActorVar(rk_MasturbatorType, 1)
-                    money -= 30
-                    rk_sexshop_value += 30
-                    perversion += Random(0, 0.25)
-                    Player(Excited)::"Not high quality but enough to have fun."
+                    If 1
+                        Player.modifyActorVar(stock_MasturbatorPocket, 1)
+                        money -= price_MasturbatorPocket
+                        perversion += Random(0, 0.25)
+                        Player(Excited)::"Not high quality but enough to have fun."
                 
-                ElseIf 2
-                    Player.setActorVar(rk_MasturbatorType, 2)
-                    money -= 200
-                    rk_sexshop_value += 200
-                    perversion += Random(0, 0.35)
-                    Player(Excited)::"The perfect toy to play with a tighter ass !"
+                    ElseIf 2
+                        Player.modifyActorVar(stock_MasturbatorBubble, 1)
+                        money -= price_MasturbatorBubble
+                        perversion += Random(0, 0.35)
+                        Player(Excited)::"The perfect toy to play with a tighter ass !"
                 
-                ElseIf 3
-                    Player.setActorVar(rk_MasturbatorType, 3)
-                    money -= 600
-                    rk_sexshop_value += 600
-                    perversion += Random(0, 0.45)
-                    Player(Evil)::"Maybe not a sex doll, but I got the essential !"
+                    ElseIf 3
+                        Player.modifyActorVar(stock_MasturbatorMega, 1)
+                        money -= price_MasturbatorMega
+                        perversion += Random(0, 0.45)
+                        Player(Evil)::"Maybe not a sex doll, but I got the essential !"
                 
-                ElseIf 4
-                    Player.setActorVar(rk_MasturbatorType, 4)
-                    money -= 900
-                    rk_sexshop_value += 900
-                    perversion += Random(0, 0.55)
-                    Player(Excited)::"That will makes things so much more exciting in the bedroom !"
+                    ElseIf 4
+                        Player.modifyActorVar(stock_Lovebotz, 1)
+                        money -= price_Lovebotz
+                        perversion += Random(0, 0.55)
+                        Player(Excited)::"That will makes things so much more exciting in the bedroom !"
                 
-                EndIf
-            EndIf
-        
-        EndIf
-        
-    EndIf
-    
-    passTime(2, 3)
-    
+                    EndIf
+                EndIf    
+ 
+            Endif
+            
+            
+        Endif   
     SceneEnd()
