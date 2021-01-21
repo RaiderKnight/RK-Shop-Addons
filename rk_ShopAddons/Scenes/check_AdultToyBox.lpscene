@@ -63,13 +63,13 @@ OTHER: none
         Else
 
             Player(Curious)::"Let see what I got in my adult toy box"
-            0:: "Dildo"
-            1:: "Fleshlight"
-            2:: "Anal Plug"
-            3:: "Lubricant"
-            4:: "Sex Doll"
-            5:: "Massage Lotion"
-            6:: "Masturbator"
+            0:: "<stock_DildoType> Dildo(s) in stock"
+            1:: "<stock_FleshlightType> Fleshlight(s) in stock"
+            2:: "<stock_AnalPlugType> Anal Plug(s) in stock"
+            3:: "<stock_LubricantType> Lubricant(s) in stock"
+            4:: "<stock_SexDollType> Sex Doll(s) in stock"
+            5:: "<stock_MassageLotionType> Massage Lotion(s) in stock"
+            6:: "<stock_MasturbatorType> Masturbator(s) in stock"
             99::"Nevermind, I will check later !"
         
             If 0
@@ -81,7 +81,7 @@ OTHER: none
                     0:: "<stock_DildoCheap> Leda Dildo(s)"
                     0:: "<stock_DildoQuality> Lelo Inez Gold Dildo(s)"
                     0:: "<stock_DildoLuxe> Venetian Casanova Dildo(s)"
-                    0:: "<stock_DildoFinest> Vinfamy Pearl Royale Dildo(s)"
+                    0:: "<stock_DildoFinest> Pearl Royale Dildo(s)"
                     99:: "Go back !"
 
                 Endif

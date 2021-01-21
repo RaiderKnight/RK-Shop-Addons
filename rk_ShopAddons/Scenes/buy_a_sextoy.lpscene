@@ -11,7 +11,7 @@ OTHER: none
         
         Else
         
-            Player(Curious)::"Which type of sex product shall I buy?"
+            Player(Curious)::"Which type of erotic product shall I buy?"
             0:: "Dildo"
             1:: "Fleshlight"
             2:: "Anal Plug"
@@ -41,7 +41,7 @@ OTHER: none
                     1:: "The Leda Dildo for (<price_DildoCheap_local>)"
                     2:: "Lelo Inez Gold Dildo for (<price_DildoQuality_local>)"
                     3:: "The Venetian Casanova Dildo for (<price_DildoLuxe_local>)"
-                    4:: "The Vinfamy Pearl Royale Dildo for (<price_DildoFinest_local>)"
+                    4:: "The Pearl Royale Dildo for (<price_DildoFinest_local>)"
                     5:: "Don't buy anything"
                 
                     If 1
@@ -326,9 +326,7 @@ OTHER: none
                 
                     EndIf
                 EndIf
-            
-            
-            
+
             ElseIf 6
                 If stock_MasturbatorType >= 50
                     Player(Confused)::"Eh! I think I have enough masturbators for the moment !"
@@ -376,10 +374,9 @@ OTHER: none
                         Player(Excited)::"That will makes things so much more exciting in the bedroom !"
                 
                     EndIf
-                EndIf    
+                EndIf
  
             Endif
-            
-            
-        Endif   
+
+        Endif 
     SceneEnd()

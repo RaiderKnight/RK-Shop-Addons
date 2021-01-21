@@ -2,11 +2,11 @@ ACTION_UNIQUEID: play_sextoys
 ACTION_NAME: Play with sextoy
 WHERE: home, fraternity
 WHEN: 0 - 24
-MINUTES: 10 - 40
-TIMEOUT_MINUTES: 160
+MINUTES: 1 - 4
+TIMEOUT_MINUTES: 3
 ALSO_TIMEOUT:
-EFFECTS: mood +1.5 (END), arousal -25 (END), fitness +0.003 (END), perversion +0.2 (END), attractiveness +0.002 (END), energy -10 (DURATION), mood -2 (INTERRUPTED)
+EFFECTS: 
 CONDITIONS: 
 MOVE_FIRST: true
 SCENE_ALWAYS:
-ANIMATION: masturbate
+ANIMATION: 
