@@ -45,56 +45,80 @@ OTHER: none
             mood += 0.5
             energy += 1
             fitness += 1
-            money -= MeatMeal1p
+            money -= price_Jerkey
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
             
         Elseif 1
             mood += 2
             energy += 2
             fitness += 2
-            money -= MeatMeal2p
+            money -= price_Cheesesteak
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 2
             mood += 2.5
             energy += 2.5
             fitness += 2.5
-            money -= MeatMeal3p
+            money -= price_Chicken
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 3
             mood += 3
             energy += 3
             fitness += 3
-            money -= MeatMeal4p
+            money -= price_SaltNPepper
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 4
             mood += 3.5
             energy += 3.5
             fitness += 3.5
-            money -= MeatMeal5p
+            money -= price_WrappedPork
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 5
             mood += 4
             energy += 4
             fitness += 4
-            money -= MeatMeal6p
+            money -= price_ChickenKebabs
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 6
             mood += 4.5
             energy += 4.5
             fitness += 4.5
-            money -= MeatMeal7p
+            money -= price_ChineseBeef
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 7
             mood += 5
             energy += 5
             fitness += 5
-            money -= MeatMeal8p
+            money -= price_SurfNTurf
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
             
         Endif

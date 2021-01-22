@@ -12,7 +12,7 @@ OTHER: none
     
     stock_popcorn = stock_PlainPopcorn + stock_ButterPopcorn + stock_PopcornMix + stock_HealthyPopcorn
     
-    If stock_popcorn < 1 
+    If stock_popcorn < 0.5 
         Player(Anxious)::"Ok, not enough popcorn to have a snack!"
     Else
 
@@ -28,6 +28,9 @@ OTHER: none
             mood += 0.75
             energy += 2
             fitness -= 0.02
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
 
         Elseif 1
@@ -35,6 +38,9 @@ OTHER: none
             mood += 1
             energy += 3
             fitness -= 0.05
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
 
         Elseif 2
@@ -42,6 +48,9 @@ OTHER: none
             mood += 2
             energy += 5
             fitness -= 0.07
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
 
         Elseif 3
@@ -50,6 +59,9 @@ OTHER: none
             energy += 5
             fitness += 1
             attractiveness += 1
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
 
         Endif

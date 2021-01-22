@@ -46,6 +46,9 @@ OTHER: none
             intelligence += 0.5
             attractiveness += 0.05
             money -= price_HealthyCookie
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
             
         Elseif 1
@@ -55,6 +58,9 @@ OTHER: none
             intelligence += 1
             attractiveness += 1
             money -= price_LentilStew
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 2
@@ -64,6 +70,9 @@ OTHER: none
             intelligence += 1.25
             attractiveness += 1.5
             money -= price_CauliAlfredo
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 3
@@ -73,6 +82,9 @@ OTHER: none
             intelligence += 1.5
             attractiveness += 2
             money -= price_RicePeas
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 4
@@ -82,6 +94,9 @@ OTHER: none
             intelligence += 1.75
             attractiveness += 2.5
             money -= price_Edamame
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 5
@@ -91,6 +106,9 @@ OTHER: none
             intelligence += 2
             attractiveness += 3
             money -= price_PastaAlfredo
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 6
@@ -100,6 +118,9 @@ OTHER: none
             intelligence += 2.25
             attractiveness += 3.5
             money -= price_CrispyTofu
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 7
@@ -109,6 +130,9 @@ OTHER: none
             intelligence += 2.5
             attractiveness += 4
             money -= price_LoMein
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Endif

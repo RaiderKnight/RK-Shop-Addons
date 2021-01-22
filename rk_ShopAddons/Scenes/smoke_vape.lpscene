@@ -14,7 +14,7 @@ OTHER: none
     
     vapProdStck = stock_Vapraspberry + stock_Vapgrape + stock_Vapstrawberry + stock_Vaplemon + stock_VapKanzi
     
-    If  vapProdStck < 1 
+    If  vapProdStck < 0.5 
         Player(Anxious)::"After searching everywhere... I don't have enough vape juice for smoking ! Oh well !"
     Else
 
@@ -27,48 +27,63 @@ OTHER: none
         8:: "Bah! I changed my mind!"
         
         If 0
-            Player(Excited)::"A sure fire all day vape, perfectly balanced and this one is not too sweet, great value for money."
+            
             Player.modifyActorVar(stock_Vapraspberry, -1)
             mood += 2
             energy += 1
             fitness -= 0.03
             intoxication += 0.25
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"A sure fire all day vape, perfectly balanced and this one is not too sweet, great value for money."
             passTime(0.05, 0.15)
             
         Elseif 1
-            Player(Excited)::"A rich and complex flavour that balances sweet and sharp perfectly."
+            
             Player.modifyActorVar(stock_Vapgrape, -1)
             mood += 1
             energy -= 1
             fitness -= 0.03
             interpersonal += 0.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"A rich and complex flavour that balances sweet and sharp perfectly."
             passTime(0.05, 0.15)
         
         Elseif 2
-            Player(Excited)::"Humm ! A really mouth-watering flavour with only a slight minty hit"
+            
             Player.modifyActorVar(stock_Vapstrawberry, -1)
             mood += 4
             energy += 1
             fitness -= 0.03
             interpersonal += 0.75
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"Humm ! A really mouth-watering flavour with only a slight minty hit"
             passTime(0.05, 0.15)
         
         Elseif 3
-            Player(Excited)::"Humm ! A perfect mix of dessert with fruity tones."
+            
             Player.modifyActorVar(stock_Vaplemon, -1)
             mood += 3
             energy += 1
             fitness -= 0.03
             interpersonal += 1
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"Humm ! A perfect mix of dessert with fruity tones."
             passTime(0.05, 0.15)
         
         Elseif 4
-            Player(Excited)::"Humm ! A nice refreshing combo of watermelon, fresh strawberries with just an edge of tartness from the kiwi."
+            
             Player.modifyActorVar(stock_VapKanzi, -1)
             mood += 4
             energy -= 1
             fitness -= 0.03
             interpersonal += 1.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"Humm ! A nice refreshing combo of watermelon, fresh strawberries with just an edge of tartness from the kiwi."
             passTime(0.05, 0.15)
         
         Endif

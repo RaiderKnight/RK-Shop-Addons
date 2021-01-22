@@ -17,7 +17,7 @@ OTHER: none
     
     stock_meatprod = stock_Jerkey + stock_Cheesesteak + stock_Chicken + stock_SaltNPepper + stock_WrappedPork + stock_ChickenKebabs + stock_ChineseBeef + stock_SurfNTurf
     
-    If stock_meatprod < 1 
+    If stock_meatprod < 0.5 
         Player(Anxious)::"Ok, not enough meats to make a meal! I need to go shopping !"
     Else
         
@@ -37,6 +37,9 @@ OTHER: none
             mood += 0.5
             energy += 1
             fitness += 1
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
 
         Elseif 1
@@ -44,6 +47,9 @@ OTHER: none
             mood += 2
             energy += 2
             fitness += 2
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 2
@@ -51,6 +57,9 @@ OTHER: none
             mood += 2.5
             energy += 2.5
             fitness += 2.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 3
@@ -58,6 +67,9 @@ OTHER: none
             mood += 3
             energy += 3
             fitness += 3
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 4
@@ -65,6 +77,9 @@ OTHER: none
             mood += 3.5
             energy += 3.5
             fitness += 3.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 5
@@ -72,6 +87,9 @@ OTHER: none
             mood += 4
             energy += 4
             fitness += 4
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 6
@@ -79,6 +97,9 @@ OTHER: none
             mood += 4.5
             energy += 4.5
             fitness += 4.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 7
@@ -86,6 +107,9 @@ OTHER: none
             mood += 5
             energy += 5
             fitness += 5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Endif

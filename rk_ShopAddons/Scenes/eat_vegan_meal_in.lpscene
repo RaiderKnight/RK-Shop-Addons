@@ -17,7 +17,7 @@ OTHER: none
         
         stock_veganmeal = stock_HealthyCookie + stock_LentilStew + stock_CauliAlfredo + stock_RicePeas + stock_Edamame + stock_PastaAlfredo + stock_CrispyTofu + stock_LoMein
     
-    If  stock_veganmeal < 1 
+    If  stock_veganmeal < 0.5 
         Player(Anxious)::"Ok, no vegan meal to eat! So, I need to go shop to the greengrocer if I want to eat healthy !"
     Else
 
@@ -39,6 +39,9 @@ OTHER: none
             fitness += 0.5
             intelligence += 0.5
             attractiveness += 0.05
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
             
         Elseif 1
@@ -48,6 +51,9 @@ OTHER: none
             fitness += 1
             intelligence += 1
             attractiveness += 1
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 2
@@ -57,6 +63,9 @@ OTHER: none
             fitness += 2
             intelligence += 1.25
             attractiveness += 1.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 3
@@ -66,6 +75,9 @@ OTHER: none
             fitness += 3
             intelligence += 1.5
             attractiveness += 2
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 4
@@ -75,6 +87,9 @@ OTHER: none
             fitness += 4
             intelligence += 1.75
             attractiveness += 2.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 5
@@ -84,6 +99,9 @@ OTHER: none
             fitness += 5
             intelligence += 2
             attractiveness += 3
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 6
@@ -93,6 +111,9 @@ OTHER: none
             fitness += 6
             intelligence += 2.25
             attractiveness += 3.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 7
@@ -102,6 +123,9 @@ OTHER: none
             fitness += 7
             intelligence += 2.5
             attractiveness += 4
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Endif

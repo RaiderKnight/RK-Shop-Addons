@@ -37,6 +37,9 @@ OTHER: none
             intelligence += 1
             arousal += 1
             money -= price_Oysters
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
             
         Elseif 1
@@ -46,6 +49,9 @@ OTHER: none
             intelligence += 2
             arousal += 1.25
             money -= price_Shrimps
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 2
@@ -55,6 +61,9 @@ OTHER: none
             intelligence += 3
             arousal += 1.5
             money -= price_Sushi
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 3
@@ -64,6 +73,9 @@ OTHER: none
             intelligence += 4
             arousal += 2
             money -= price_Lobster
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Elseif 4
@@ -73,6 +85,9 @@ OTHER: none
             intelligence += 5
             arousal += 3
             money -= price_Caviar
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Endif

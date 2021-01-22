@@ -11,9 +11,9 @@ OTHER: none
     stock_Cohiba = Player.getActorVar(stock_Cohiba)
     stock_Montecristo = Player.getActorVar(stock_Montecristo)
 
-    emptycigarStck = stock_Davidoff + stock_Romeo + stock_KDcigars + stock_Cohiba + stock_Montecristo
+    cigarStck = stock_Davidoff + stock_Romeo + stock_KDcigars + stock_Cohiba + stock_Montecristo
     
-    If  emptycigarStck < 1 
+    If  cigarStck < 0.5 
         Player(Anxious)::"After searching everywhere... I don't have any cigars !"
     Else
         
@@ -32,6 +32,9 @@ OTHER: none
             intoxication += 2.5
             fitness -= 0.08
             energy += 1
+            Player.show()
+            Player.animate(smoke)
+            Player(Happy)::"Hmm, a good Davidoff Yamasá cigar!"
             passTime(0.25, 0.5)
             
         Elseif 1
@@ -41,6 +44,9 @@ OTHER: none
             intoxication += 2
             fitness -= 0.07
             energy += 1.25
+            Player.show()
+            Player.animate(smoke)
+            Player(Happy)::"Hmm, a good Romeo y Julieta cigar!"
             passTime(0.25, 0.5)
         
         Elseif 2
@@ -50,6 +56,9 @@ OTHER: none
             intoxication -= 0.5
             fitness -= 0.06
             energy += 1.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Happy)::"Hmm, a good Montecristo cigar!"
             passTime(0.25, 0.5)
         
         Elseif 3
@@ -59,6 +68,9 @@ OTHER: none
             intoxication += 1
             fitness -= 0.05
             energy += 1.75
+            Player.show()
+            Player.animate(smoke)
+            Player(Happy)::"Hmm, a good King of Denmark Limited Edition cigar!"
             passTime(0.25, 0.5)
         
         Elseif 4
@@ -68,6 +80,9 @@ OTHER: none
             intoxication += 0.5
             fitness -= 0.04
             energy += 2
+            Player.show()
+            Player.animate(smoke)
+            Player(Happy)::"Hmm, a good Cohiba Behike cigar! The people around doesn't even realize the value of my cigar, but hey!"
             passTime(0.25, 0.5)
         
         Endif

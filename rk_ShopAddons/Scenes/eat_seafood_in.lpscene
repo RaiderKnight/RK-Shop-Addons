@@ -15,7 +15,7 @@ OTHER: none
     
     stock_seafoodprod = stock_Oysters + stock_Shrimps + stock_Sushi + stock_Lobster + stock_Caviar
     
-    If stock_seafoodprod < 1 
+    If stock_seafoodprod < 0.5 
         Player(Anxious)::"Ok, not enough seafood to make a lunch!"
         
     Else
@@ -35,6 +35,9 @@ OTHER: none
             fitness += 1
             intelligence += 1
             arousal += 1
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 1
@@ -44,6 +47,9 @@ OTHER: none
             fitness += 2
             intelligence += 2
             arousal += 1.25
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 2
@@ -53,6 +59,9 @@ OTHER: none
             fitness += 3
             intelligence += 3
             arousal += 1.5
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 3
@@ -62,6 +71,9 @@ OTHER: none
             fitness += 4
             intelligence += 4
             arousal += 2
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
 
         Elseif 4
@@ -71,6 +83,9 @@ OTHER: none
             fitness += 5
             intelligence += 5
             arousal += 3
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.25, 0.5)
         
         Endif

@@ -17,7 +17,7 @@ OTHER: none
     
     weedstck = stock_AK47weed + stock_SSweed + stock_WWweed + stock_PEweed + stock_OGKweed + stock_GSCweed + stock_BBweed + stock_GGweed
     
-    If  weedstck < 1 
+    If  weedstck < 0.4 
         Player(Anxious)::"After searching everywhere... I don't have enough weed to roll a joint ! Oh well !"
     Else
 
@@ -33,99 +33,115 @@ OTHER: none
         8:: "Bah! I changed my mind!"
         
         If 0
-            Player(Excited)::"Humm, I like the uplifting effects and the unique aromatic smell of that strain !"
+            
             Player.modifyActorVar(stock_AK47weed, -0.5)
-            stock_AK47weed -= 0.5
             mood += 5
             energy += 0.5
             fitness -= 0.3
             intelligence -= 0.3
             interpersonal += 0.5
             intoxication += 0.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"Humm, I like the uplifting effects and the unique aromatic smell of that strain !"
             passTime(0.05, 0.15)
             
         Elseif 1
-            Player(Excited)::"When you look for a strong and potent high which lasts for hours !"
+            
             Player.modifyActorVar(stock_SSweed, -0.5)
-            stock_SSweed -= 0.5
             mood += 1
             energy -= 0.75
             fitness -= 0.4
             intelligence += 1
             interpersonal -= 0.5
             intoxication += 1
+            Player.show()
+            Player.animate(smoke)
+            Player(Lazy)::"When you look for a strong and potent high which lasts for hours !"
             passTime(0.05, 0.15)
         
         Elseif 2
-            Player(Excited)::"Ha! The best hybrid for relaxing, having fun and its uplifting effect."
+            
             Player.modifyActorVar(stock_WWweed, -0.5)
-            stock_WWweed -= 0.5
             mood += 4
             energy += 1
             fitness -= 1
             intelligence -= 0.5
             interpersonal -= 1
             intoxication += 1.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Lazy)::"Ha! The best hybrid for relaxing, having fun and its uplifting effect."
             passTime(0.05, 0.15)
         
         Elseif 3
-            Player(Excited)::"Humm, I like its pineapple and woody taste. I have to watch myself not to smoke it all!"
+            
             Player.modifyActorVar(stock_PEweed, -0.5)
-            stock_PEweed -= 0.5
             mood += 3
             energy += 1.5
             fitness += 0.6
             intelligence -= 0.6
             interpersonal += 1
             intoxication += 2
+            Player.show()
+            Player.animate(smoke)
+            Player(Peaceful)::"Humm, I like its pineapple and woody taste. I have to watch myself not to smoke it all!"
             passTime(0.05, 0.15)
         
         Elseif 4
-            Player(Excited)::"Humm, a spicy and hashy taste. I always forget its strong smell when smoked ! Best weed to attract people !"
+            
             Player.modifyActorVar(stock_OGKweed, -0.5)
-            stock_OGKweed -= 0.5
             mood += 4
             energy -= 1
             fitness -= 0.7
             intelligence += 1.5
             interpersonal += 1.5
             intoxication += 2.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Peaceful)::"Humm, a spicy and hashy taste. I always forget its strong smell when smoked ! Best weed to attract people !"
             passTime(0.05, 0.15)
         
         Elseif 5
-            Player(Excited)::"Humm, I like the spicy and sweet taste of that one ! Where's my Munchies !"
+            
             Player.modifyActorVar(stock_GSCweed, -0.5)
-            stock_GSCweed -= 0.5
             mood += 5
             energy -= 1.5
             fitness -= 1
             intelligence += 0.8
             interpersonal -= 1
             intoxication += 3
+            Player.show()
+            Player.animate(smoke)
+            Player(Excited)::"Humm, I like the spicy and sweet taste of that one ! Where's my Munchies !"
             passTime(0.05, 0.15)
         
         Elseif 6
-            Player(Excited)::"I love its strong lemon-lime and diesel flavors. Damn, I'm stoned like a rock !"
+            
             Player.modifyActorVar(stock_BBweed, -0.5)
-            stock_BBweed -= 0.5
             mood += 1
             energy -= 1.25
             fitness -= 1.5
             intelligence += 1.5
             interpersonal -= 1
             intoxication += 3.5
+            Player.show()
+            Player.animate(smoke)
+            Player(Drained)::"I love its strong lemon-lime and diesel flavors. Damn, I'm stoned like a rock !"
             passTime(0.05, 0.15)
         
         Elseif 7
-            Player(Excited)::"Humm, I like the earthy, piney and sour taste and the couch-locking effect of that one !"
+            
             Player.modifyActorVar(stock_GGweed, -0.5)
-            stock_GGweed -= 0.5
             mood += 5
             energy += 1.5
             fitness -= 2
             intelligence += 1.5
             interpersonal -= 1
             intoxication += 4
+            Player.show()
+            Player.animate(smoke)
+            Player(Drained)::"Humm, I like the earthy, piney and sour taste and the couch-locking effect of that one !"
             passTime(0.05, 0.15)
         
         Endif

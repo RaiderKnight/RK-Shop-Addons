@@ -3,9 +3,9 @@ ACTION_NAME: Buy erotic product
 WHERE: beauty, department_store, marketplace
 WHEN: 0 - 24
 MINUTES: 1 - 1
-TIMEOUT_MINUTES: 0
+TIMEOUT_MINUTES: 1
 ALSO_TIMEOUT: 
-EFFECTS: mood +1 (END),perversion +0.5 (END)
+EFFECTS: mood +1 (END), perversion +0.5 (END)
 CONDITIONS:
 MOVE_FIRST: true
 SCENE_ALWAYS: buy_a_sextoy

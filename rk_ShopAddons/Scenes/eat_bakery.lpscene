@@ -44,6 +44,9 @@ OTHER: none
             energy += 1
             fitness += 1
             money -= price_Pita
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
             
         Elseif 1
@@ -51,6 +54,9 @@ OTHER: none
             energy += 3
             fitness += 2
             money -= price_Bread
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 2
@@ -58,6 +64,9 @@ OTHER: none
             energy += 4
             fitness += 3
             money -= price_Bagel
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 3
@@ -65,6 +74,9 @@ OTHER: none
             energy += 5
             fitness += 4
             money -= price_BaltikBread
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 4
@@ -72,6 +84,9 @@ OTHER: none
             energy += 3
             fitness += 1
             money -= price_ProteinCookie
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 5
@@ -79,6 +94,9 @@ OTHER: none
             energy += 3
             fitness -= 1
             money -= price_VdolkyDonut
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 6
@@ -86,6 +104,9 @@ OTHER: none
             energy += 4
             fitness -= 1
             money -= price_ApplePie
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
         
         Elseif 7
@@ -93,6 +114,9 @@ OTHER: none
             energy += 5
             fitness -= 2
             money -= price_RoyalCake
+            Player.show()
+            Player.animate(eat)
+            Player(Happy)::"Hmmm, yummy!"
             passTime(0.15, 0.25)
             
         Endif
