@@ -2,8 +2,8 @@
 <p>Module for the game LifePlay</p>
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
-<h3>rk_ShopAddons  version(1.0): </h3>
-<p>Add more options to buy / eat different consumable items in the city. </p> 
+<h3>rk_ShopAddons  version(1.0):</h3>
+<p>Add more options to buy / eat different consumable items in the city.</p>
 <p>Contain 30 scenes.</p>
 <br>
 <p><strong>This mod contain all addons that I made</strong></p>
@@ -24,7 +24,7 @@
 <hr>
 <br>
 <h3> Module requirements</h3>
-<p>At least LifePlay 3.18
+<p>At least LifePlay 3.18</p>
 <br>
 <h3> Module conflicts</h3>
 <p>You need to uninstall these mods (same content...)</p>
@@ -50,7 +50,7 @@
 <p>c:\..\LifePlay\Content\Modules\rk_ShopAddons </p>
 <p><strong>NOT</strong></p>
 <p>c:\..\LifePlay\Content\Modules\RK-Shop-Addons\rk_ShopAddons</p>
-<p>After the mod have been installed, make sure the mod is active in the Mod Manager. </p>
+<p>After the mod have been installed, make sure the mod is active in the Mod Manager.</p>
 <br>
 <hr>
 <br>
@@ -64,4 +64,22 @@
 <br>
 <hr>
 <br>
-> I am a freelance coder, I am in no way associated, affiliate or employee of the LifePlay team.
+<h3>How to contribute</h3>
+<ul>
+<li>Supporting me on <a href="https://www.patreon.com/raiderknight">Patreon</a></li>
+<li>Sending your ideas or feedback: Here on Github or on <a href="https://discord.gg/d3U9E2wb4Y">Discord</a></li>
+<li>Adding more content to the module.</li>
+<li>Improving the module, texts,...</li>
+<li>Reporting bugs, errors and typos</li>
+</ul>
+<br>
+<hr>
+<br>
+<h3>Contributors</h3>
+NickNo<br>
+<br>
+<hr>
+<br>
+<blockquote> I'm a freelance coder, who love playing with codes.<br>
+I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with the LifePlay team, or any of its subsidiaries or its affiliates.<br>
+All images, icons, animations, code snippets are from LifePlay.</blockquote>
