@@ -4,6 +4,7 @@
 <br>
 <h3>rk_ShopAddons  version(1.0):</h3>
 <p>Add more options to buy / eat different consumable items in the city.</p>
+<p>Contain 5 types of inventory (adult toy box, freezer, pantry, pockets and refrigerator)</p>
 <p>Contain 30 scenes.</p>
 <br>
 <p><strong>This mod contain all addons that I made</strong></p>
