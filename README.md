@@ -3,11 +3,12 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_ShopAddons  version(1.0):</h3>
+<p>All the mods I made for shopping / eating in the city, in one.</p>
 <p>Add more options to buy / eat different consumable items in the city.</p>
 <p>Contain 5 types of inventory (adult toy box, freezer, pantry, pockets and refrigerator)</p>
 <p>Contain 30 scenes.</p>
 <br>
-<p><strong>This mod contain all addons that I made</strong></p>
+<p><strong>This mod contains all these mini-shops</strong></p>
 <ul>
 <li>RK-Bakery-Shop</li>
 <li>RK-Confectionery-Shop</li>
