@@ -19,7 +19,6 @@ OTHER: none
             4:: "Sex Doll"
             5:: "Massage Lotion"
             6:: "Masturbator"
-            7:: Player.isInterestedIn(CurrentCompanion):: "Buy something for your companion"
             99:: "Don't buy anything"
         
             If 0
