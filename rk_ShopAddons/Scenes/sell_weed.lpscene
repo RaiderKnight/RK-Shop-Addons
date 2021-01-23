@@ -40,7 +40,7 @@ OTHER: none
                 
                 If 0 
                 
-                    If stock_AK47weed >= 10
+                    If stock_AK47weed <= 9.9
                         "You got not enough AK 47 to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -63,7 +63,7 @@ OTHER: none
 
                 Elseif 1
                 
-                    If stock_SSweed >= 10
+                    If stock_SSweed <= 9.9
                         "You got not enough Sunset Sherbet to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -86,7 +86,7 @@ OTHER: none
 
                 Elseif 2
                 
-                    If stock_WWweed >= 10
+                    If stock_WWweed <= 9.9
                         "You got not enough White Widow to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -109,7 +109,7 @@ OTHER: none
 
                 Elseif 3
                 
-                    If stock_PEWeed >= 10
+                    If stock_PEWeed <= 9.9
                         "You got not enough Pineapple Express to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -132,7 +132,7 @@ OTHER: none
 
                 Elseif 4
                 
-                    If stock_OGKWeed >= 10
+                    If stock_OGKWeed <= 9.9
                         "You got not enough OG Kush to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -155,7 +155,7 @@ OTHER: none
 
                 Elseif 5
                 
-                    If stock_GSCWeed >= 10
+                    If stock_GSCWeed <= 9.9
                         "You got not enough Girl Scout Cookies to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -178,7 +178,7 @@ OTHER: none
 
                 Elseif 6
                 
-                    If stock_BBWeed >= 10
+                    If stock_BBWeed <= 9.9
                         "You got not enough Bruce Banner to sell. Better go find some at the tobacco shop!"  
                 
                     Else
@@ -201,7 +201,7 @@ OTHER: none
 
                 Elseif 7
                 
-                    If stock_GGWeed >= 10
+                    If stock_GGWeed <= 9.9
                         "You got not enough Gorilla Glue to sell. Better go find some at the tobacco shop!"  
                 
                     Else
