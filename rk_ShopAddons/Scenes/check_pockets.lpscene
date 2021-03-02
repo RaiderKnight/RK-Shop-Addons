@@ -34,8 +34,8 @@ OTHER: none
         stock_PeanutCups = Player.getActorVar(stock_PeanutCups)
         stock_Licorice = Player.getActorVar(stock_Licorice)
         stock_PowerBar = Player.getActorVar(stock_PowerBar)
-    
-        stock_confectioneryprod = stock_PopRocks + stock_CottonCandy + stock_GummiBears + stock_Smarties + stock_JollyRanchers + stock_PeanutCups + stock_Licorice + stock_PowerBar
+        stock_BigBallHickey = Player.getActorVar(stock_BigBallHickey)
+        stock_confectioneryprod = stock_BigBallHickey + stock_PopRocks + stock_CottonCandy + stock_GummiBears + stock_Smarties + stock_JollyRanchers + stock_PeanutCups + stock_Licorice + stock_PowerBar
         
         stock_Vapraspberry = Player.getActorVar(stock_Vapraspberry)
         stock_Vapgrape = Player.getActorVar(stock_Vapgrape)
@@ -64,6 +64,7 @@ OTHER: none
             Else
                 0:: "<stock_PopRocks> box(es) of Pop Rocks"
                 0:: "<stock_CottonCandy> Cotton Candy"
+                0:: "<stock_BigBallHickey> Big ball hickey(s)"
                 0:: "<stock_GummiBears> pack(s) of Gummi Bears"
                 0:: "<stock_Smarties> box(es) of Smarties"
                 0:: "<stock_JollyRanchers> pack(s) of Jolly Ranchers"

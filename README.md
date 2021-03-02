@@ -3,10 +3,12 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_ShopAddons :</h3>
+<p>Version: 1.0.1</p>
+<br>
 <p>All the mods I made for shopping / eating in the city, in one.</p>
 <p>Add more options to buy / eat different consumable items in the city.</p>
 <p>Contain 5 types of inventory (adult toy box, freezer, pantry, pockets and refrigerator)</p>
-<p>Contain 30 scenes.</p>
+<p>Contain 34 scenes.</p>
 <p>Contain 1 scenes locked until you get black market skills.</p>
 <br>
 <p><strong>This mod contains all these mini-shops</strong></p>
@@ -27,8 +29,7 @@
 <hr>
 <br>
 <h3> Module requirements</h3>
-<p>At least LifePlay 3.18</p>
-<p>Optional: nn_GangsOfLifePlay : to sell weed</p>
+<p>At least the game LifePlay 3.20</p>
 <br>
 <h3> Module conflicts</h3>
 <p>You need to uninstall these mods (same content...)</p>
