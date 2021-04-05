@@ -11,7 +11,7 @@ OTHER: none
     stock_Vapstrawberry = Player.getActorVar(stock_Vapstrawberry)
     stock_Vaplemon = Player.getActorVar(stock_Vaplemon)
     stock_VapKanzi = Player.getActorVar(stock_VapKanzi)
-    
+
     vapProdStck = stock_Vapraspberry + stock_Vapgrape + stock_Vapstrawberry + stock_Vaplemon + stock_VapKanzi
     
     If  vapProdStck < 0.5 

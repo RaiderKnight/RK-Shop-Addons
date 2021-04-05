@@ -4,7 +4,8 @@ WHEN: 0 - 24
 WHO: none
 OTHER: none
 
-    SceneStart()
+SceneStart()
+
         // Get current items inside pantry inventory
         stock_PlainPopcorn = Player.getActorVar(stock_PlainPopcorn)
         stock_ButterPopcorn = Player.getActorVar(stock_ButterPopcorn)
@@ -26,50 +27,72 @@ OTHER: none
         
         pantry_inventory = stock_popcorn + stock_bakery
     
-    If pantry_inventory < 1 
+    If pantry_inventory < 1
+
         Player(Anxious)::"I got nothing inside my pantry!"
         
     Else
+    
+        stayInMenu = true
+        While stayInMenu
 
-        Player(Curious)::"Let see what I got in my pantry"
-        0:: isModEnabled(rk_PopCornsShop) || stock_popcorn > 0 ::"Check popcorn inventory (<stock_popcorn>)"
-        10:: isModEnabled(rk_BakeryShop) || stock_bakery > 0 ::"Check bread/pastry inventory (<stock_bakery>)"
-        99::"Nevermind, I will check later !"
+            Player(Curious)::"Let see what I got in my pantry"
+            0:: isModEnabled(rk_PopCornsShop) || stock_popcorn > 0 ::"Check popcorn inventory (<stock_popcorn>)"
+            10:: isModEnabled(rk_BakeryShop) || stock_bakery > 0 ::"Check bread/pastry inventory (<stock_bakery>)"
+            50:: isModEnabled(rk_PopCornsShop) || stock_popcorn > 0 ::"Eat a popcorn"
+            60:: isModEnabled(rk_BakeryShop) || stock_bakery > 0 ::"Eat a  bread/pastry"
+            99::"Nevermind, I will check later !"
         
-        If 0
+            If 0
         
-            If stock_popcorn  < 1
-                Player(Anxious)::"Ok, I don't have any popcorn! I have to go shopping !"
-            Else
+                If stock_popcorn  < 1
+                    Player(Anxious)::"Ok, I don't have any popcorn! I have to go shopping !"
+                Else
         
-                0::"<stock_PlainPopcorn> bag(s) of plain popcorn"
-                0::"<stock_ButterPopcorn> bag(s) of butter popcorn"
-                0::"<stock_PopcornMix> bag(s) of popcorn sweet mix"
-                0::"<stock_HealthyPopcorn> bag(s) of healthy popcorn"
-                99:: "Go back !"
+                    0::"<stock_PlainPopcorn> bag(s) of plain popcorn"
+                    0::"<stock_ButterPopcorn> bag(s) of butter popcorn"
+                    0::"<stock_PopcornMix> bag(s) of popcorn sweet mix"
+                    0::"<stock_HealthyPopcorn> bag(s) of healthy popcorn"
+                    99:: "Go back !"
                 
-            Endif
+                Endif
             
-        Elseif 10
+            Elseif 10
 
-            if stock_bakery  < 1
-                Player(Anxious)::"Ok, I don't have any bread or pastry! I have to go to the bakery shop!"
-            Else
+                if stock_bakery  < 1
+                    Player(Anxious)::"Ok, I don't have any bread or pastry! I have to go to the bakery shop!"
+                Else
             
-                0:: "<stock_Pita> pita(s)"
-                0:: "<stock_Bread> Nutricious bread(s)"
-                0:: "<stock_Bagel> Whole grain bagel(s)"
-                0:: "<stock_BaltikBread> Baltik bread(s)"
-                0:: "<stock_ProteinCookie> Protein cookie(s)"
-                0:: "<stock_VdolkyDonut> Vdolky donut(s)"
-                0:: "<stock_ApplePie> piece Homemade apple pie(s)"
-                0:: "<stock_RoyalCake> piece of Royal cake(s)"
-                99:: "Go back !"
+                    0:: "<stock_Pita> pita(s)"
+                    0:: "<stock_Bread> Nutricious bread(s)"
+                    0:: "<stock_Bagel> Whole grain bagel(s)"
+                    0:: "<stock_BaltikBread> Baltik bread(s)"
+                    0:: "<stock_ProteinCookie> Protein cookie(s)"
+                    0:: "<stock_VdolkyDonut> Vdolky donut(s)"
+                    0:: "<stock_ApplePie> piece Homemade apple pie(s)"
+                    0:: "<stock_RoyalCake> piece of Royal cake(s)"
+                    99:: "Go back !"
             
-            Endif
+                Endif
+ 
+            ElseIf 50
+            
+                followUp(eat_popcorns_in)
+                stayInMenu = false
+                
+            ElseIf 60
+            
+                followUp(eat_bakery_in)
+                stayInMenu = false
+            
+            ElseIf 99
+            
+                stayInMenu = false
         
-        Endif
+            Endif
+            
+        EndWhile
         
     Endif
 
-    SceneEnd()
+SceneEnd()

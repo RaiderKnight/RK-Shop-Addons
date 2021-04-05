@@ -4,64 +4,68 @@ WHEN: 0 - 24
 WHO: none
 OTHER: none
 
-    SceneStart()
-            // Get current sex produts
-            stock_DildoCheap = Player.getActorVar(stock_DildoCheap)
-            stock_DildoQuality = Player.getActorVar(stock_DildoQuality)
-            stock_DildoLuxe = Player.getActorVar(stock_DildoLuxe)
-            stock_DildoFinest = Player.getActorVar(stock_DildoFinest)
-            
-            stock_DildoType = stock_DildoCheap + stock_DildoQuality + stock_DildoLuxe + stock_DildoFinest
-            
-            stock_FleshlightPilot = Player.getActorVar(stock_FleshlightPilot)
-            stock_FleshlightGripIce = Player.getActorVar(stock_FleshlightGripIce)
-            stock_FleshlightTenga = Player.getActorVar(stock_FleshlightTenga)
-            stock_FleshLightJack = Player.getActorVar(stock_FleshLightJack)
-            
-            stock_FleshlightType = stock_FleshLightJack + stock_FleshlightTenga + stock_FleshlightGripIce + stock_FleshlightPilot
-            
-            stock_AnalPlugBVibe = Player.getActorVar(stock_AnalPlugBVibe)
-            stock_AnalPlugTrainer = Player.getActorVar(stock_AnalPlugTrainer)
-            stock_AnalPlugUnbound = Player.getActorVar(stock_AnalPlugUnbound)
-            stock_AnalPlugTango = Player.getActorVar(stock_AnalPlugTango)
-                
-            stock_AnalPlugType = stock_AnalPlugBVibe + stock_AnalPlugTrainer + stock_AnalPlugUnbound + stock_AnalPlugTango
-        
-            stock_LubeJOH2O = Player.getActorVar(stock_LubeJOH2O)
-            stock_LubeCoconut = Player.getActorVar(stock_LubeCoconut)
-            stock_LubeSilicone = Player.getActorVar(stock_LubeSilicone)
-            stock_LubeForia = Player.getActorVar(stock_LubeForia)
-                
-            stock_LubricantType = stock_LubeJOH2O + stock_LubeCoconut + stock_LubeSilicone + stock_LubeForia + stock_LubeForia
-            
-            stock_SexDollInflatable = Player.getActorVar(stock_SexDollInflatable)
-            stock_SexDollClassic = Player.getActorVar(stock_SexDollClassic)
-            stock_SexDollTPE = Player.getActorVar(stock_SexDollTPE)
-            stock_SexDollRobot = Player.getActorVar(stock_SexDollRobot)
-                
-            stock_SexDollType = stock_SexDollInflatable + stock_SexDollClassic + stock_SexDollTPE + stock_SexDollRobot
-            
-            stock_LotionHoneydew = Player.getActorVar(stock_LotionHoneydew)
-            stock_LotionRedFlower = Player.getActorVar(stock_LotionRedFlower)
-            stock_LotionNaturale = Player.getActorVar(stock_LotionNaturale)
-            stock_LotionTHC = Player.getActorVar(stock_LotionTHC)
+SceneStart()
 
-            stock_MassageLotionType = stock_LotionHoneydew + stock_LotionRedFlower + stock_LotionNaturale + stock_LotionTHC
-        
-            stock_MasturbatorPocket = Player.getActorVar(stock_MasturbatorPocket)
-            stock_MasturbatorBubble = Player.getActorVar(stock_MasturbatorBubble)
-            stock_MasturbatorMega = Player.getActorVar(stock_MasturbatorMega)
-            stock_Lovebotz = Player.getActorVar(stock_Lovebotz)
-        
-            stock_MasturbatorType = stock_MasturbatorPocket + stock_MasturbatorBubble + stock_MasturbatorMega + stock_Lovebotz
-            
-            AdultToyBox_inventory = stock_MasturbatorType + stock_MassageLotionType + stock_SexDollType + stock_LubricantType + stock_AnalPlugType + stock_FleshlightType + stock_DildoType
-            
-        If AdultToyBox_inventory < 1 
-            Player(Anxious)::"I got nothing inside my adult toy box!"
-        
-        Else
+        // Get current sex produts
+        stock_DildoCheap = Player.getActorVar(stock_DildoCheap)
+        stock_DildoQuality = Player.getActorVar(stock_DildoQuality)
+        stock_DildoLuxe = Player.getActorVar(stock_DildoLuxe)
+        stock_DildoFinest = Player.getActorVar(stock_DildoFinest)
 
+        stock_DildoType = stock_DildoCheap + stock_DildoQuality + stock_DildoLuxe + stock_DildoFinest
+
+        stock_FleshlightPilot = Player.getActorVar(stock_FleshlightPilot)
+        stock_FleshlightGripIce = Player.getActorVar(stock_FleshlightGripIce)
+        stock_FleshlightTenga = Player.getActorVar(stock_FleshlightTenga)
+        stock_FleshLightJack = Player.getActorVar(stock_FleshLightJack)
+
+        stock_FleshlightType = stock_FleshLightJack + stock_FleshlightTenga + stock_FleshlightGripIce + stock_FleshlightPilot
+
+        stock_AnalPlugBVibe = Player.getActorVar(stock_AnalPlugBVibe)
+        stock_AnalPlugTrainer = Player.getActorVar(stock_AnalPlugTrainer)
+        stock_AnalPlugUnbound = Player.getActorVar(stock_AnalPlugUnbound)
+        stock_AnalPlugTango = Player.getActorVar(stock_AnalPlugTango)
+                
+        stock_AnalPlugType = stock_AnalPlugBVibe + stock_AnalPlugTrainer + stock_AnalPlugUnbound + stock_AnalPlugTango
+        
+        stock_LubeJOH2O = Player.getActorVar(stock_LubeJOH2O)
+        stock_LubeCoconut = Player.getActorVar(stock_LubeCoconut)
+        stock_LubeSilicone = Player.getActorVar(stock_LubeSilicone)
+        stock_LubeForia = Player.getActorVar(stock_LubeForia)
+                
+        stock_LubricantType = stock_LubeJOH2O + stock_LubeCoconut + stock_LubeSilicone + stock_LubeForia + stock_LubeForia
+            
+        stock_SexDollInflatable = Player.getActorVar(stock_SexDollInflatable)
+        stock_SexDollClassic = Player.getActorVar(stock_SexDollClassic)
+        stock_SexDollTPE = Player.getActorVar(stock_SexDollTPE)
+        stock_SexDollRobot = Player.getActorVar(stock_SexDollRobot)
+                
+        stock_SexDollType = stock_SexDollInflatable + stock_SexDollClassic + stock_SexDollTPE + stock_SexDollRobot
+            
+        stock_LotionHoneydew = Player.getActorVar(stock_LotionHoneydew)
+        stock_LotionRedFlower = Player.getActorVar(stock_LotionRedFlower)
+        stock_LotionNaturale = Player.getActorVar(stock_LotionNaturale)
+        stock_LotionTHC = Player.getActorVar(stock_LotionTHC)
+
+        stock_MassageLotionType = stock_LotionHoneydew + stock_LotionRedFlower + stock_LotionNaturale + stock_LotionTHC
+        
+        stock_MasturbatorPocket = Player.getActorVar(stock_MasturbatorPocket)
+        stock_MasturbatorBubble = Player.getActorVar(stock_MasturbatorBubble)
+        stock_MasturbatorMega = Player.getActorVar(stock_MasturbatorMega)
+        stock_Lovebotz = Player.getActorVar(stock_Lovebotz)
+        
+        stock_MasturbatorType = stock_MasturbatorPocket + stock_MasturbatorBubble + stock_MasturbatorMega + stock_Lovebotz
+
+        AdultToyBox_inventory = stock_MasturbatorType + stock_MassageLotionType + stock_SexDollType + stock_LubricantType + stock_AnalPlugType + stock_FleshlightType + stock_DildoType
+
+    If AdultToyBox_inventory < 1 
+        Player(Anxious)::"I got nothing inside my adult toy box!"
+        
+    Else
+
+        stayInMenu = true
+        While stayInMenu
+        
             Player(Curious)::"Let see what I got in my adult toy box"
             0:: "<stock_DildoType> Dildo(s) in stock"
             1:: "<stock_FleshlightType> Fleshlight(s) in stock"
@@ -74,7 +78,7 @@ OTHER: none
         
             If 0
         
-                If stock_DildoType  < 1
+                If stock_DildoType < 1
                     Player(Anxious)::"Ok, I don't have any dildo to play with! I have to go shopping!"
                 Else
         
@@ -88,7 +92,7 @@ OTHER: none
                 
             ElseIf 1
         
-                If stock_FleshlightType  < 1
+                If stock_FleshlightType < 1
                     Player(Anxious)::"Ok, I don't have any fleshlight! I have to go shopping!"
                 Else
         
@@ -102,7 +106,7 @@ OTHER: none
                 
             ElseIf 2
         
-                If stock_AnalPlugType  < 1
+                If stock_AnalPlugType < 1
                     Player(Anxious)::"Ok, I don't have any butt plug! I have to go shopping!"
                 Else
         
@@ -116,7 +120,7 @@ OTHER: none
             
             ElseIf 3
         
-                If stock_LubricantType  < 1
+                If stock_LubricantType < 1
                     Player(Anxious)::"Ok, I don't have any lubricant! I have to go shopping!"
                 Else
         
@@ -130,7 +134,7 @@ OTHER: none
             
             ElseIf 4
         
-                If stock_SexDollType  < 1
+                If stock_SexDollType < 1
                     Player(Anxious)::"Ok, I don't have any sell doll ! I have to go shopping or use my hand instead!"
                 Else
         
@@ -144,7 +148,7 @@ OTHER: none
                 
             ElseIf 5
         
-                If stock_MassageLotionType  < 1
+                If stock_MassageLotionType < 1
                     Player(Anxious)::"Ok, I don't have any massage lotion! I have to go shopping!"
                 Else
         
@@ -158,7 +162,7 @@ OTHER: none
                 
             ElseIf 6
         
-                If stock_MasturbatorType  < 1
+                If stock_MasturbatorType < 1
                     Player(Anxious)::"Ok, I don't have any masturbator ! I have to go shopping!"
                 Else
         
@@ -169,11 +173,15 @@ OTHER: none
                     99:: "Go back !"
                 
                 Endif
+            
+            ElseIf 99
+            
+                stayInMenu = false
 
             Endif
         
-        Endif
+        EndWhile
         
+    Endif
 
-
-    SceneEnd()
+SceneEnd()

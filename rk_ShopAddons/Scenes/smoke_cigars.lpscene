@@ -10,7 +10,6 @@ OTHER: none
     stock_KDcigars = Player.getActorVar(stock_KDcigars)
     stock_Cohiba = Player.getActorVar(stock_Cohiba)
     stock_Montecristo = Player.getActorVar(stock_Montecristo)
-
     cigarStck = stock_Davidoff + stock_Romeo + stock_KDcigars + stock_Cohiba + stock_Montecristo
     
     If  cigarStck < 0.5 

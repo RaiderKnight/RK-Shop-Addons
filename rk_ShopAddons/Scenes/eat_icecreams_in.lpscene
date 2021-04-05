@@ -12,7 +12,6 @@ OTHER: none
     stock_MilkShake = Player.getActorVar(stock_MilkShake)
     stock_FrozenPie = Player.getActorVar(stock_FrozenPie)
     stock_IceCreamCake = Player.getActorVar(stock_IceCreamCake)
-    
     stock_icecreampop = stock_Popcycle + stock_IcecreamCup + stock_MilkShake + stock_FrozenPie + stock_IceCreamCake
     
     If stock_icecreampop < 0.5 
