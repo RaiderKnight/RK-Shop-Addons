@@ -20,6 +20,7 @@ OTHER: none
         SBstock_IPhone = Player.getActorVar(SBstock_IPhone)
         SRstock_IPhone = Player.getActorVar(SRstock_IPhone)
         TBstock_IPhone = Player.getActorVar(TBstock_IPhone)
+        Pockstock_IPhone = Player.getActorVar(Pockstock_IPhone)
         
         LRstock_Samsung = Player.getActorVar(LRstock_Samsung)
         MBstock_Samsung = Player.getActorVar(MBstock_Samsung)
@@ -27,6 +28,7 @@ OTHER: none
         SBstock_Samsung = Player.getActorVar(SBstock_Samsung)
         SRstock_Samsung = Player.getActorVar(SRstock_Samsung)
         TBstock_Samsung = Player.getActorVar(TBstock_Samsung)
+        Pockstock_Samsung = Player.getActorVar(Pockstock_Samsung)
         
         LRstock_OnePlus = Player.getActorVar(LRstock_OnePlus)
         MBstock_OnePlus = Player.getActorVar(MBstock_OnePlus)
@@ -34,6 +36,7 @@ OTHER: none
         SBstock_OnePlus = Player.getActorVar(SBstock_OnePlus)
         SRstock_OnePlus = Player.getActorVar(SRstock_OnePlus)
         TBstock_OnePlus = Player.getActorVar(TBstock_OnePlus)
+        Pockstock_OnePlus = Player.getActorVar(Pockstock_OnePlus)
         
         LRstock_LPGPower = Player.getActorVar(LRstock_LPGPower)
         MBstock_LPGPower = Player.getActorVar(MBstock_LPGPower)
@@ -41,6 +44,7 @@ OTHER: none
         SBstock_LPGPower = Player.getActorVar(SBstock_LPGPower)
         SRstock_LPGPower = Player.getActorVar(SRstock_LPGPower)
         TBstock_LPGPower = Player.getActorVar(TBstock_LPGPower)
+        Pockstock_LPGPower = Player.getActorVar(Pockstock_LPGPower)
         
         stock_IPhone = Player.getActorVar(stock_IPhone)
         stock_Samsung = Player.getActorVar(stock_Samsung)
@@ -77,6 +81,7 @@ OTHER: none
                 Player(Happy)::"Well, I'm really happy with my purchase ...!"
                 
                 "Where I will srore this phone?"
+                1::"Inside my my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
                 3::"Inside my my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
@@ -84,7 +89,12 @@ OTHER: none
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
                 7::isModEnabled(nn_HomeExpander) && hasThirdBedroom::"Inside my third bedroom"
                 
-                If 2
+                If 1
+                
+                    "Added to your living room!"
+                    Player.modifyActorVar(Pockstock_IPhone, 1)
+                
+                ElseIf 2
                 
                     "Added to your living room!"
                     Player.modifyActorVar(LRstock_IPhone, 1)
@@ -123,6 +133,7 @@ OTHER: none
                 Player(Happy)::"Well, I'm really happy with my purchase ...!"
                 
                 "Where I will srore this phone?"
+                1::"Inside my my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
                 3::"Inside my my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
@@ -130,7 +141,12 @@ OTHER: none
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
                 7::isModEnabled(nn_HomeExpander) && hasThirdBedroom::"Inside my third bedroom"
                 
-                If 2
+                If 1
+                
+                    "Added to your living room!"
+                    Player.modifyActorVar(Pockstock_IPhone, 1)
+                
+                ElseIf 2
                 
                     "Added to your living room!"
                     Player.modifyActorVar(LRstock_Samsung, 1)
@@ -169,6 +185,7 @@ OTHER: none
                 Player(Happy)::"Well, I'm really proud of my purchase ...!"
                 
                 "Where I will srore this phone?"
+                1::"Inside my my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
                 3::"Inside my my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
@@ -176,7 +193,12 @@ OTHER: none
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
                 7::isModEnabled(nn_HomeExpander) && hasThirdBedroom::"Inside my third bedroom"
                 
-                If 2
+                If 1
+                
+                    "Added to your living room!"
+                    Player.modifyActorVar(Pockstock_IPhone, 1)
+                
+                ElseIf 2
                 
                     "Added to your living room!"
                     Player.modifyActorVar(LRstock_OnePlus, 1)
@@ -215,6 +237,7 @@ OTHER: none
                 Player(Happy)::"Well, I'm really proud of my purchase ...!"
                 
                 "Where I will srore this phone?"
+                1::"Inside my my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
                 3::"Inside my my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
@@ -222,7 +245,12 @@ OTHER: none
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
                 7::isModEnabled(nn_HomeExpander) && hasThirdBedroom::"Inside my third bedroom"
                 
-                If 2
+                If 1
+                
+                    "Added to your living room!"
+                    Player.modifyActorVar(Pockstock_IPhone, 1)
+                
+                ElseIf 2
                 
                     "Added to your living room!"
                     Player.modifyActorVar(LRstock_LPGPower, 1)
