@@ -1,0 +1,66 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    
+        stock_ZellVostro = Player.getActorVar(stock_ZellVostro)
+        stock_LPPavilion = Player.getActorVar(stock_LPPavilion)
+        stock_LPware = Player.getActorVar(stock_LPware)
+        stock_LPX = Player.getActorVar(stock_LPX)
+        
+        stock_Computer = stock_ZellVostro + stock_LPPavilion + stock_LPware + stock_LPX
+        
+        PriceZe = Random(600, 750)
+        PriceZe_loc = PriceZe.convertToLocalCurrency()
+        PriceLP = Random(900, 980)
+        PriceLP_loc = PriceLP.convertToLocalCurrency()
+        PricePw = Random(1750, 1900)
+        PricePw_loc = PricePw.convertToLocalCurrency()
+        PricePX = Random(2850, 3100)
+        PricePX_loc = PricePX.convertToLocalCurrency()
+
+        If money < PriceZe
+        
+            Player(Anxious)::"I am in debt. The store owner will not sell me anything."
+            
+        Else
+        
+            "What do I want to buy?"
+            0:: "Compact desktop Zell Vostro — <PriceZe_loc>"
+            1:: "LP Pavilion All-in-One — <PriceLP_loc>"
+            2:: "LPware Aurora R12 Gaming Desktop - <PricePw_loc>"
+            3:: "LPX RA Ryzen Battlebox ultimate - <PricePX_loc>"
+            99:: "Nothing"
+            
+            If 0
+            
+                Player.modifyActorVar(stock_ZellVostro, 1)
+                money -= PriceZe
+                Player(Happy)::"Well, I'm really happy with my purchase ...!"
+            
+            ElseIf 1
+            
+                Player.modifyActorVar(stock_LPPavilion, 1)
+                money -= PriceLP
+                Player(Happy)::"Well, I'm really proud of my purchase ...!"
+            
+            ElseIf 2
+            
+                Player.modifyActorVar(stock_LPware, 1)
+                money -= PricePw
+                Player(Happy)::"Good computer for playing games and for dev developpements..."
+            
+            ElseIf 3
+            
+                Player.modifyActorVar(stock_LPX, 1)
+                money -= PricePX
+                Player(Happy)::"The best for playing demanding games!"
+            
+            EndIf
+              
+        EndIf
+    
+    SceneEnd()

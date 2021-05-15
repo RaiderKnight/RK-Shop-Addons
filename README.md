@@ -3,7 +3,7 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_ShopAddons :</h3>
-<p>Version: 1.0.2</p>
+<p>Version: 1.0.3</p>
 <br>
 <p>All the mods I made for shopping / eating in the city, in one.</p>
 <p>Add more options to buy / eat different consumable items in the city.</p>
@@ -29,7 +29,9 @@
 <hr>
 <br>
 <h3> Module requirements</h3>
-<p>At least the game LifePlay 3.20</p>
+<p>At least the game LifePlay 3.21</p>
+<p><a href="https://github.com/RaiderKnight/RK-Home-Inventories" tilte="Home Inventories Mod">rk_Home_Inventories</a></p>
+<p><a href="https://github.com/RaiderKnight/RK-Personal-Inventories" tilte="Personal Inventories Mod">rk_Personal_Inventories</a></p>
 <br>
 <h3> Module conflicts</h3>
 <p>You need to uninstall these mods (same content...)</p>

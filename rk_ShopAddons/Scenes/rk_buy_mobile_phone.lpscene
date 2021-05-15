@@ -1,0 +1,66 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+        
+        
+        stock_IPhone = Player.getActorVar(stock_IPhone)
+        stock_Samsung = Player.getActorVar(stock_Samsung)
+        stock_OnePlus = Player.getActorVar(stock_OnePlus)
+        stock_LPGPower = Player.getActorVar(stock_LPGPower)
+        Stock_phones = stock_IPhone + stock_Samsung + stock_OnePlus + stock_LPGPower
+        
+        PriceZe = Random(1250, 1350)
+        PriceZe_loc = PriceZe.convertToLocalCurrency()
+        PriceLP = Random(1350, 1450)
+        PriceLP_loc = PriceLP.convertToLocalCurrency()
+        PricePw = Random(1100, 1200)
+        PricePw_loc = PricePw.convertToLocalCurrency()
+        PricePX = Random(200, 350)
+        PricePX_loc = PricePX.convertToLocalCurrency()
+
+        If money < PriceZe
+        
+            Player(Anxious)::"I am in debt. The store owner will not sell me anything."
+            
+        Else
+        
+            "What do I want to buy?"
+            0:: "Vinfamy iPhone — <PriceZe_loc>"
+            1:: "Galaxy LP ultra — <PriceLP_loc>"
+            2:: "Vin OnePlus Pro - <PricePw_loc>"
+            3:: "LPlay G Power - <PricePX_loc>"
+            99:: "Nothing"
+            
+            If 0
+            
+                Player.modifyActorVar(stock_ZellVostro, 1)
+                money -= PriceZe
+                Player(Happy)::"Well, I'm really happy with my purchase ...!"
+            
+            ElseIf 1
+            
+                Player.modifyActorVar(stock_LPPavilion, 1)
+                money -= PriceLP
+                Player(Happy)::"Well, I'm really happy with my purchase ...!"
+            
+            ElseIf 2
+            
+                Player.modifyActorVar(stock_LPware, 1)
+                money -= PricePw
+                Player(Happy)::"Well, I'm really proud of my purchase ...!"
+            
+            ElseIf 3
+            
+                Player.modifyActorVar(stock_LPX, 1)
+                money -= PricePX
+                Player(Happy)::"Well, I'm really proud of my purchase ...!"
+            
+            EndIf
+              
+        EndIf
+    
+    SceneEnd()
