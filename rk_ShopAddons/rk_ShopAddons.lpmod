@@ -4,4 +4,4 @@ MODULE_AUTHOR: Raddeck
 MODULE_LINK: https://github.com/RaiderKnight/RK-Shop-Addons
 MODULE_DESCRIPTION: Add more options to stores for buying items and few extras !
 MODULE_REQUIREMENTS: rk_Home_Inventories, rk_Personal_Inventories
-MODULE_VERSION: 1.0.3
+MODULE_VERSION: 1.0.4

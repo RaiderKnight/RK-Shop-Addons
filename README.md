@@ -3,7 +3,7 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_ShopAddons :</h3>
-<p>Version: 1.0.3</p>
+<p>Version: 1.0.4</p>
 <br>
 <p>All the mods I made for shopping / eating in the city, in one.</p>
 <p>Add more options to buy / eat different consumable items in the city.</p>
