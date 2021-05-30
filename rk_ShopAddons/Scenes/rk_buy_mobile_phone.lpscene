@@ -80,10 +80,10 @@ OTHER: none
                 money -= PriceZe
                 Player(Happy)::"Well, I'm really happy with my purchase ...!"
                 
-                "Where I will srore this phone?"
-                1::"Inside my my pockets"
+                "Where I will store this phone?"
+                1::"Inside my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
-                3::"Inside my my bedroom"
+                3::"Inside my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
                 5::isModEnabled(nn_HomeExpander) && hasSecBedroom::"Inside my second bedroom"
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
@@ -132,10 +132,10 @@ OTHER: none
                 money -= PriceLP
                 Player(Happy)::"Well, I'm really happy with my purchase ...!"
                 
-                "Where I will srore this phone?"
-                1::"Inside my my pockets"
+                "Where I will store this phone?"
+                1::"Inside my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
-                3::"Inside my my bedroom"
+                3::"Inside my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
                 5::isModEnabled(nn_HomeExpander) && hasSecBedroom::"Inside my second bedroom"
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
@@ -184,10 +184,10 @@ OTHER: none
                 money -= PricePw
                 Player(Happy)::"Well, I'm really proud of my purchase ...!"
                 
-                "Where I will srore this phone?"
-                1::"Inside my my pockets"
+                "Where I will store this phone?"
+                1::"Inside my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
-                3::"Inside my my bedroom"
+                3::"Inside my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
                 5::isModEnabled(nn_HomeExpander) && hasSecBedroom::"Inside my second bedroom"
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"
@@ -236,10 +236,10 @@ OTHER: none
                 money -= PricePX
                 Player(Happy)::"Well, I'm really proud of my purchase ...!"
                 
-                "Where I will srore this phone?"
-                1::"Inside my my pockets"
+                "Where I will store this phone?"
+                1::"Inside my pockets"
                 2::isModEnabled(nn_HomeExpander) && hasLivingroom ::"Inside my living room"
-                3::"Inside my my bedroom"
+                3::"Inside my bedroom"
                 4::isModEnabled(nn_HomeExpander) && hasOfficeroom::"Inside my office room"
                 5::isModEnabled(nn_HomeExpander) && hasSecBedroom::"Inside my second bedroom"
                 6::isModEnabled(rk_MoneyMaker) || isModEnabled(rk_Art_items_Shop)::"Inside my storage room"

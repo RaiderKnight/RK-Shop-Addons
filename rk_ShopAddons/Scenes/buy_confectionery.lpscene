@@ -19,6 +19,8 @@ OTHER: none
         price_CottonCandy_local = price_CottonCandy.convertToLocalCurrency()
         price_BigBallHickey = Random(1, 2)
         price_BigBallHickey_local = price_BigBallHickey.convertToLocalCurrency()
+        price_SweetTarts = Random(1, 2)
+        price_SweetTarts_local = price_SweetTarts.convertToLocalCurrency()
         price_GummiBears = Random(2, 3)
         price_GummiBears_local = price_GummiBears.convertToLocalCurrency()
         price_Smarties = Random(2.5, 3.5)
@@ -33,15 +35,16 @@ OTHER: none
         price_PowerBar_local = price_PowerBar.convertToLocalCurrency()
             
         Player(Curious)::"Which type of candy shall I buy?"
-        0:: money >= 0 ::"1 box of Pop Rocks for <price_PopRocks_local>"
-        1:: money >= 0 ::"1 Cotton Candy for <price_CottonCandy_local>"
-        2:: money >= 0 ::"1 pack of Gummi Bears for <price_GummiBears_local>"
-        3:: money >= 0 ::"1 box of Smarties for <price_Smarties_local>"
-        4:: money >= 0 ::"1 pack of Jolly Ranchers for <price_JollyRanchers_local>"
-        5:: money >= 0 ::"1 pack of Peanut Butter Cups for <price_PeanutCups_local>"
-        6:: money >= 0 ::"1 pack of Licorices for <price_Licorice_local>"
-        7:: money >= 0 ::"1 power bar for <price_PowerBar_local>"
-        8:: money >= 0 ::"1 Big ball hickey for <price_BigBallHickey_local>"
+        0:: money > price_PopRocks ::"1 box of Pop Rocks for <price_PopRocks_local>"
+        1:: money > price_CottonCandy ::"1 Cotton Candy for <price_CottonCandy_local>"
+        2:: money > price_GummiBears ::"1 pack of Gummi Bears for <price_GummiBears_local>"
+        3:: money > price_Smarties ::"1 box of Smarties for <price_Smarties_local>"
+        4:: money > price_JollyRanchers ::"1 pack of Jolly Ranchers for <price_JollyRanchers_local>"
+        5:: money > price_PeanutCups ::"1 pack of Peanut Butter Cups for <price_PeanutCups_local>"
+        6:: money > price_Licorice ::"1 pack of Licorices for <price_Licorice_local>"
+        7:: money > price_PowerBar ::"1 power bar for <price_PowerBar_local>"
+        8:: money > price_BigBallHickey ::"1 Lollypop for <price_BigBallHickey_local>"
+        9:: money > price_SweetTarts ::"1 pack of Sweet Tarts <price_SweetTarts_local>"
         99:: "Don't buy anything"
                
         If 0
@@ -88,6 +91,12 @@ OTHER: none
             Player.modifyActorVar(stock_BigBallHickey, 1)
             money -= price_BigBallHickey
             Player(Excited)::"1 Big ball hickey added to my pockets!"
+            
+        ElseIf 9
+        
+            Player.modifyActorVar(stock_SweetTarts, 1)
+            money -= price_SweetTarts
+            Player(Excited)::"1 pack of Sweet Tarts added to my pockets!"
    
         EndIf
         
