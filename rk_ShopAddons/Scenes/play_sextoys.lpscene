@@ -63,7 +63,7 @@ OTHER: none
         HisGay = player.isGay()
            
            
-        If AdultToyBox_inventory < 1 
+        If AdultToyBox_inventory < 0 
             Player(Anxious)::"I got nothing inside my adult toy box!"
         
                     
@@ -1140,9 +1140,7 @@ OTHER: none
                             Actor = generatePersonTemporary()
                         EndWhile
                     EndIf
-                    
-                    filter(Sleeping)
-                    
+
                     Player(Curious)::"Which sex doll I'm gonna fuck?"
                     1:: stock_SexDollInflatable > 0::"Play with my Inflatable Sex Doll"
                     2:: stock_SexDollClassic > 0::"Play with my Classic Tan Sex Doll"
@@ -1164,7 +1162,7 @@ OTHER: none
                             If 1
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollInflatable, -0.009)
                                 Player.modifyActorVar(stock_LubeJOH2O, -0.05)
                                 mood += 2
@@ -1174,13 +1172,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollInflatable, -0.009)
                                 Player.modifyActorVar(stock_LubeCoconut, -0.05)
                                 mood += 2.25
@@ -1190,13 +1188,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollInflatable, -0.009)
                                 Player.modifyActorVar(stock_LubeSilicone, -0.05)
                                 mood += 2.5
@@ -1206,13 +1204,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollInflatable, -0.009)
                                 Player.modifyActorVar(stock_LubeForia, -0.05)
                                 mood += 2.75
@@ -1222,13 +1220,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollInflatable, -0.01)
                                 mood += 2
                                 energy -= 10
@@ -1237,7 +1235,7 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             Endif
@@ -1258,7 +1256,7 @@ OTHER: none
                             If 1
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollClassic, -0.007)
                                 Player.modifyActorVar(stock_LubeJOH2O, -0.05)
                                 mood += 2.15
@@ -1268,13 +1266,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollClassic, -0.007)
                                 Player.modifyActorVar(stock_LubeCoconut, -0.05)
                                 mood += 2.35
@@ -1284,13 +1282,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollClassic, -0.007)
                                 Player.modifyActorVar(stock_LubeSilicone, -0.05)
                                 mood += 2.55
@@ -1300,13 +1298,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollClassic, -0.007)
                                 Player.modifyActorVar(stock_LubeForia, -0.05)
                                 mood += 2.8
@@ -1316,13 +1314,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollClassic, -0.006)
                                 mood += 2.15
                                 energy -= 9
@@ -1331,7 +1329,7 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             Endif
@@ -1352,7 +1350,7 @@ OTHER: none
                             If 1
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollTPE, -0.005)
                                 Player.modifyActorVar(stock_LubeJOH2O, -0.05)
                                 mood += 2.25
@@ -1362,13 +1360,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollTPE, -0.005)
                                 Player.modifyActorVar(stock_LubeCoconut, -0.05)
                                 mood += 2.45
@@ -1378,13 +1376,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollTPE, -0.005)
                                 Player.modifyActorVar(stock_LubeSilicone, -0.05)
                                 mood += 2.65
@@ -1394,13 +1392,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollTPE, -0.005)
                                 Player.modifyActorVar(stock_LubeForia, -0.05)
                                 mood += 2.85
@@ -1410,13 +1408,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollTPE, -0.006)
                                 mood += 2.25
                                 energy -= 9
@@ -1425,7 +1423,7 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             Endif
@@ -1448,7 +1446,7 @@ OTHER: none
                             If 1
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollRobot, -0.0045)
                                 Player.modifyActorVar(stock_LubeJOH2O, -0.05)
                                 mood += 2.55
@@ -1458,13 +1456,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollRobot, -0.0045)
                                 Player.modifyActorVar(stock_LubeCoconut, -0.05)
                                 mood += 2.65
@@ -1474,13 +1472,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollRobot, -0.0045)
                                 Player.modifyActorVar(stock_LubeSilicone, -0.05)
                                 mood += 2.85
@@ -1490,13 +1488,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Player)
+                                SexNoAffair(Player)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollRobot, -0.0045)
                                 Player.modifyActorVar(stock_LubeForia, -0.05)
                                 mood += 3
@@ -1506,13 +1504,13 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
                                 Player.closeEyes(false)
                                 Actor.closeEyes(true)
-                                Actor.show()
+                                Actor.show(1)
                                 Player.modifyActorVar(stock_SexDollRobot, -0.005)
                                 mood += 2.35
                                 energy -= 9
@@ -1521,7 +1519,7 @@ OTHER: none
                                 Player.strip()
                                 Actor.strip()
                                 
-                                Sex(Actor, Player)
+                                SexNoAffair(Actor, Player)
                                 passTime(0.25, 0.5)
                                 
                             Endif
