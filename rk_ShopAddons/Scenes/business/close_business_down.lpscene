@@ -17,8 +17,15 @@ OTHER: none
         1:: "No"
     
         If 0
+        
             "I have closed down this business."
             karma -= 5
             stopBusiness()
+            
+        Else
+        
+            "No I don't want to, I don't know what I was thinking, I think I had a weakness ..."
+            
         Endif
+        
     SceneEnd()

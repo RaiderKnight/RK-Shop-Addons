@@ -21,8 +21,7 @@ OTHER: none
         1::"I changed my mind"
         
         If 0
-    
-    
+
             Revenue = calculateRevenue()
             RevenueC = Revenue.convertToLocalCurrency(true)
             Actor(Serene)::"Estimated gross revenue for this month is <RevenueC>."
@@ -39,7 +38,7 @@ OTHER: none
             ProfitC = Profit.convertToLocalCurrency(true)
             ProfitMargin = Profit / Revenue
             Actor(Serene)::"In the end, estimated net profit works out at <ProfitC> for this month." 
-            "Do I ask <Actor.name> to dig deeper into the performance data?"
+            Actor(Serene)::"Do you want me dig deeper into the performance data?"
             0:: "Yes"
             1:: "No"
     
@@ -120,9 +119,11 @@ OTHER: none
                 Else
                     Actor(Happy)::"Your company has immense purchasing power. Most suppliers would do anything to work with you." 
                 Endif
-                Player(Curious)::"Thanks, my dear <Actor.name>!"
+                
+                Player(Curious)::"Thanks, my dear <Actor.name>! See you later!"
 
             Endif
+            
         Endif
     
     SceneEnd()

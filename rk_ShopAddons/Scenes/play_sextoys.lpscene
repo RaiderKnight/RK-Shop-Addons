@@ -1631,8 +1631,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                Filter(Fleshlight)
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
@@ -1643,8 +1643,8 @@ OTHER: none
                                 fitness += 0.004
                                 attractiveness += 0.002
                                 Player.strip()
+                                Filter(Fleshlight)
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
@@ -1655,8 +1655,8 @@ OTHER: none
                                 fitness += 0.003
                                 attractiveness += 0.002
                                 Player.strip()
+                                Filter(Fleshlight)
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
@@ -1667,8 +1667,8 @@ OTHER: none
                                 fitness += 0.002
                                 attractiveness += 0.002
                                 Player.strip()
+                                Filter(Fleshlight)
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
@@ -1678,8 +1678,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                Filter(Fleshlight)
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             Endif
@@ -1705,8 +1705,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
@@ -1717,8 +1717,8 @@ OTHER: none
                                 fitness += 0.004
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
@@ -1729,8 +1729,8 @@ OTHER: none
                                 fitness += 0.003
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
@@ -1741,8 +1741,8 @@ OTHER: none
                                 fitness += 0.002
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
@@ -1752,8 +1752,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             Endif
@@ -1779,8 +1779,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             ElseIf 2
@@ -1791,8 +1791,8 @@ OTHER: none
                                 fitness += 0.004
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 3
@@ -1803,8 +1803,8 @@ OTHER: none
                                 fitness += 0.003
                                 attractiveness += 0.0029
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                             
                             ElseIf 4
@@ -1815,8 +1815,8 @@ OTHER: none
                                 fitness += 0.002
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                         
                             ElseIf 99
@@ -1826,8 +1826,8 @@ OTHER: none
                                 fitness += 0.005
                                 attractiveness += 0.002
                                 Player.strip()
+                                
                                 Sex(Player)
-                                Filter(Anal)
                                 passTime(0.25, 0.5)
                                 
                             Endif
