@@ -5,8 +5,22 @@ WHO: none
 OTHER: none
 
     SceneStart()
-    Change = 0.5
-    ModifyReputation(Change)
-    "My business's reputation in the local community increased a bit."
+    
+        Change = Random(0, 1)
+    
+        If Change > 0
+        
+            ModifyReputation(Change)
+            "My business's reputation in the local community increased a bit."
+        
+        Else
+
+            Change = Random(-0.1, -1)
+            "My promo didn't go well! A total fail!"
+            "My business's reputation in the local community decreased a bit."
+            ModifyReputation(Change)
+            
+        EndIf
+        
     SceneEnd()
     timeout(2, promote_locally)
