@@ -24,13 +24,17 @@ OTHER: none
             timeToWait = 7 - NotYetWait
             Player(Annoyed)::"<MainActor.Name> already had a job training this week. I will have to wait <timeToWait> days."
             
+        ElseIf Actor:intelligence => 100
+            
+            Player(Annoyed)::"<MainActor.Name> already fully trained for the job. I will have to choose an another employee."
+            
         Else
 
             "I decided to meet with one of my employees to offer <Actor.him_or_her> a training in order to improve <Actor.his_or_her> technical skills."
             "A job training will surely improves <Actor.Name>'s skills. Do I pay <traningPriceLocal> for <Actor.p> training?"
             0:: "Yes!"
             1:: "No, too expensive!"
-            2:: isModEnabled(vin_Corruption) && Actor.isInterestedIn(Player)::"No, I will train <Actor.him_or_her> myself!"
+            2:: "No, I will train <Actor.him_or_her> myself!"
                 
             If 0
                 
@@ -52,21 +56,63 @@ OTHER: none
                     MainActor(Serene)::"That very really cool to you. I really need to improve my technical skills!"
                     MainActor(Serene)::"Cool, I love participating in a training. Thank you for inviting me!"
                 EndRandom
-                
+
                 Actor:intelligence += intelligence*0.005
+                money -= traningPrice
+                Actor.hide()
                 Actor.saveAndDelete()
             
             ElseIf 2
 
-                Player.strip()
-                Actor.strip()
-                "We stripped and I started caressing <Actor.him_or_her>..."
-                Sex(Actor, Player)
-                mood += 2
-                passTime(0.5, 1)
-                Actor:attractiontoplayer += 2
-                Actor:rapportwithplayer += 2
-            
+                Player(Serene)::"My dear <Actor.Name>, did you know that your technical skills are not satisfying, I have no choice to train you myself, that is why you are here."
+                Actor(Embarassed)::"Sorry boss, I will do everything to meet your expectations!"
+                "What training am I going to make <Actor.him_or_her> do?"
+                0::"Make <Actor.him_or_her> read work procedures"
+                1::isModEnabled(vin_Corruption)::"Offer <Actor.him_or_her> a sex training instead"
+                
+                If 0
+                    Player(Serene)::"<Actor.Name>, I want you to read the working procedures of our company, they will help you better understand your work."
+                    Actor(Serene)::"Ok boss, I'm doing it right away!"
+                    Player(Serene)::"I will stay next to you, if you have any questions ..."
+                    Actor:intelligence += intelligence*0.0025
+                    Actor.hide()
+                    Actor.saveAndDelete()
+                
+                ElseIf 1
+                
+                    Random
+                        Player(Flirty)::"Maybe you're too shy, if a little fuck can help you get out of your shyness, we can sort it out right away? Let's strip down babe!"
+                        Player(Flirty)::"Would you be more interested for a sex training, actually your skills are pretty good but I was curious if you would like to hang out with me!"
+                    EndRandom
+                    
+                    If Actor.isInterestedIn(Player) && Actor:arousal > 25
+                    
+                        Actor(Happy)::"Sure boss, I'm always willing for sex..."
+                        Player.strip()
+                        Actor.strip()
+                        "We stripped and I started caressing <Actor.him_or_her>..."
+                        Sex(Actor, Player)
+                        mood += 2
+                        passTime(0.5, 1)
+                        Actor:attractiontoplayer += 2
+                        Actor:rapportwithplayer += 2
+                        
+                    ElseIf Actor.isInterestedIn(Player)
+                    
+                        Actor(Happy)::"Sorry boss, I'm not interested..."
+                        Actor.hide()
+                    
+                    Else
+                        
+                        Actor(Angry)::"Sorry boss, I think you're going too far..."
+                        Actor:attractiontoplayer -= 2
+                        Actor:rapportwithplayer -= 2
+                        Actor.hide()
+                    
+                    EndIf
+                    
+                EndIf
+                
             EndIf
             
         EndIf
