@@ -61,9 +61,8 @@
 <br>
 <hr>
 <br>
-<h3>How to update</h3>
-<ul>
 <h3> How to update</h3>
+<ul>
 <li>Download and extract the latest version on your pc</li>
 <li>Delete the old mod (rk_ShopAddons) inside c:\..\LifePlay\Content\Modules\</li>
 <li>Upload the new version of rk_ShopAddons inside c:\..\LifePlay\Content\Modules\</li>
