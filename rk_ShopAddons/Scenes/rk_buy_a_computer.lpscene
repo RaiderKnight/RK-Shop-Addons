@@ -76,8 +76,7 @@ OTHER: none
             99:: "Nothing"
             
             If 0
-            
-                Player.modifyActorVar(stock_ZellVostro, 1)
+
                 money -= PriceZe
                 Player(Happy)::"Well, I'm really happy with my purchase ...!"
                 
@@ -129,7 +128,6 @@ OTHER: none
             
             ElseIf 1
             
-                Player.modifyActorVar(stock_LPPavilion, 1)
                 money -= PriceLP
                 Player(Happy)::"Well, I'm really proud of my purchase ...!"
                 
@@ -181,7 +179,6 @@ OTHER: none
             
             ElseIf 2
             
-                Player.modifyActorVar(stock_LPware, 1)
                 money -= PricePw
                 Player(Happy)::"Good computer for playing games and for dev developpements..."
                 
@@ -233,7 +230,6 @@ OTHER: none
             
             ElseIf 3
             
-                Player.modifyActorVar(stock_LPX, 1)
                 money -= PricePX
                 Player(Happy)::"The best for playing demanding games!"
                 
